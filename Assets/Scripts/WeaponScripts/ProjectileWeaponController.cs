@@ -10,62 +10,43 @@ public class ProjectileWeaponController : MonoBehaviour
     public float projectileSpeed;
     public float nextFireTime;
 
-    public LayerMask enemyLayer;
     public GameObject projectilePrefab;
-    public Transform firePoint; 
-    public Vector3 testTargetPos;
+    public Transform firePoint;
+
+    private PlayerMovement playerMovement;
+
+    void Start()
+    {
+        playerMovement = FindObjectOfType<PlayerMovement>();
+    }
 
     protected void PlayFireSound()
     {
         // Play fire sound 
     }
 
-    public void FireAtNearestEnemy()
-    {
-        if (Time.time >= nextFireTime)
-        {
-            Collider2D nearestEnemy = FindNearestEnemy();
-            if (nearestEnemy != null)
-            {
-                Fire(nearestEnemy.transform.position);
-            }
-        }
-    }
     private void Update()
     {
         if (Time.time >= nextFireTime)
         {
-            Fire(testTargetPos);
+            Fire();
         }
     }
-    protected Collider2D FindNearestEnemy()
-    {
-        Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, range, enemyLayer);
-        Collider2D nearestEnemy = null;
-        float minDistance = Mathf.Infinity;
 
-        foreach (Collider2D enemy in enemies)
-        {
-            float distance = Vector2.Distance(transform.position, enemy.transform.position);
-            if (distance < minDistance)
-            {
-                minDistance = distance;
-                nearestEnemy = enemy;
-            }
-        }
-
-        return nearestEnemy;
-    }
-
-    public void Fire(Vector3 targetPosition)
+    public void Fire()
     {
         nextFireTime = Time.time + 1f / fireRate;
         PlayFireSound();
 
-        // Create the projectile 
+        // Determine the direction based on the player's facing direction
+        Vector3 direction = playerMovement.moveDirection.x > 0 ? Vector3.right : Vector3.left;
+        
+
+        // Create the projectile
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         Projectile projScript = projectile.GetComponent<Projectile>();
-        projScript.SetTarget(testTargetPos);//Set projectile values setted to test target for now
+
+        projScript.Initialize(direction);
         projScript.damage = damage;
         projScript.speed = projectileSpeed;
     }

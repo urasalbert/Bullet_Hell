@@ -6,36 +6,37 @@ public class Projectile : MonoBehaviour
 {
     public float speed;
     public float damage;
-    private Vector3 targetPosition;
+    private Vector2 moveDirection;
     private Rigidbody2D rb;
+
+    public void Initialize(Vector2 direction)
+    {
+        moveDirection = direction;
+    }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 5f); // Destroy bullet after 5 sec
+        Destroy(gameObject, 5f); // Destroy the bullet after 5 seconds
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        Vector2 direction = (targetPosition - transform.position).normalized;
-        rb.velocity = direction * speed;
+        Move();
     }
 
-    public void SetTarget(Vector3 target)
+    private void Move()
     {
-        targetPosition = target;
+        transform.position += (Vector3)moveDirection * speed * Time.deltaTime;
     }
 
-    /*void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Enemy"))
+        // Check if the projectile hits an enemy
+        if (other.CompareTag("Enemy"))
         {
-            Enemy enemy = collision.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                enemy.TakeDamage(damage);
-            }
-            Destroy(gameObject); // Mermiyi yok et
+            // Destroy the projectile
+            Destroy(gameObject);
         }
-    } */
+    }
 }
