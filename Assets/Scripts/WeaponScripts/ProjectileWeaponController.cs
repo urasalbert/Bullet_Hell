@@ -10,6 +10,7 @@ public class ProjectileWeaponController : MonoBehaviour
     public float projectileSpeed;
     public float nextFireTime;
 
+    public GameObject parentObject;
     public GameObject projectilePrefab;
     public Transform firePoint;
 
@@ -43,7 +44,7 @@ public class ProjectileWeaponController : MonoBehaviour
         
 
         // Create the projectile
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
         Projectile projScript = projectile.GetComponent<Projectile>();
 
         projScript.Initialize(direction);

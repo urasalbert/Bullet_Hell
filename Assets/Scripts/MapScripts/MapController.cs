@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MapController : MonoBehaviour
 {
+    public GameObject parentObject;
     public List<GameObject> terrainChunks;
     public GameObject player;
     public float checkerRadius;
@@ -44,7 +45,7 @@ public class MapController : MonoBehaviour
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Right").position;  //Right
+                noTerrainPosition = currentChunk.transform.Find("Right").position;//Right
                 SpawnChunk();
             }
         }
@@ -52,7 +53,7 @@ public class MapController : MonoBehaviour
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Left").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Left").position;    //Left
+                noTerrainPosition = currentChunk.transform.Find("Left").position;//Left
                 SpawnChunk();
             }
         }
@@ -60,7 +61,7 @@ public class MapController : MonoBehaviour
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Up").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Up").position; //Up
+                noTerrainPosition = currentChunk.transform.Find("Up").position;//Up
                 SpawnChunk();
             }
         }
@@ -68,7 +69,7 @@ public class MapController : MonoBehaviour
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Down").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Down").position;    //Down
+                noTerrainPosition = currentChunk.transform.Find("Down").position;//Down
                 SpawnChunk();
             }
         }
@@ -76,7 +77,7 @@ public class MapController : MonoBehaviour
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right Up").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Right Up").position;   //Right up
+                noTerrainPosition = currentChunk.transform.Find("Right Up").position;//Right up
                 SpawnChunk();
             }
         }
@@ -84,7 +85,7 @@ public class MapController : MonoBehaviour
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right Down").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Right Down").position;  //Right down
+                noTerrainPosition = currentChunk.transform.Find("Right Down").position;//Right down
                 SpawnChunk();
             }
         }
@@ -92,7 +93,7 @@ public class MapController : MonoBehaviour
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Left Up").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Left Up").position;  //Left up
+                noTerrainPosition = currentChunk.transform.Find("Left Up").position;//Left up
                 SpawnChunk();
             }
         }
@@ -100,7 +101,7 @@ public class MapController : MonoBehaviour
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Left Down").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Left Down").position; //Left down
+                noTerrainPosition = currentChunk.transform.Find("Left Down").position;//Left down
                 SpawnChunk();
             }
         }
@@ -109,7 +110,7 @@ public class MapController : MonoBehaviour
     void SpawnChunk()
     {
         int rand = Random.Range(0, terrainChunks.Count);
-        latestChunk = Instantiate(terrainChunks[rand], noTerrainPosition, Quaternion.identity);
+        latestChunk = Instantiate(terrainChunks[rand], noTerrainPosition, Quaternion.identity, parentObject.transform);
         spawnedChunks.Add(latestChunk);
     }
 
