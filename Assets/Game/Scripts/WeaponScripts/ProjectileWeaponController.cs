@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ProjectileWeaponController : MonoBehaviour
 {
+    public static ProjectileWeaponController Instance { get; private set; }
+
     public float damage;
     public float range;
     public float fireRate;
@@ -21,6 +24,17 @@ public class ProjectileWeaponController : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
     }
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
     protected void PlayFireSound()
     {
         // Play fire sound 
@@ -40,7 +54,7 @@ public class ProjectileWeaponController : MonoBehaviour
         PlayFireSound();
 
         // Determine the direction based on the player's facing direction
-        Vector3 direction = playerMovement.moveDirection.x > 0 ? Vector3.right : Vector3.left;
+        Vector3 direction = playerMovement.lastHorizontalVector > 0 ? Vector3.right : Vector3.left;
         
 
         // Create the projectile

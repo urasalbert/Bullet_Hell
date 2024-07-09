@@ -41,7 +41,7 @@ public class ExperienceManager : MonoBehaviour
             totalExperience -= experienceToNextLevel;
             currentLevel++;
             experienceToNextLevel *= 1.2f; //Increase xp requirement by 20 percent at each level
-            textMeshProUGUI.text = currentLevel.ToString();
+            textMeshProUGUI.text = ("Level: ") + currentLevel.ToString();
             UpdateXPBar();
         }
     }
