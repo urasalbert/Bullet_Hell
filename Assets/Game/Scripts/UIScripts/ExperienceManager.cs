@@ -6,12 +6,26 @@ using UnityEngine.UI;
 
 public class ExperienceManager : MonoBehaviour
 {
+    public static ExperienceManager Instance { get; private set; }
+
     public float totalExperience;
     public int currentLevel = 1;
     public float experienceToNextLevel = 500;
     public Image xpBar;
     public TextMeshProUGUI textMeshProUGUI;
 
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
     private void Start()
     {
         UpdateXPBar();
@@ -21,13 +35,13 @@ public class ExperienceManager : MonoBehaviour
     {
         
 
-        if(Input.GetKeyDown("b")) // for testing
+        if(Input.GetKeyDown("b")) // For testing delete this later
         {
             AddExperience(10);
         }
     }
 
-    internal void AddExperience(float amount)
+    public void AddExperience(float amount)
     {
         totalExperience += amount;
         UpdateXPBar();

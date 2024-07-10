@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4590120118953341708}
   m_Layer: 0
   m_Name: PurpleProjectile
-  m_TagString: Untagged
+  m_TagString: Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,8 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264a5827a09ec334d8813592ddafa5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
-  damage: 11
+  speed: 7
+  damage: 25
 --- !u!50 &4590120118953341708
 Rigidbody2D:
   serializedVersion: 4

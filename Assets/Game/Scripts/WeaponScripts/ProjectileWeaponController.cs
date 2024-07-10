@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,11 +8,11 @@ public class ProjectileWeaponController : MonoBehaviour
 {
     public static ProjectileWeaponController Instance { get; private set; }
 
-    public float damage;
-    public float range;
-    public float fireRate;
-    public float projectileSpeed;
-    public float nextFireTime;
+    [NonSerialized] public float damage;
+    [NonSerialized] public float range;
+    [NonSerialized] public float fireRate = 1.5f;
+    [NonSerialized] public float projectileSpeed;
+    [NonSerialized] public float nextFireTime;
 
     public GameObject parentObject;
     public GameObject projectilePrefab;
@@ -55,14 +56,14 @@ public class ProjectileWeaponController : MonoBehaviour
 
         // Determine the direction based on the player's facing direction
         Vector3 direction = playerMovement.lastHorizontalVector > 0 ? Vector3.right : Vector3.left;
-        
+
 
         // Create the projectile
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
         Projectile projScript = projectile.GetComponent<Projectile>();
 
         projScript.Initialize(direction);
-        projScript.damage = damage;
-        projScript.speed = projectileSpeed;
+        damage = projScript.damage;
+        projectileSpeed = projScript.speed;
     }
 }

@@ -4,38 +4,35 @@ using UnityEngine;
 
 public class EnemyHealthManager : MonoBehaviour
 {
-    public static EnemyHealthManager Instance { get; private set; }
+    //Can't use singleton it's not working with clones
 
 
-    [SerializeField] internal float enemyMaxHealth = 100;
+    [SerializeField] internal float enemyMaxHealth = 1500;
     public float enemyCurrentHealth;
     [SerializeField] internal GameObject xpFragment;
-    [SerializeField] public GameObject parentObject;
+    //internal GameObject parentObject;
 
     private void Awake()
     {
         enemyCurrentHealth = enemyMaxHealth;
 
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        TakeDamage();
-    }
-    public  void TakeDamage()
-    {
-        enemyCurrentHealth -= ProjectileWeaponController.Instance.damage;
-        if (enemyCurrentHealth <= 0)
+        if (collision.CompareTag("Ammo"))
         {
-            Debug.Log("Damage dealed!");
+            TakeDamage();
+            Destroy(collision.gameObject);// Destroy after collision
+        }
+
+    }
+    public void TakeDamage()
+    {
+        enemyCurrentHealth -= ProjectileWeaponController.Instance.damage; // I have 2 colliders damage deal twice because of it
+        Debug.Log("Damage dealed!" + ProjectileWeaponController.Instance.damage);
+        if (enemyCurrentHealth <= 0)
+        {      
             Die();
         }
     }
@@ -43,6 +40,6 @@ public class EnemyHealthManager : MonoBehaviour
     internal void Die()
     {
         Destroy(gameObject);
-        Instantiate(xpFragment, transform.position, Quaternion.identity, parentObject.transform);
+        Instantiate(xpFragment, transform.position, Quaternion.identity);
     }
 }
