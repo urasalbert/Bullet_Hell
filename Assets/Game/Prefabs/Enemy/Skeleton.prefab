@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1732702549, guid: 421ffe260f2719342bf5821861075f9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -291,6 +291,3 @@ MonoBehaviour:
   - {fileID: 7254516665250300992, guid: 9efb7b3bf50664f428aace455ad1046c, type: 3}
   - {fileID: 5979786184570442799, guid: c42aadd2d86328a49bdfc170722d4de1, type: 3}
   - {fileID: 2243565040719367773, guid: 7a75aa082daae364587304b593857a7a, type: 3}
-  numberOfFragments: 3
-  explosionForce: 500
-  explosionRadius: 5

@@ -3,10 +3,13 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public List<Transform> spawners; 
-    public GameObject enemyPrefab;
-    public float spawnInterval = 2f; 
+    [SerializeField] internal List<Transform> spawners;
+    [SerializeField] internal GameObject enemyPrefab;
+    [SerializeField] internal GameObject rangedEnemyPrefab;
+    internal float spawnInterval = 2f;
+    internal float rangedSpawnInterval = 10f;
     private float nextSpawnTime;
+    private float nextRangedSpawnTime;
     private GameObject parentObject;
 
 
@@ -22,7 +25,28 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy();
             nextSpawnTime = Time.time + spawnInterval;
         }
+
+        if (Time.time >= nextRangedSpawnTime)
+        {
+            SpawnRangedEnemy();
+            nextRangedSpawnTime = Time.time + rangedSpawnInterval;
+        }
     }
+
+
+    void SpawnRangedEnemy()
+    {
+        if (spawners.Count == 0) return;// If there is no spawner just return 
+        else
+        {
+            int randomIndex = Random.Range(0, spawners.Count);
+            Transform selectedSpawner = spawners[randomIndex];
+
+            GameObject rangedEnemy = Instantiate(rangedEnemyPrefab, selectedSpawner.position, selectedSpawner.rotation, parentObject.transform);
+        }
+
+    }
+
 
     void SpawnEnemy()
     {

@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 0
   enemyCurrentHealth: 0
-  xpFragment: {fileID: 0}
+  xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
 --- !u!114 &-6861329257060185036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,4 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a6bf8338a5df747bfcc9afedaaec0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fragments: []
+  fragments:
+  - {fileID: 7254516665250300992, guid: 9efb7b3bf50664f428aace455ad1046c, type: 3}
+  - {fileID: 5979786184570442799, guid: c42aadd2d86328a49bdfc170722d4de1, type: 3}
+  - {fileID: 2243565040719367773, guid: 7a75aa082daae364587304b593857a7a, type: 3}
