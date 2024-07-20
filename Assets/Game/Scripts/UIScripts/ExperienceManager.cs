@@ -52,12 +52,17 @@ public class ExperienceManager : MonoBehaviour
     {
         if (totalExperience >= experienceToNextLevel)
         {
-            totalExperience -= experienceToNextLevel;
-            currentLevel++;
-            experienceToNextLevel *= 1.2f; //Increase xp requirement by 20 percent at each level
+            LevelUp();
             textMeshProUGUI.text = ("Level: ") + currentLevel.ToString();
             UpdateXPBar();
         }
+    }
+
+    private void LevelUp()
+    {
+        totalExperience -= experienceToNextLevel;
+        currentLevel++;
+        experienceToNextLevel *= 1.6f; //Increase xp requirement by 20 percent at each level
     }
 
     private void UpdateXPBar()

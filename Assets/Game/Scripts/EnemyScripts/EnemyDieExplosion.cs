@@ -40,10 +40,10 @@ public class EnemyDieExplosion : MonoBehaviour
         }
     }
 
-    private IEnumerator DestroyFragmentAfterTime(GameObject fragment, float delay) // Function to destroy gore objects 
+    private IEnumerator DestroyFragmentAfterTime(GameObject gameObject, float delay) // Function to destroy gore objects 
     {
         yield return new WaitForSeconds(delay);
-        Destroy(fragment);
+        Destroy(gameObject);
     }
 }
 
