@@ -17,12 +17,13 @@ GameObject:
   - component: {fileID: 8409989525420955754}
   - component: {fileID: 7108153052708731373}
   - component: {fileID: 2532787300107030508}
+  - component: {fileID: 1313230263568082389}
   m_Layer: 7
-  m_Name: Zombie
+  m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3477775895860359882
 Transform:
@@ -79,13 +80,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: -1315997151, guid: 0e7208dfe073f214d9ca51f218abc2f1, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1732702549, guid: 421ffe260f2719342bf5821861075f9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.3, y: 0.44}
+  m_Size: {x: 0.3, y: 0.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,7 +102,7 @@ Animator:
   m_GameObject: {fileID: 3460264748729301433}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 84fdcb74aca7372409756965a6998f10, type: 2}
+  m_Controller: {fileID: 9100000, guid: bdabd9a6aaf44a545af4feb564d9f041, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -176,8 +177,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.44}
-    newSize: {x: 0.3, y: 0.44}
+    oldSize: {x: 0.3, y: 0.46}
+    newSize: {x: 0.3, y: 0.46}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -248,8 +249,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.44}
-    newSize: {x: 0.3, y: 0.44}
+    oldSize: {x: 0.3, y: 0.46}
+    newSize: {x: 0.3, y: 0.46}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -273,3 +274,23 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  damageInterval: 1
+--- !u!114 &1313230263568082389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3460264748729301433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a6bf8338a5df747bfcc9afedaaec0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fragments:
+  - {fileID: 7254516665250300992, guid: 9efb7b3bf50664f428aace455ad1046c, type: 3}
+  - {fileID: 5979786184570442799, guid: c42aadd2d86328a49bdfc170722d4de1, type: 3}
+  - {fileID: 2243565040719367773, guid: 7a75aa082daae364587304b593857a7a, type: 3}
+  numberOfFragments: 3
+  explosionForce: 500
+  explosionRadius: 5

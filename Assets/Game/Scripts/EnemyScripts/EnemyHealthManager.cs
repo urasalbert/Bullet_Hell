@@ -7,7 +7,7 @@ public class EnemyHealthManager : MonoBehaviour
 {
     //Can't use singleton it's not working with clones
 
-
+    EnemyDieExplosion enemyDieExplosion;
     [SerializeField] internal float enemyMaxHealth = 1500;
     public float enemyCurrentHealth;
     [SerializeField] internal GameObject xpFragment;
@@ -18,6 +18,7 @@ public class EnemyHealthManager : MonoBehaviour
     {
         enemyCurrentHealth = enemyMaxHealth;
         isDead = false;
+        enemyDieExplosion = GetComponent<EnemyDieExplosion>();
 
         parentObject = GameObject.FindWithTag("Environment");
         if (parentObject == null)
@@ -50,6 +51,7 @@ public class EnemyHealthManager : MonoBehaviour
 
     internal void Die()
     {
+        enemyDieExplosion.GoreExplosion();
         Destroy(gameObject);
         Instantiate(xpFragment, transform.position, Quaternion.identity, parentObject.transform);//Create experience fragment after enemy dead
     }
