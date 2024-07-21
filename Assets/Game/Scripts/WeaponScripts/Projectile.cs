@@ -5,7 +5,6 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float speed;
-    public float damage;
     private Vector2 moveDirection;
     private Rigidbody2D rb;
 

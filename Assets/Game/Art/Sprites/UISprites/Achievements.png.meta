@@ -1,0 +1,3889 @@
+fileFormatVersion: 2
+guid: 384c7dbcab8ab2b4d9eb83328a3935ea
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Achievements_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e5d9932952a3243b37f42ffceeecb2
+      internalID: 2087590591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cbebb63c1332c45ba06486fcbfd983
+      internalID: 2002353745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5289397d7585e12459848800281be847
+      internalID: 256725805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad25eb432e530ae4881b0ee01f7d4ee0
+      internalID: 94536361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3814e54b4d9c2e446b135453ec0a274b
+      internalID: -838350173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b429772c6dae940944be2e822de886
+      internalID: -1106769890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74df3498185e278419159567f6c489cf
+      internalID: 798343304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32644561ac9a3340a8732a702a22119
+      internalID: -2051233249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_8
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b85d9e9381c324fb8749811aa83cca
+      internalID: 1415730001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_9
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d2f343c2212d240b81c1e612b685c4
+      internalID: 725822693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_10
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a26494a0e2da443992239fbe29f5b5
+      internalID: 335676750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_11
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ba7860d17f38a4e9ff784a00c494eb
+      internalID: 1355400206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_12
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298c7e19a743815469a848c880e93554
+      internalID: -1007284602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_13
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ed058e39ae15b479af1f9ff2e9d22e
+      internalID: 544215081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_14
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58cc08592ded3e4dbce2849579553fb
+      internalID: 1642764787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_15
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 726
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138fd16f48b233a46919c3d1616d0b89
+      internalID: -1542074623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d471f706842b64f85afbaff3eabcf5
+      internalID: -1083056518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73261a27ad8a904aa1c911f9195fc8e
+      internalID: 116070159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_18
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fabaddeccc1ef409f8498b85d6da94
+      internalID: 678915045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_19
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518920fe37ffd704ab2a39256ae1914e
+      internalID: -892012954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_20
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce8b6c23a9432e4faa291d56c23aaf2
+      internalID: -10128809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_21
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906b481d5d90adf459b1bf9a5c20cabd
+      internalID: 756064500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ede23387d409534ebfa0ca5825fe61c
+      internalID: -290406099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_23
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2c6635ce1e90447be30b7cd56978c5
+      internalID: -1790817993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_24
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd7805e6be2daa418511507a1008824
+      internalID: 1314267269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_25
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 594
+        width: 196
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31fae98f86b89a4a9d5a2010b861ea1
+      internalID: -1985912919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_26
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 594
+        width: 64
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04a4a762f942814c876b28f58a0b585
+      internalID: 1095914226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_27
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 594
+        width: 64
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303533a4384d278419ac65e64a152f8c
+      internalID: -137565531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_28
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb668237503ffb543b7ad818aec6de8b
+      internalID: -771676956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_29
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0d1533ff23b564cb8297e5cba35247
+      internalID: -631027798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400858da90601de45a4df0e21b58f835
+      internalID: -290366787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_31
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20eaa6e66ea54cf43a0d521f58f3181b
+      internalID: 1955183270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_32
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fffbe25e5a51a48bc380d58639d3fa
+      internalID: 1252498030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_33
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba0a9130d8cdbd4187bd5a9d40522df
+      internalID: -1966693954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_34
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503d3b187cec233469b44eb71e4fb5cd
+      internalID: 1450044441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_35
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0d1e89e69938f498e175e2432d52ec
+      internalID: 30908197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_36
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe85412b9f89c94e9ece4226ea8a150
+      internalID: 195575716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_37
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3fca611ec58b4469fa6225b21bd26b
+      internalID: 1681883317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_38
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdccf6d430756d34ba52989d8f88186e
+      internalID: -1837683120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_39
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57da0841679eec6429772b912c1ca777
+      internalID: 390761207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_40
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 594
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e97cd26d0313c42ae6c7f530342841
+      internalID: 485219625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463faf58da5830b41b9c5d4982b1d648
+      internalID: 1509554540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_42
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3145009ce383e9c4c8a4de9ba087a3e1
+      internalID: 1627869935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_43
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3a5b8f2e6b5ea4e8b86258bb362ddf
+      internalID: -1205084596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_44
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455dbf22d2e22ae4990535eb55835758
+      internalID: -1788306295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_45
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4982c373e6912a94298827494244978b
+      internalID: -1642889324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_46
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9461b6df339ef3347a05805c06d4b8b2
+      internalID: -1897502411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_47
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cb924fe66e54c4eb47d9abaae45678
+      internalID: 2088563655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_48
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecaa749c6165454db18271fa7f60613
+      internalID: 1814133433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_49
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2c0b2aa79c4554d9221477d0eef879
+      internalID: -1830164538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_50
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592da3803903d4241b98b00608fe3082
+      internalID: 1969773103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_51
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4bcc64a6ba7254f9e189ce0f5e2a31
+      internalID: 602285791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_52
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73118b9d767e60743b1ae89c8e7c1929
+      internalID: 1129825835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_53
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02186f2907e65fc42b70dfa116d558cb
+      internalID: -1520674597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_54
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd4d1f04df8b9f43bed4f924d7d1051
+      internalID: 276841680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_55
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0368670c8438a114d9f7de18dd313054
+      internalID: 473808604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_56
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 528
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0c28a6c74c083449e4a2ebb39a7b22
+      internalID: 1138709986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9513b620abcdab41b5132ac0c6fe8c4
+      internalID: -1359392230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_58
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444e4e30f46365840a7cc393b34fee3b
+      internalID: 410523368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_59
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9d06b10c2b0e848b04b8cc2b46539d
+      internalID: 2081030721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_60
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20fad657a5969c3449d6f0533ebeb74b
+      internalID: 1707146279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_61
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70aa435c49694e41bdd1f84d9faf7a9
+      internalID: 1921370631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_62
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6644deb497b2042408204c37bb40defb
+      internalID: 301334100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_63
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8562a8170af4ef45b55911ca73f1e75
+      internalID: 1158743619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_64
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bdc0cf3cbf13144b14ac93f0190619
+      internalID: 229784288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_65
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad9ce32bfd43e04d9b9794a6e099794
+      internalID: 1684678203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_66
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d6955ea1f0b5441a3706db73737f90
+      internalID: 1686396978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_67
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4724297da6c7d48ba80dce74ea6a36
+      internalID: -2062449362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_68
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c808d83446c154aa311a3aba87b04f
+      internalID: 997654456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_69
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df23acdd4cba47c4e880d397c6c07374
+      internalID: 1563034471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_70
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce21ec0c6602794aa7008e9eaaa535e
+      internalID: -1188425393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_71
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae72bf625bdc7e4cb4a1d4e1e75a244
+      internalID: -1281201085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_72
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 462
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c707a9b6c72514283d0c59104d1700
+      internalID: 1024593913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962365630bfc3e2429db1a7eb4db14b9
+      internalID: -1832294308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_74
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f3b27985963864987524a34672bd81
+      internalID: 735370691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_75
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d8ca7200db1db4c97375fabaf437ae
+      internalID: -763369985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_76
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1266fcc43f6b1a94b952e8d2cb09dcf0
+      internalID: 2095813637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_77
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edf4bc261e0b4a47acdce3f9347c8e6
+      internalID: 405186378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_78
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562f858d66ccbdb4a94801009ce0ff8b
+      internalID: 1346151748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_79
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9911e6185612c4290dd7bb515bd8c6
+      internalID: 1762541748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_80
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f11bd4e4e3e8834da430310c07e0647
+      internalID: 45323706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_81
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312f78382c8993d4790af0f089a7e06e
+      internalID: 1722323830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_82
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0181244a68e37cc4cac0997ca36b4269
+      internalID: -1680632720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_83
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc55437850f3ff49b91b5131137adba
+      internalID: 400578114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_84
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088254c859fb3cb4a953b962565fa918
+      internalID: 1553706090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_85
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c692c432d87f34196586ebbcc64a3b
+      internalID: 1141794335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_86
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a0974667279ab49a3535fd964e482f
+      internalID: 1549370300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_87
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05468e2eee8fc1540a45a07cb03a42b0
+      internalID: -649785723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_88
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 396
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e12c71f8e55dc47b85556353c4e66e
+      internalID: 1948721031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283598875a4644041a54a345d28a1a02
+      internalID: -1626364985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_90
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359950bc2d5fefa428727258a47f4321
+      internalID: 1656361485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_91
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e2aa7d96eeea742b63dbfa663a464e
+      internalID: 1998227217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_92
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8e352cf9d972c48bd2915f8c357910
+      internalID: -1869353664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_93
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba8ead61c756d64bbe1c04cf993d97e
+      internalID: -1696416538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_94
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3e659580f1afe4fa58cd145a5c6ec8
+      internalID: -1415871366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_95
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a49a6de935eb746bdd0e902bdfc9a5
+      internalID: -721399065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_96
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b61b724bd259334bb6171366622fd38
+      internalID: -2032686840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_97
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432c0826ae5f61a4d9a02f638d8ea085
+      internalID: -442590665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_98
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a70f55df464b84783eb59c0d918421
+      internalID: -844913013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_99
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1dcb1e7d499f74d873e78734c9b3b7
+      internalID: -197903810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_100
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c70bcad6d734c64e8cadec778e6a556
+      internalID: 24220240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_101
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c288b1690cfe1a64fb4f68c9e55e88ce
+      internalID: -1253076471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_102
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35d892ed84851f47affa7025a5e7c12
+      internalID: -825226708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_103
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4ee28f64c175046a53fb8cdf4a1157
+      internalID: 373982201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_104
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890b2181b5cdeb64dae14af7aa287fb0
+      internalID: 599321096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a181790cf56515e41963a820468fa5e5
+      internalID: -1902229188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_106
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903d054a02d243d489edbc9c4a5503c9
+      internalID: 1136447761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_107
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e62a9132adb5d4980e7c77c6bf2a18
+      internalID: 967173802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_108
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a5252618f0dcc4cb6d1631a2902d47
+      internalID: 1138600221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_109
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5e8f506a9313b4fa280ead15b21f3e
+      internalID: -1076816922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_110
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e79f697ad77a8f45a0e9350da10ffcb
+      internalID: -1557081213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_111
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe888870cd457c14bbac35c100e60449
+      internalID: 1033843112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_112
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec94b66d2c600e4ba3b657ca53e5cff
+      internalID: 528135403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_113
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4a48d2fdb6d06469329ee882128724
+      internalID: 634352815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_114
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18a132d2d4fc894ab44dec3af8f0acc
+      internalID: -1149184405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_115
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06abfce7c04aea543adb2b1da0ea52e0
+      internalID: -1574876327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_116
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa54d14253d777c45a571f7d24731573
+      internalID: -1867250316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_117
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7bcd92ed5835f40ada4f1de8077141
+      internalID: 295711944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_118
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce10a05129eeb041af621949e3a8f80
+      internalID: 108652854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_119
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cad4b9b274945242a6510a613c84858
+      internalID: 1662642752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_120
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 264
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd37576adfa1914e812f7d395c50fe1
+      internalID: -311387294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_121
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347288d07cf613743b171e7494dcb1c4
+      internalID: -569343682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_122
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97984da960cbffe46b0e50762f79c806
+      internalID: -1608068913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_123
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22b211316283c944b3b45e57018a14b
+      internalID: 1908124846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_124
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc24e192d3fb4f44b2a7075ee34c206
+      internalID: -1928267540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_125
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02dd5c86f2963604caab267ac9e48422
+      internalID: -1680270145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_126
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97eb9e44c4462a84a99f3917d78f55fd
+      internalID: 1847689342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_127
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92250acf109464499f5bcd32527fc04
+      internalID: -2123165287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_128
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4253fce9e41d91442a84087da6b2d07d
+      internalID: -692246566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_129
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460193679fb5e674fbafc2a93b13516b
+      internalID: -409893619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_130
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fce0a0b8851242458cdbcc076e81618
+      internalID: 1774520131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_131
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538895ff01c0aaa41af3bc35b491a9e6
+      internalID: 1585731159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_132
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d81c0ec9be2d147909c0980333e540
+      internalID: 1227564811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_133
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c014c3eaa9ea2dd478a65975a1c4977f
+      internalID: -1981268049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_134
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5484035ac8092f438353a342d704cb2
+      internalID: -2035400767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_135
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738f43947d6782a4daa3275b6752081d
+      internalID: 278389691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_136
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 198
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba9b13858bfb2a4db1dd12712f905bf
+      internalID: 1120191768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_137
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07de592407746943b9aad1e13fb4b34
+      internalID: 584525757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_138
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57443901f8038b54296d30633e3aec6b
+      internalID: 990693383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_139
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fec000245630944a6f10114e32edf9
+      internalID: 638575233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_140
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6bd4eb13063b7478babb17e10a3bd8
+      internalID: -1000916369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_141
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c8522e91ad59247a26d1fa62db30a3
+      internalID: 152323503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_142
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e201d02103f4e1045bfb337a08931871
+      internalID: 1674853599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_143
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981b5de69a7827d4aad67dd94ec69eb6
+      internalID: 368572714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_144
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3caa908c849ea468d442a26fae01dc
+      internalID: 548301060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_145
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec221e134d7c6cf4a9621c8708480bd7
+      internalID: 790583200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_146
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0597a80da14984196005915384899f
+      internalID: -265187294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_147
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b00d92ab40cd140987551b5e0050c8
+      internalID: 3587025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_148
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a01222dad7a9ad4fa9116e8574bc4df
+      internalID: -395115658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_149
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf8081f9c8541e43a87d87c2dfe215a
+      internalID: 219529355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_150
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b67ddc5331ccdc49a496c1915f88150
+      internalID: 410467551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_151
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e597f5c157bab04f9c8dfd5a0ce19cc
+      internalID: 1395833939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_152
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 132
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e134770a26aa2074a8b58aee0b9a5abc
+      internalID: 2123536438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_153
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e129ec6e05f9c5498c3e966f6024b80
+      internalID: 2043087961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_154
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39fc8091878eb64e8f689252778b140
+      internalID: -681484468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_155
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afdfbc6304774a4186b82a6ecba550f
+      internalID: -824834470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_156
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfe0635d1875f64c8d054b6c0030f01
+      internalID: 1147207673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_157
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3426eb3269d4e4849a1e94f43229a06d
+      internalID: 1059321255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_158
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a98e3a100236834e97889f875acf32a
+      internalID: -555749719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_159
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551c17129f1b89a4d99f1be0d63ce9ce
+      internalID: 2056639100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_160
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f1b273cc1bf034aae15c4866ff4b14
+      internalID: 485855144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_161
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd4ea47f822d8c419771e13ecef8a08
+      internalID: 1480766281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_162
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158756ed2ec8f624dac4d8611ae9a52b
+      internalID: 1855622247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_163
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9d54d485dea4245b845964f9c924a6
+      internalID: -1271132992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_164
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9246fe043e4c9f4592b3ce7bab7b64b
+      internalID: -132701996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_165
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3e118d81d292643a62c7c6e8dd9c17
+      internalID: 163076287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_166
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0550c97516635654ca7065962268cd8c
+      internalID: 850084863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_167
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c3ef4ab85240841ae7e5e8127667a9
+      internalID: 1173902768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_168
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 66
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbaa676ddcc3c3c43b6d7cb37292f975
+      internalID: -785482580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_169
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998f644a08b67134082bf273ce1bb00a
+      internalID: -1548270751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_170
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2207ccdc2bb60cf4eb1845c1a958972b
+      internalID: 586269764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Achievements_0: 2087590591
+      Achievements_1: 2002353745
+      Achievements_10: 335676750
+      Achievements_100: 24220240
+      Achievements_101: -1253076471
+      Achievements_102: -825226708
+      Achievements_103: 373982201
+      Achievements_104: 599321096
+      Achievements_105: -1902229188
+      Achievements_106: 1136447761
+      Achievements_107: 967173802
+      Achievements_108: 1138600221
+      Achievements_109: -1076816922
+      Achievements_11: 1355400206
+      Achievements_110: -1557081213
+      Achievements_111: 1033843112
+      Achievements_112: 528135403
+      Achievements_113: 634352815
+      Achievements_114: -1149184405
+      Achievements_115: -1574876327
+      Achievements_116: -1867250316
+      Achievements_117: 295711944
+      Achievements_118: 108652854
+      Achievements_119: 1662642752
+      Achievements_12: -1007284602
+      Achievements_120: -311387294
+      Achievements_121: -569343682
+      Achievements_122: -1608068913
+      Achievements_123: 1908124846
+      Achievements_124: -1928267540
+      Achievements_125: -1680270145
+      Achievements_126: 1847689342
+      Achievements_127: -2123165287
+      Achievements_128: -692246566
+      Achievements_129: -409893619
+      Achievements_13: 544215081
+      Achievements_130: 1774520131
+      Achievements_131: 1585731159
+      Achievements_132: 1227564811
+      Achievements_133: -1981268049
+      Achievements_134: -2035400767
+      Achievements_135: 278389691
+      Achievements_136: 1120191768
+      Achievements_137: 584525757
+      Achievements_138: 990693383
+      Achievements_139: 638575233
+      Achievements_14: 1642764787
+      Achievements_140: -1000916369
+      Achievements_141: 152323503
+      Achievements_142: 1674853599
+      Achievements_143: 368572714
+      Achievements_144: 548301060
+      Achievements_145: 790583200
+      Achievements_146: -265187294
+      Achievements_147: 3587025
+      Achievements_148: -395115658
+      Achievements_149: 219529355
+      Achievements_15: -1542074623
+      Achievements_150: 410467551
+      Achievements_151: 1395833939
+      Achievements_152: 2123536438
+      Achievements_153: 2043087961
+      Achievements_154: -681484468
+      Achievements_155: -824834470
+      Achievements_156: 1147207673
+      Achievements_157: 1059321255
+      Achievements_158: -555749719
+      Achievements_159: 2056639100
+      Achievements_16: -1083056518
+      Achievements_160: 485855144
+      Achievements_161: 1480766281
+      Achievements_162: 1855622247
+      Achievements_163: -1271132992
+      Achievements_164: -132701996
+      Achievements_165: 163076287
+      Achievements_166: 850084863
+      Achievements_167: 1173902768
+      Achievements_168: -785482580
+      Achievements_169: -1548270751
+      Achievements_17: 116070159
+      Achievements_170: 586269764
+      Achievements_18: 678915045
+      Achievements_19: -892012954
+      Achievements_2: 256725805
+      Achievements_20: -10128809
+      Achievements_21: 756064500
+      Achievements_22: -290406099
+      Achievements_23: -1790817993
+      Achievements_24: 1314267269
+      Achievements_25: -1985912919
+      Achievements_26: 1095914226
+      Achievements_27: -137565531
+      Achievements_28: -771676956
+      Achievements_29: -631027798
+      Achievements_3: 94536361
+      Achievements_30: -290366787
+      Achievements_31: 1955183270
+      Achievements_32: 1252498030
+      Achievements_33: -1966693954
+      Achievements_34: 1450044441
+      Achievements_35: 30908197
+      Achievements_36: 195575716
+      Achievements_37: 1681883317
+      Achievements_38: -1837683120
+      Achievements_39: 390761207
+      Achievements_4: -838350173
+      Achievements_40: 485219625
+      Achievements_41: 1509554540
+      Achievements_42: 1627869935
+      Achievements_43: -1205084596
+      Achievements_44: -1788306295
+      Achievements_45: -1642889324
+      Achievements_46: -1897502411
+      Achievements_47: 2088563655
+      Achievements_48: 1814133433
+      Achievements_49: -1830164538
+      Achievements_5: -1106769890
+      Achievements_50: 1969773103
+      Achievements_51: 602285791
+      Achievements_52: 1129825835
+      Achievements_53: -1520674597
+      Achievements_54: 276841680
+      Achievements_55: 473808604
+      Achievements_56: 1138709986
+      Achievements_57: -1359392230
+      Achievements_58: 410523368
+      Achievements_59: 2081030721
+      Achievements_6: 798343304
+      Achievements_60: 1707146279
+      Achievements_61: 1921370631
+      Achievements_62: 301334100
+      Achievements_63: 1158743619
+      Achievements_64: 229784288
+      Achievements_65: 1684678203
+      Achievements_66: 1686396978
+      Achievements_67: -2062449362
+      Achievements_68: 997654456
+      Achievements_69: 1563034471
+      Achievements_7: -2051233249
+      Achievements_70: -1188425393
+      Achievements_71: -1281201085
+      Achievements_72: 1024593913
+      Achievements_73: -1832294308
+      Achievements_74: 735370691
+      Achievements_75: -763369985
+      Achievements_76: 2095813637
+      Achievements_77: 405186378
+      Achievements_78: 1346151748
+      Achievements_79: 1762541748
+      Achievements_8: 1415730001
+      Achievements_80: 45323706
+      Achievements_81: 1722323830
+      Achievements_82: -1680632720
+      Achievements_83: 400578114
+      Achievements_84: 1553706090
+      Achievements_85: 1141794335
+      Achievements_86: 1549370300
+      Achievements_87: -649785723
+      Achievements_88: 1948721031
+      Achievements_89: -1626364985
+      Achievements_9: 725822693
+      Achievements_90: 1656361485
+      Achievements_91: 1998227217
+      Achievements_92: -1869353664
+      Achievements_93: -1696416538
+      Achievements_94: -1415871366
+      Achievements_95: -721399065
+      Achievements_96: -2032686840
+      Achievements_97: -442590665
+      Achievements_98: -844913013
+      Achievements_99: -197903810
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
