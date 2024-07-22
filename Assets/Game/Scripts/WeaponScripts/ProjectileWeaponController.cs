@@ -34,6 +34,8 @@ public class ProjectileWeaponController : MonoBehaviour
         else
         {
             Instance = this;
+            //Normalize projectile prefab at start
+            projectilePrefab.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
     }
     protected void PlayFireSound()
@@ -47,6 +49,15 @@ public class ProjectileWeaponController : MonoBehaviour
         {
             Fire();
         }
+
+        if (ProjectileScaleSkill.Instance.isClicked)
+        {
+            // Change prefab scale if projectile scale skill is taken
+            GameObject scaledProjectilePrefab = projectilePrefab;
+
+            scaledProjectilePrefab.transform.localScale = new Vector3(3, 3, 3);
+        }
+        else return;
     }
 
     public void Fire()
@@ -72,6 +83,7 @@ public class ProjectileWeaponController : MonoBehaviour
 
             Projectile projScript2 = projectile2.GetComponent<Projectile>();
             projScript2.Initialize(direction);
+            float projectileSpeed2 = projScript2.speed;
         }
         else
         {

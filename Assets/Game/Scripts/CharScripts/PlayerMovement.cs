@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //Movement
-    public float moveSpeed;
+    [NonSerialized] public float moveSpeed = 5;
     [HideInInspector]
     public float lastHorizontalVector, lastVerticalVector;
     Rigidbody2D rb;
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = new Vector2(moveX, moveY).normalized;
 
         //Storing last vectors for better char flip animations
-        if(moveDirection.x != 0)
+        if (moveDirection.x != 0)
         {
             lastHorizontalVector = moveDirection.x;
         }
@@ -47,6 +48,18 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        if (MovementSkill.Instance.isClicked)//If player already clicked the movement speed skill
+        {
+            //Increase the movement amount 
+            moveSpeed = 6f;
+            rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        }
+        else
+        {
+            //Normalized movement speed
+            moveSpeed = 5f;
+            rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        }
+
     }
 }

@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 155767444}
   - component: {fileID: 155767443}
   - component: {fileID: 155767442}
+  - component: {fileID: 155767447}
   m_Layer: 5
   m_Name: Skill2
   m_TagString: Untagged
@@ -455,6 +456,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 155767447}
+        m_TargetAssemblyTypeName: ProjectileScaleSkill, Assembly-CSharp
+        m_MethodName: GetTheSkill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &155767445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +506,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155767440}
   m_CullTransparentMesh: 1
+--- !u!114 &155767447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155767440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9298606329abce34486435a25c237958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillTreeUI: {fileID: 386321624}
+  projectilePrefab: {fileID: 1906022409}
 --- !u!1 &217763778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,6 +1276,7 @@ GameObject:
   - component: {fileID: 670660266}
   - component: {fileID: 670660268}
   - component: {fileID: 670660267}
+  - component: {fileID: 670660269}
   m_Layer: 5
   m_Name: Skill1
   m_TagString: Untagged
@@ -1272,7 +1300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440, y: -200}
+  m_AnchoredPosition: {x: -316.8, y: -200}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &670660264
@@ -1419,7 +1447,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 670660266}
         m_TargetAssemblyTypeName: Skill, Assembly-CSharp
-        m_MethodName: ClickEvent
+        m_MethodName: updateUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1429,6 +1457,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 670660269}
+        m_TargetAssemblyTypeName: MovementSkill, Assembly-CSharp
+        m_MethodName: GetTheSkill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &670660269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670660262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2732ea014daf1514ba57aebad5252366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillTreeUI: {fileID: 386321624}
 --- !u!1 &876617375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,6 +1918,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291555556}
   m_CullTransparentMesh: 1
+--- !u!1001 &1317012710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3911975530353044238, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_Name
+      value: PurpleProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245816388716178300, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.397526
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245816388716178300, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3459125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245816388716178300, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245816388716178300, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245816388716178300, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245816388716178300, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245816388716178300, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245816388716178300, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245816388716178300, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245816388716178300, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
 --- !u!1 &1359855802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,7 +2734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0841e84a9d12a3e438c1edabf4a9eb29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   lastHorizontalVector: 0
   lastVerticalVector: 0
   moveDirection: {x: 0, y: 0}
@@ -2804,6 +2913,11 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.27, y: 0.4}
   m_Direction: 0
+--- !u!1 &1906022409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3911975530353044238, guid: 2eac122c0071ebf4f9647b55a5a46798, type: 3}
+  m_PrefabInstance: {fileID: 1317012710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1956850444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,3 +3202,4 @@ SceneRoots:
   - {fileID: 524736190}
   - {fileID: 1359855806}
   - {fileID: 2040781011}
+  - {fileID: 1317012710}

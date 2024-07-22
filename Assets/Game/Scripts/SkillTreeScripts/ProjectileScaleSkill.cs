@@ -1,0 +1,46 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ProjectileScaleSkill : MonoBehaviour
+{
+    public static ProjectileScaleSkill Instance { get; private set; } //Singleton instance
+
+    [NonSerialized] public bool isClicked = false;
+    internal Image SkillImage;
+    public GameObject skillTreeUI;
+    bool isAlreadyTaken = false;
+    [SerializeField] private GameObject projectilePrefab;
+
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+            SkillImage = GetComponent<Image>();
+        }
+    }
+
+    public void GetTheSkill()
+    {
+        isClicked = true;
+        SkillImage.color = new Color32(0x38, 0x38, 0x38, 0xFF); // Darken color after clicking       
+        if (isAlreadyTaken == false)
+        {
+            Time.timeScale = 1;
+            skillTreeUI.SetActive(false);
+            isAlreadyTaken = true;
+        }
+        else
+        {
+            return;
+        }
+    }
+}
