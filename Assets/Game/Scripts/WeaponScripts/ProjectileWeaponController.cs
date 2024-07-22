@@ -62,12 +62,12 @@ public class ProjectileWeaponController : MonoBehaviour
         if (ProjectileSkill.Instance.isClicked == true)
         {
             // If the player received the ability that increases the first projectile, two projectiles will be thrown.
-            GameObject projectile1 = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
-            GameObject projectile2 = Instantiate(projectilePrefab, firePoint.position + new Vector3(0, 1f, 0), Quaternion.identity, parentObject.transform);
+            GameObject projectile1 = Instantiate(projectilePrefab, firePoint.position + new Vector3(0, -0.2f, 0), Quaternion.identity, parentObject.transform);
+            GameObject projectile2 = Instantiate(projectilePrefab, firePoint.position + new Vector3(0, 0.2f, 0), Quaternion.identity, parentObject.transform);
 
             // Access and initialize the Projectile script for both projectiles
             Projectile projScript1 = projectile1.GetComponent<Projectile>();
-            projScript1.Initialize(direction);            
+            projScript1.Initialize(direction);
             float projectileSpeed1 = projScript1.speed;
 
             Projectile projScript2 = projectile2.GetComponent<Projectile>();

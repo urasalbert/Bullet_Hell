@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +8,10 @@ public class ProjectileSkill : MonoBehaviour
 {
     public static ProjectileSkill Instance { get; private set; }
 
-    public bool isClicked = false;
+    [NonSerialized] public bool isClicked = false;
     internal Image SkillImage;
+    public GameObject skillTreeUI;
+    bool isAlreadyTaken = false;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -22,17 +25,19 @@ public class ProjectileSkill : MonoBehaviour
         }
     }
 
-
-
-    private void Start()
-    {
-
-    }
-
     public void GetTheSkill()
     {
         isClicked = true;
-        SkillImage.color = new Color32(0x38, 0x38, 0x38, 0xFF); // Darken color after clicking
-
+        SkillImage.color = new Color32(0x38, 0x38, 0x38, 0xFF); // Darken color after clicking       
+        if(isAlreadyTaken == false)
+        {
+            Time.timeScale = 1;
+            skillTreeUI.SetActive(false);
+            isAlreadyTaken=true;
+        }
+        else
+        {
+            return;
+        }
     }
 }
