@@ -33,7 +33,7 @@ public class EnemyHealthManager : MonoBehaviour
         if (collision.CompareTag("Ammo"))
         {
             TakeDamage();
-            Destroy(collision.gameObject);// Destroy after collision
+            // Do not destroy it here for pierce skill, if you do pierce breaks
         }
 
     }

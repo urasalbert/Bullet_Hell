@@ -4,14 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ProjectileScaleSkill : MonoBehaviour
+public class PierceSkill : MonoBehaviour
 {
-    public static ProjectileScaleSkill Instance { get; private set; } //Singleton instance
-
+    public static PierceSkill Instance { get; private set; }
     [NonSerialized] public bool isClicked = false;
-    internal Image SkillImage;
-    public GameObject skillTreeUI;
-    bool isAlreadyTaken = false;
+    private Image SkillImage;
+    private bool isAlreadyTaken;
+    [SerializeField] private GameObject skillTreeUI;
 
 
     private void Awake()
@@ -26,6 +25,7 @@ public class ProjectileScaleSkill : MonoBehaviour
             SkillImage = GetComponent<Image>();
         }
     }
+
 
     public void GetTheSkill()
     {

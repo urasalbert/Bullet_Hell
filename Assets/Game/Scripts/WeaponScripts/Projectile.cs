@@ -32,10 +32,15 @@ public class Projectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the projectile hits an enemy
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && PierceSkill.Instance.isClicked == false)
         {
             // Destroy the projectile
             Destroy(gameObject);
         }
+        else
+        {
+            return;
+        }
+            
     }
 }
