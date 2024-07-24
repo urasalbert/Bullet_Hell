@@ -20,6 +20,13 @@ public class EnemySpawner : MonoBehaviour
     }
     void Update()
     {
+        if (GameTimer.Instance.minutes % 5 == 0 && GameTimer.Instance.minutes > 2) // If the time is not less than 3 minutes
+        {
+            GameTimer.Instance.TriggerEvent("Spawn Rate Increased");
+            spawnInterval -= 0.4f; // Decrease the spawn interval by 0.5f for melee enemies
+        }
+
+
         if (Time.time >= nextSpawnTime)
         {
             SpawnEnemy();

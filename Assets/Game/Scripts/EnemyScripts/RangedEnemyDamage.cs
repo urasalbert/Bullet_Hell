@@ -18,6 +18,6 @@ public class RangedEnemyDamage : MonoBehaviour
     {
         // Dealing damage
         HealthBarManager.Instance.IncomeDamage(25);
-        Debug.Log("Damage Dealed: " + HealthBarManager.Instance.currentPlayerHealth);
+        //Debug.Log("Damage Dealed: " + HealthBarManager.Instance.currentPlayerHealth);
     }
 }

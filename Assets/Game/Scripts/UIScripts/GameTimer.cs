@@ -1,18 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.EventSystems;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class GameTimer : MonoBehaviour
 {
+    public static GameTimer Instance { get; private set; }// Singleton instance
+
     private float elapsedTime = 0;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI eventText;
+    [NonSerialized] public float minutes;
 
-
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
     private void Start()
     {
         StartCoroutine(StartTimer());
+        TriggerEvent("xd min event"); //Test code for timer events (if i don't remember xd)
     }
 
 
@@ -42,17 +59,24 @@ public class GameTimer : MonoBehaviour
     }
     void CheckEvents(float seconds)
     {
-        int minutes = Mathf.FloorToInt(seconds / 60f); // Checking how many minutes it's been
-
-        if (minutes == 0)
-        {
-            TriggerEvent("0 min passed!"); //Test code for timer events (if i don't remember xd)
-        }
+        minutes = Mathf.FloorToInt(seconds / 60f); // Checking how many minutes it's been
     }
 
-    void TriggerEvent(string message)
+    public void TriggerEvent(string eventMessage)
     {
-        eventText.text = message;
-        Debug.Log(message);
+        //It does not need to take a minute value
+        //its adjustment is made when calling the event triggers.
+        Debug.Log(eventMessage);
+        eventText.text = eventMessage;
+        Invoke("ClearEventText", 5f);
+    }
+    void ClearEventText()
+    {
+        eventText.text = null;
+    }
+
+    void GameFinish()
+    {
+        // After 20 minutes the game will end, its codes are here
     }
 }
