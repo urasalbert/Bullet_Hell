@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1061795281417175996}
   - component: {fileID: 1883317485312425720}
   - component: {fileID: 7950836911345867222}
+  - component: {fileID: 1545026196761740787}
   m_Layer: 0
   m_Name: SkeletonArcher
   m_TagString: Enemy
@@ -240,3 +241,48 @@ MonoBehaviour:
   - {fileID: 7254516665250300992, guid: 9efb7b3bf50664f428aace455ad1046c, type: 3}
   - {fileID: 5979786184570442799, guid: c42aadd2d86328a49bdfc170722d4de1, type: 3}
   - {fileID: 2243565040719367773, guid: 7a75aa082daae364587304b593857a7a, type: 3}
+--- !u!61 &1545026196761740787
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6596506985508194959}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6, y: 0.6}
+    newSize: {x: 0.6, y: 0.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.6}
+  m_EdgeRadius: 0

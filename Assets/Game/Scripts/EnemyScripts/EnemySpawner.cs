@@ -4,10 +4,15 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] internal List<Transform> spawners;
+    [SerializeField] internal List<Transform> archerSpawners;
+
     [SerializeField] internal GameObject enemyPrefab;
     [SerializeField] internal GameObject rangedEnemyPrefab;
+    [SerializeField] internal GameObject archerEnemyPrefab;
+
     internal float spawnInterval = 2f;
     internal float rangedSpawnInterval = 10f;
+
     private float nextSpawnTime;
     private float nextRangedSpawnTime;
     private GameObject parentObject;
@@ -61,9 +66,14 @@ public class EnemySpawner : MonoBehaviour
 
         //Choose random spawner 
         int randomIndex = Random.Range(0, spawners.Count);
+        int randomArcherIndex = Random.Range(0, archerSpawners.Count);
+
         Transform selectedSpawner = spawners[randomIndex];
+        Transform selectedArcherSpawner = archerSpawners[randomArcherIndex];
 
         GameObject enemy = Instantiate(enemyPrefab, selectedSpawner.position, selectedSpawner.rotation, parentObject.transform);
+        GameObject archerenemy = Instantiate(archerEnemyPrefab, selectedArcherSpawner.position,
+            selectedArcherSpawner.rotation, parentObject.transform);
 
         //Checking health manager script for debugging
         //Null Check

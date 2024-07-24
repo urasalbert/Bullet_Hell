@@ -78,7 +78,7 @@ public class ArcherSkeleton : MonoBehaviour
         }
 
         // Create bow prefab
-        GameObject arrowPrefab = Instantiate(projectilePrefab, transform.position, rotation);
+        GameObject arrowPrefab = Instantiate(projectilePrefab, transform.position, rotation, parentObject.transform);
 
         if (arrowPrefab == null) // Null check
         {
