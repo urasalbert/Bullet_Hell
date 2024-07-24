@@ -12,8 +12,6 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     [HideInInspector] public Vector2 moveDirection;
 
-
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

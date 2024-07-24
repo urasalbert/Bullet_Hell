@@ -42,14 +42,14 @@ public class ArcherSkeleton : MonoBehaviour
 
         if (timeSinceLastShot >= fireInterval)
         {
-            //animator.SetBool("", true);
+            animator.SetBool("isShooting", true);
 
             FireProjectile();
             timeSinceLastShot = 0f; // Reset the timer
         }
         else
         {
-            //animator.SetBool("", false);
+            animator.SetBool("isShooting", false);
         }
     }
 

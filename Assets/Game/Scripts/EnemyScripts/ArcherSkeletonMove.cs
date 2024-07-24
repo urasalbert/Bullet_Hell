@@ -7,10 +7,12 @@ public class ArcherSkeletonMove : MonoBehaviour
     private Transform playerTransform;
     private float moveSpeed = 2f;
     private float stopDistance = 7f;
+    private Animator animator;
 
     private void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
 
         if (playerTransform == null) // Null check
         {
@@ -26,7 +28,12 @@ public class ArcherSkeletonMove : MonoBehaviour
 
         if (distanceToPlayer > stopDistance)
         {
+            animator.SetBool("isMoving", true);
             MoveTowardsPlayer();
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
         }
     }
 
