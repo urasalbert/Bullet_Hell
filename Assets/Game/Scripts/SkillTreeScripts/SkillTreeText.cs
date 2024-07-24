@@ -27,13 +27,15 @@ public class SkillTreeText : MonoBehaviour
     void Start()
     {
         // Add texts with index
-        SkillNameText = new string[] { "Projectile Hell", "Movement Rush", "Bigger Better", "Pierce All of Them"};
+        SkillNameText = new string[] { "Projectile Hell", "Movement Rush", "Bigger Better", "Pierce All of Them",
+        "One Up One Down"};
         SkillDescriptionText = new string[]
         {
             "Adds one projectile to the number of projectiles already owned.",
             "Provides some increase in movement speed.",
             "Makes the projectiles you have bigger.",
-            "Your bullets shatter all enemies but disappear fast."          
+            "Your bullets shatter all enemies but disappear fast.",
+            "You send one more projectile up and down."
         };
 
         // Add all Skill components in SkillHolder to SkillList

@@ -66,11 +66,40 @@ public class ProjectileWeaponController : MonoBehaviour
         PlayFireSound();
 
         // Determine the direction based on the player's facing direction
-        Vector3 direction = playerMovement.lastHorizontalVector > 0 ? Vector3.right : Vector3.left;
+        Vector3 direction;
+        Vector3 diagonalDirectionUp;
+        Vector3 diagonalDirectionDown;
 
+        if (playerMovement.lastHorizontalVector > 0)
+        {
+            direction = Vector3.right;
+            diagonalDirectionUp = (Vector3.right + Vector3.up).normalized;
+            diagonalDirectionDown = (Vector3.right + Vector3.down).normalized;
+        }
+        else
+        {
+            direction = Vector3.left;
+            diagonalDirectionUp = (Vector3.left + Vector3.up).normalized;
+            diagonalDirectionDown = (Vector3.left + Vector3.down).normalized;
+        }
+
+        if (ProjectileSkill2.Instance.isClicked)
+        {
+            //Upper diagonal
+            GameObject projectile1 = Instantiate(projectilePrefab, firePoint.position + new Vector3(0, -0.2f, 0), Quaternion.identity, parentObject.transform);
+            Projectile projScript1 = projectile1.GetComponent<Projectile>();
+            projScript1.Initialize(diagonalDirectionUp);
+            float projectileSpeed1 = projScript1.speed;
+
+            //Down diagonal
+            GameObject projectile2 = Instantiate(projectilePrefab, firePoint.position + new Vector3(0, 0.2f, 0), Quaternion.identity, parentObject.transform);
+            Projectile projScript2 = projectile2.GetComponent<Projectile>();
+            projScript2.Initialize(diagonalDirectionDown);
+            float projectileSpeed2 = projScript2.speed;
+        }
 
         // ProjectileSkill.Instance.isClicked control
-        if (ProjectileSkill.Instance.isClicked == true)
+        if (ProjectileSkill.Instance.isClicked)
         {
             // If the player received the ability that increases the first projectile, two projectiles will be thrown.
             GameObject projectile1 = Instantiate(projectilePrefab, firePoint.position + new Vector3(0, -0.2f, 0), Quaternion.identity, parentObject.transform);
