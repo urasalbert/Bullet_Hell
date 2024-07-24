@@ -77,10 +77,10 @@ public class ArcherSkeleton : MonoBehaviour
             rotation = Quaternion.Euler(0, 0, 90); // Yön sol
         }
 
-        // Ok prefab'ýný oluþtur
+        // Create bow prefab
         GameObject arrowPrefab = Instantiate(projectilePrefab, transform.position, rotation);
 
-        if (arrowPrefab == null) // Ok prefab'ýnýn oluþturulup oluþturulmadýðýný kontrol et
+        if (arrowPrefab == null) // Null check
         {
             Debug.LogError("Projeyi oluþturmakta baþarýsýz");
             return;
@@ -88,7 +88,7 @@ public class ArcherSkeleton : MonoBehaviour
 
         Rigidbody2D rb = arrowPrefab.GetComponent<Rigidbody2D>();
 
-        if (rb != null) // Rigidbody2D varsa, hýzý ayarla
+        if (rb != null) // If there is rb set speed
         {
             rb.velocity = direction * projectileSpeed;
         }
@@ -97,7 +97,7 @@ public class ArcherSkeleton : MonoBehaviour
             Debug.LogError("Projede rb bileþeni bulunamadý");
         }
 
-        Destroy(arrowPrefab, 10f); // Lag'i önlemek için yok et
+        Destroy(arrowPrefab, 10f); // Destroy it for antilag
     }
     void SpriteDirectionChecker()
     {
