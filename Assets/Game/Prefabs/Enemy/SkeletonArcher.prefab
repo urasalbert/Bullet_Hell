@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1883317485312425720}
   - component: {fileID: 7950836911345867222}
   - component: {fileID: 1545026196761740787}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SkeletonArcher
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -284,5 +284,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.6}
+  m_Size: {x: 0.28, y: 0.48}
   m_EdgeRadius: 0
