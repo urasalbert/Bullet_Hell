@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc8d37641e61d964b89a83253f3dfff6
+guid: d6711ec8cde49c7409f0557bc28c227c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 613739d435da51d4cad64cc664b2108f
-      internalID: 987931847
+      spriteID: 23327834e43811e40bb3b250b854a4c5
+      internalID: -261483521
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46202a93fa12e794d83804ac97a52367
-      internalID: 1406583987
+      spriteID: fcd4388f7fd6ecc44b8ec524cb81e178
+      internalID: -1588427988
       vertices: []
       indices: 
       edges: []
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e32e44c881ff7a74599bf21e95bec575
-      internalID: -2103392562
+      spriteID: 08f83d5bad5da6a41bbb9592e978c344
+      internalID: -2126195239
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24e259ea0634f314dbc694deca48eaa4
-      internalID: -761979345
+      spriteID: 552214fe25669ad4e8ec3ae0780e4188
+      internalID: -329303406
       vertices: []
       indices: 
       edges: []
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9137e0c3a09f74e498060d1989bd02b6
-      internalID: -1293468518
+      spriteID: efd1e814d43a9e0489930ff7df2dce49
+      internalID: -1056076746
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5908980905d553244827710b622cb2b3
-      internalID: 379291411
+      spriteID: a733d92be499ff643b013747f1d5ee3f
+      internalID: 1118285164
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI_BossBar_0: 987931847
-      UI_BossBar_1: 1406583987
-      UI_BossBar_2: -2103392562
-      UI_BossBar_3: -761979345
-      UI_BossBar_4: -1293468518
-      UI_BossBar_5: 379291411
+      UI_BossBar_0: -261483521
+      UI_BossBar_1: -1588427988
+      UI_BossBar_2: -2126195239
+      UI_BossBar_3: -329303406
+      UI_BossBar_4: -1056076746
+      UI_BossBar_5: 1118285164
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

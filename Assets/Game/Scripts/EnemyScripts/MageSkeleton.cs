@@ -19,7 +19,7 @@ public class MageSkeleton : MonoBehaviour
         _playerTransform = FindObjectOfType<PlayerMovement>().transform;
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        parentObject = parentObject = GameObject.FindWithTag("Environment");
+        parentObject = GameObject.FindWithTag("Environment");
     }
 
     void Start()
