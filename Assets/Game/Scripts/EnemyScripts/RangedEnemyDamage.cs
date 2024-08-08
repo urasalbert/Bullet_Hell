@@ -12,7 +12,12 @@ public class RangedEnemyDamage : MonoBehaviour
             DamagePlayer();
             Destroy(this.gameObject);
         }
+        else if (collision.CompareTag("Shield"))//For shield skill object if collide 
+        {
+            Destroy(this.gameObject);
+        }
     }
+
 
     private void DamagePlayer()
     {

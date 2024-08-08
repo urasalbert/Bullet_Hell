@@ -69,6 +69,7 @@ public class ProjectileWeaponController : MonoBehaviour
         Vector3 direction;
         Vector3 diagonalDirectionUp;
         Vector3 diagonalDirectionDown;
+        //Vector3 backDirection; 
 
         if (playerMovement.lastHorizontalVector > 0)
         {
@@ -98,6 +99,16 @@ public class ProjectileWeaponController : MonoBehaviour
             float projectileSpeed2 = projScript2.speed;
         }
 
+        //Behind projectile if skill already taken shoot projectiles behind the player
+        if (BackProjectile.Instance.isClicked)
+        {
+            GameObject backProjectile = Instantiate(projectilePrefab, firePoint.position + new Vector3(0, 0.2f, 0), Quaternion.identity, parentObject.transform);
+            Projectile procscript = backProjectile.GetComponent<Projectile>();
+
+            procscript.Initialize(-direction);
+            float projectileSpeed = procscript.speed;
+
+        }
         // ProjectileSkill.Instance.isClicked control
         if (ProjectileSkill.Instance.isClicked)
         {

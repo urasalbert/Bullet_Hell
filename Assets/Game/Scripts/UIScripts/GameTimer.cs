@@ -29,7 +29,7 @@ public class GameTimer : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartTimer());
-        TriggerEvent("xd min event"); //Test code for timer events (if i don't remember xd)
+        TriggerEvent("Event text goes here"); //Test code for timer events (if i don't remember xd)
     }
 
 

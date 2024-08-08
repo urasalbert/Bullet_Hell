@@ -9,6 +9,7 @@ public class ArcherSkeletonMove : MonoBehaviour
     private float stopDistance = 7f;
     private Animator animator;
 
+
     private void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -33,7 +34,8 @@ public class ArcherSkeletonMove : MonoBehaviour
         }
         else
         {
-            animator.SetBool("isMoving", false);
+            animator.SetTrigger("isShoot");
+            //animator.SetBool("isMoving", false);
         }
     }
 
