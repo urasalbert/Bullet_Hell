@@ -28,7 +28,7 @@ public class SkillTreeText : MonoBehaviour
     {
         // Add texts with index
         SkillNameText = new string[] { "Projectile Hell", "Movement Rush", "Bigger Better", "Pierce All of Them",
-        "One Up One Down", "Check Behind", "Shield", "More Numbers"};
+        "One Up One Down", "Check Behind", "Shields Up", "More Numbers", "Tank All of Them"};
         SkillDescriptionText = new string[]
         {
             "Adds one projectile to the number of projectiles already owned.",
@@ -39,7 +39,8 @@ public class SkillTreeText : MonoBehaviour
             "You send one projectile behind you.",
             "You gain a shield of flame that blocks projectile damage, " +
             "shuts off for 5 seconds in case of collision ",
-            "You gain more damage."
+            "You gain more damage.",
+            "You have more health."
         };
 
         // Add all Skill components in SkillHolder to SkillList

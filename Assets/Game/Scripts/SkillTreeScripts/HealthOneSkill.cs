@@ -2,25 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ProjectileSkill : MonoBehaviour
+public class HealthOneSkill : MonoBehaviour
 {
-    public static ProjectileSkill Instance { get; private set; }
+    public static HealthOneSkill Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
+    private float pointCost = 1;
     [NonSerialized] public bool isClicked = false;
-    internal Image SkillImage;
-    public GameObject skillTreeUI;
-    bool isAlreadyTaken = false;
-    float pointCost = 3;
+    private Image SkillImage;
+    private bool isAlreadyTaken;
+    [SerializeField] private GameObject skillTreeUI;
+
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(this);
         }
         else
         {
@@ -28,9 +29,10 @@ public class ProjectileSkill : MonoBehaviour
             SkillImage = GetComponent<Image>();
         }
     }
+
+
     public void GetTheSkill()
     {
-        //Check if the player has enough skill points
         if (ExperienceManager.Instance.skillPoints >= pointCost)
         {
             isClicked = true;
@@ -40,13 +42,11 @@ public class ProjectileSkill : MonoBehaviour
                 Time.timeScale = 1;
                 skillTreeUI.SetActive(false);
                 isAlreadyTaken = true;
-                ExperienceManager.Instance.skillPoints -= pointCost; //Subtract the score of the
-                                                                     //received ability from the total score
+                ExperienceManager.Instance.skillPoints -= pointCost;
                 ExperienceManager.Instance.UpdateSkillPoints();
             }
             else
             {
-
                 skillCostText.text = ("You don't have enough points to get the ability");
             }
         }
@@ -55,9 +55,8 @@ public class ProjectileSkill : MonoBehaviour
             return;
         }
     }
-
     public void SkillCost()
-    {      
+    {
         if (isClicked)
         {
             skillCostText.text = ("You have already took the ability ");
@@ -76,3 +75,4 @@ public class ProjectileSkill : MonoBehaviour
         skillCostText.text = (" ");
     }
 }
+

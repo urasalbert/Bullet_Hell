@@ -38,8 +38,7 @@ public class ExperienceManager : MonoBehaviour
 
     private void Update()
     {
-        
-
+      
         if(Input.GetKeyDown("b")) // For testing delete this later
         {
             AddExperience(10);
@@ -58,6 +57,7 @@ public class ExperienceManager : MonoBehaviour
         if (totalExperience >= experienceToNextLevel)
         {
             LevelUp();
+            UpdateSkillPoints();
             textMeshProUGUI.text = ("Level: ") + currentLevel.ToString();
             skillPointUIText.text = ("Skill Points: ") + skillPoints.ToString();
             UpdateXPBar();
@@ -74,7 +74,10 @@ public class ExperienceManager : MonoBehaviour
         skillTreeUI.SetActive(true);
 
     }
-
+    public void UpdateSkillPoints()
+    {
+        skillPointUIText.text = ("SkillPoint: ") + skillPoints.ToString();
+    }
     private void UpdateXPBar()
     {
         if (xpBar != null)
