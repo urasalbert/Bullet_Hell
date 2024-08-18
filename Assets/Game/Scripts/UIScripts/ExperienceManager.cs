@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,8 +14,9 @@ public class ExperienceManager : MonoBehaviour
     public float experienceToNextLevel = 500;
     public Image xpBar;
     public TextMeshProUGUI textMeshProUGUI;
+    public TextMeshProUGUI skillPointUIText;
     public GameObject skillTreeUI;
-
+    public float skillPoints = 0;
 
     private void Awake()
     {
@@ -26,6 +28,7 @@ public class ExperienceManager : MonoBehaviour
         {
             Instance = this;
             skillTreeUI.SetActive(false);
+            skillPoints = 0;
         }
     }
     private void Start()
@@ -56,6 +59,7 @@ public class ExperienceManager : MonoBehaviour
         {
             LevelUp();
             textMeshProUGUI.text = ("Level: ") + currentLevel.ToString();
+            skillPointUIText.text = ("Skill Points: ") + skillPoints.ToString();
             UpdateXPBar();
         }
     }
@@ -64,9 +68,11 @@ public class ExperienceManager : MonoBehaviour
     {
         totalExperience -= experienceToNextLevel;
         currentLevel++;
+        skillPoints++;
         experienceToNextLevel *= 1.6f; //Increase xp requirement by 20 percent at each level
         Time.timeScale = 0;
         skillTreeUI.SetActive(true);
+
     }
 
     private void UpdateXPBar()
