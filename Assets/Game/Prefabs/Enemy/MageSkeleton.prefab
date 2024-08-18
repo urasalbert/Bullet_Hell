@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f769e37a9faf80f42b1ff55c9d305232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMaxHealth: 0
+  enemyMaxHealth: 50
   enemyCurrentHealth: 0
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
 --- !u!114 &-6861329257060185036

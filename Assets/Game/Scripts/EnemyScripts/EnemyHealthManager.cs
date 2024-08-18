@@ -39,9 +39,19 @@ public class EnemyHealthManager : MonoBehaviour
     }
     public void TakeDamage()
     {
-        enemyCurrentHealth -= ProjectileWeaponController.Instance.damage; // I have 2 colliders damage deal twice because of it
-        //If I have one collider damage deal once 
-        //Debug.Log("Damage dealed!" + ProjectileWeaponController.Instance.damage);
+        //If player took the first damage skill in skill tree add 20 more points to the damage
+        if (MoreDamageOneSkill.Instance.isClicked)
+        {
+            enemyCurrentHealth -= ProjectileWeaponController.Instance.damage + 20;
+        }
+        else
+        {
+            enemyCurrentHealth -= ProjectileWeaponController.Instance.damage; 
+            // I have 2 colliders damage deal twice because of it                                                                             
+            //If I have one collider damage deal once                                                                           
+            //Debug.Log("Damage dealed!" + ProjectileWeaponController.Instance.damage);
+        }
+
         if (enemyCurrentHealth <= 0)
         {
             Die();
