@@ -8,11 +8,12 @@ public class HealthBarManager : MonoBehaviour
 {
     public static HealthBarManager Instance { get; private set; }
 
-    internal float currentPlayerHealth;
+    internal float currentPlayerHealth = 100;
     internal float maxPlayerHealth = 100;
     internal bool isDead;
     [SerializeField] internal Image healthFill;
 
+    private bool isMaxHealthIncreased = false;
 
     private void Awake()
     {
@@ -23,10 +24,9 @@ public class HealthBarManager : MonoBehaviour
         else
         {
             Instance = this;
+            isDead = false;
+            currentPlayerHealth = maxPlayerHealth;
         }
-
-        currentPlayerHealth = maxPlayerHealth;
-        isDead = false;
     }
 
     void Update()
@@ -35,23 +35,34 @@ public class HealthBarManager : MonoBehaviour
         {
             Die();
         }
+
+        UpdateHealth();
     }
 
     void UpdateHealth()
     {
+        if (HealthOneSkill.Instance.isClicked && !isMaxHealthIncreased)
+        {
+            maxPlayerHealth = 200;
+            isMaxHealthIncreased = true;
+            currentPlayerHealth = maxPlayerHealth;
+        }
+
         if (healthFill != null)
         {
-            healthFill.fillAmount = currentPlayerHealth / 100;
+            healthFill.fillAmount = currentPlayerHealth / maxPlayerHealth;
         }
     }
+
     public void IncomeDamage(float damage)
     {
         currentPlayerHealth -= damage;
         UpdateHealth();
-
+        Debug.Log("Current player health: " + currentPlayerHealth);
     }
+
     void Die()
     {
-        //Die Script Goes Here
+        //Die script goes here
     }
 }

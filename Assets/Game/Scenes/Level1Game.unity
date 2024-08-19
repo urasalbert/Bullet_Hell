@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 155767442}
   - component: {fileID: 155767447}
   m_Layer: 5
-  m_Name: Skill2
+  m_Name: ProjectileScale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 619927654}
   - component: {fileID: 619927653}
   m_Layer: 5
-  m_Name: Skill8
+  m_Name: MoreHealth1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1885,7 +1885,7 @@ GameObject:
   - component: {fileID: 670660267}
   - component: {fileID: 670660269}
   m_Layer: 5
-  m_Name: Skill1
+  m_Name: MovementSpeed1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2167,7 +2167,7 @@ GameObject:
   - component: {fileID: 775843416}
   - component: {fileID: 775843415}
   m_Layer: 5
-  m_Name: Skill4
+  m_Name: UpDownProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2822,7 +2822,7 @@ GameObject:
   - component: {fileID: 1041491922}
   - component: {fileID: 1041491925}
   m_Layer: 5
-  m_Name: Skill3
+  m_Name: Pierce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3594,7 +3594,7 @@ GameObject:
   - component: {fileID: 1361012949}
   - component: {fileID: 1361012951}
   m_Layer: 5
-  m_Name: Skill
+  m_Name: MoreProjectile1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3839,7 +3839,7 @@ GameObject:
   - component: {fileID: 1468774533}
   - component: {fileID: 1468774538}
   m_Layer: 5
-  m_Name: Skill6
+  m_Name: ShieldUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4417,7 +4417,7 @@ GameObject:
   - component: {fileID: 1698897547}
   - component: {fileID: 1698897552}
   m_Layer: 5
-  m_Name: Skill7
+  m_Name: MoreDamage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5088,7 +5088,7 @@ GameObject:
   - component: {fileID: 1872729200}
   - component: {fileID: 1872729205}
   m_Layer: 5
-  m_Name: Skill5
+  m_Name: BackProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5157,6 +5157,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1872729205}
+          m_TargetAssemblyTypeName: BackProjectile, Assembly-CSharp
+          m_MethodName: SkillCost
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -5164,6 +5176,18 @@ MonoBehaviour:
         - m_Target: {fileID: 1872729200}
           m_TargetAssemblyTypeName: Skill, Assembly-CSharp
           m_MethodName: RemoveText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1872729205}
+          m_TargetAssemblyTypeName: BackProjectile, Assembly-CSharp
+          m_MethodName: ClearSkillCost
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5291,6 +5315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ebe047bc12a7242ab64a46f1b8533a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillCostText: {fileID: 0}
   skillTreeUI: {fileID: 386321624}
 --- !u!1 &1900373887
 GameObject:
