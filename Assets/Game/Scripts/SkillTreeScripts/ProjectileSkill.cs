@@ -11,11 +11,13 @@ public class ProjectileSkill : MonoBehaviour
     public static ProjectileSkill Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
+    float pointCost = 3;
+
     [NonSerialized] public bool isClicked = false;
     internal Image SkillImage;
     public GameObject skillTreeUI;
     bool isAlreadyTaken = false;
-    float pointCost = 3;
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)

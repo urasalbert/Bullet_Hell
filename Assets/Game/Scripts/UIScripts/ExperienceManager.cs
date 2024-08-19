@@ -59,7 +59,6 @@ public class ExperienceManager : MonoBehaviour
             LevelUp();
             UpdateSkillPoints();
             textMeshProUGUI.text = ("Level: ") + currentLevel.ToString();
-            skillPointUIText.text = ("Skill Points: ") + skillPoints.ToString();
             UpdateXPBar();
         }
     }
