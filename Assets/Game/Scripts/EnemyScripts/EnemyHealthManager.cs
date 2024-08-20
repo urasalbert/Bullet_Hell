@@ -8,7 +8,7 @@ public class EnemyHealthManager : MonoBehaviour
     //Can't use singleton it's not working with clones
 
     EnemyDieExplosion enemyDieExplosion;
-    [SerializeField] internal float enemyMaxHealth = 1500;
+    [SerializeField] internal float enemyMaxHealth;
     public float enemyCurrentHealth;
     [SerializeField] internal GameObject xpFragment;
     [NonSerialized] public bool isDead;
@@ -37,16 +37,24 @@ public class EnemyHealthManager : MonoBehaviour
         }
 
     }
+    internal float damage1 = 50, damage2 = 70;
     public void TakeDamage()
     {
         //If player took the first damage skill in skill tree add 20 more points to the damage
         if (MoreDamageOneSkill.Instance.isClicked)
         {
-            enemyCurrentHealth -= ProjectileWeaponController.Instance.damage + 20;
+            enemyCurrentHealth -= damage1;
+            Debug.Log("More damage one is working");
+        }
+        if (MoreDamageTwoSkill.Instance.isClicked)
+        {
+            enemyCurrentHealth -= damage2;
+            Debug.Log("More damage two is working");
         }
         else
         {
-            enemyCurrentHealth -= ProjectileWeaponController.Instance.damage; 
+            enemyCurrentHealth -= ProjectileWeaponController.Instance.damage;
+            Debug.Log("More damage skills is not working");
             // I have 2 colliders damage deal twice because of it                                                                             
             //If I have one collider damage deal once                                                                           
             //Debug.Log("Damage dealed!" + ProjectileWeaponController.Instance.damage);
@@ -56,7 +64,6 @@ public class EnemyHealthManager : MonoBehaviour
         {
             Die();
             isDead = true;
-
         }
     }
 

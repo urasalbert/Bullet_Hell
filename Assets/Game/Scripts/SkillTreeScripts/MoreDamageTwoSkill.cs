@@ -5,23 +5,25 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MovementSkill : MonoBehaviour
+public class MoreDamageTwoSkill : MonoBehaviour
 {
-    public static MovementSkill Instance { get; private set; }
+    public static MoreDamageTwoSkill Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
-    float pointCost = 2;
+    float pointCost = 1;
 
     [NonSerialized] public bool isClicked = false;
-    [SerializeField] private GameObject skillTreeUI;
-    private bool isAlreadyTaken = false;
-    private Image SkillImage;
+
+    internal Image SkillImage;
+    public GameObject skillTreeUI;
+    bool isAlreadyTaken = false;
+
 
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -29,7 +31,6 @@ public class MovementSkill : MonoBehaviour
             SkillImage = GetComponent<Image>();
         }
     }
-
     public void GetTheSkill()
     {
         //Check if the player has enough skill points
@@ -78,3 +79,4 @@ public class MovementSkill : MonoBehaviour
         skillCostText.text = (" ");
     }
 }
+
