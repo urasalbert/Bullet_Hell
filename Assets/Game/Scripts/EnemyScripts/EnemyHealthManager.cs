@@ -37,7 +37,7 @@ public class EnemyHealthManager : MonoBehaviour
         }
 
     }
-    internal float damage1 = 50, damage2 = 70;
+    internal float damage1 = 50, damage2 = 70, damage3 = 100;
     public void TakeDamage()
     {
         //If player took the first damage skill in skill tree add 20 more points to the damage
@@ -50,6 +50,11 @@ public class EnemyHealthManager : MonoBehaviour
         {
             enemyCurrentHealth -= damage2;
             Debug.Log("More damage two is working");
+        }
+        if(MoreDamageThreeSkill.Instance.isClicked)
+        {
+            enemyCurrentHealth -= damage3;
+            Debug.Log("More damage three is working");
         }
         else
         {

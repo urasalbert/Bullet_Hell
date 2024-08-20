@@ -3,22 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class ShieldSkill : MonoBehaviour
+public class MoreDamageThreeSkill : MonoBehaviour
 {
-    public static ShieldSkill Instance { get; private set; }
+    public static MoreDamageThreeSkill Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
-    float pointCost = 5;
+    float pointCost = 9;
 
     [NonSerialized] public bool isClicked = false;
 
     internal Image SkillImage;
     public GameObject skillTreeUI;
     bool isAlreadyTaken = false;
-
 
 
     private void Awake()

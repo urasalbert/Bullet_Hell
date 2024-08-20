@@ -10,7 +10,7 @@ public class MoreDamageTwoSkill : MonoBehaviour
     public static MoreDamageTwoSkill Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
-    float pointCost = 1;
+    float pointCost = 5;
 
     [NonSerialized] public bool isClicked = false;
 
