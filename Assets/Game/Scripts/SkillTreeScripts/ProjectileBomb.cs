@@ -10,7 +10,7 @@ public class ProjectileBomb : MonoBehaviour
     public static ProjectileBomb Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
-    float pointCost = 1;
+    float pointCost = 7;
 
     [NonSerialized] public bool isClicked = false;
 

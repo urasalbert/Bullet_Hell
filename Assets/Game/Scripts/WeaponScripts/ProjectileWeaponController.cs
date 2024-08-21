@@ -19,6 +19,8 @@ public class ProjectileWeaponController : MonoBehaviour
     public GameObject greenProjectilePrefab;
     public Transform firePoint;
 
+    internal float elapsedTime = 0;
+
     private PlayerMovement playerMovement;
 
     void Start()
@@ -46,6 +48,17 @@ public class ProjectileWeaponController : MonoBehaviour
 
     private void Update()
     {
+        //Timer for projectile bomb skill
+        if (elapsedTime <= 5)
+        {
+            elapsedTime += Time.deltaTime;           
+        }
+        else
+        {
+            elapsedTime = 0;
+            ProjectileBombFire();
+        }
+
         if (Time.time >= nextFireTime)
         {
             Fire();
@@ -60,7 +73,73 @@ public class ProjectileWeaponController : MonoBehaviour
         }
         else return;
     }
+    public void ProjectileBombFire()
+    {
+        //Projectile bomb projectiles
+        if (ProjectileBomb.Instance.isClicked)
+        {
+            Vector3 up, down, diagonalDown, diagonalUp,
+            diagonalBackUp, diagonalBackDown, left, right;
 
+            up = (Vector3.up).normalized;
+            down = (Vector3.down).normalized;
+            diagonalUp = (Vector3.right + Vector3.up).normalized;
+            diagonalDown = (Vector3.right + Vector3.down).normalized;
+            diagonalBackUp = (Vector3.left + Vector3.up).normalized;
+            diagonalBackDown = (Vector3.left + Vector3.down).normalized;
+            right = (Vector3.right).normalized;
+            left = (Vector3.left).normalized;
+
+            // Up
+            GameObject projectileUp = Instantiate(greenProjectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
+            Projectile projScriptUp = projectileUp.GetComponent<Projectile>();
+            projScriptUp.Initialize(up);
+            float projectileSpeedUp = projScriptUp.speed;
+
+            // Down
+            GameObject projectileDown = Instantiate(greenProjectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
+            Projectile projScriptDown = projectileDown.GetComponent<Projectile>();
+            projScriptDown.Initialize(down);
+            float projectileSpeedDown = projScriptDown.speed;
+
+            // Diagonal Up
+            GameObject projectileDiagonalUp = Instantiate(greenProjectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
+            Projectile projScriptDiagonalUp = projectileDiagonalUp.GetComponent<Projectile>();
+            projScriptDiagonalUp.Initialize(diagonalUp);
+            float projectileSpeedDiagonalUp = projScriptDiagonalUp.speed;
+
+            // Diagonal Down
+            GameObject projectileDiagonalDown = Instantiate(greenProjectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
+            Projectile projScriptDiagonalDown = projectileDiagonalDown.GetComponent<Projectile>();
+            projScriptDiagonalDown.Initialize(diagonalDown);
+            float projectileSpeedDiagonalDown = projScriptDiagonalDown.speed;
+
+            // Diagonal Back Up
+            GameObject projectileDiagonalBackUp = Instantiate(greenProjectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
+            Projectile projScriptDiagonalBackUp = projectileDiagonalBackUp.GetComponent<Projectile>();
+            projScriptDiagonalBackUp.Initialize(diagonalBackUp);
+            float projectileSpeedDiagonalBackUp = projScriptDiagonalBackUp.speed;
+
+            // Diagonal Back Down
+            GameObject projectileDiagonalBackDown = Instantiate(greenProjectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
+            Projectile projScriptDiagonalBackDown = projectileDiagonalBackDown.GetComponent<Projectile>();
+            projScriptDiagonalBackDown.Initialize(diagonalBackDown);
+            float projectileSpeedDiagonalBackDown = projScriptDiagonalBackDown.speed;
+
+            // Right
+            GameObject projectileRight = Instantiate(greenProjectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
+            Projectile projScriptRight = projectileRight.GetComponent<Projectile>();
+            projScriptRight.Initialize(right);
+            float projectileSpeedRight = projScriptRight.speed;
+
+            // Left
+            GameObject projectileLeft = Instantiate(greenProjectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);
+            Projectile projScriptLeft = projectileLeft.GetComponent<Projectile>();
+            projScriptLeft.Initialize(left);
+            float projectileSpeedLeft = projScriptLeft.speed;
+
+        }
+    }
     public void Fire()
     {
         nextFireTime = Time.time + 1f / fireRate;
@@ -75,7 +154,7 @@ public class ProjectileWeaponController : MonoBehaviour
         //Set directions for up and down projectiles 
         //It does not matter where the character looks
         Up = (Vector3.up).normalized;
-        Down = (Vector3.down).normalized;
+        Down = (Vector3.down).normalized;       
 
         // Determine the direction based on the player's facing direction
         if (playerMovement.lastHorizontalVector > 0)

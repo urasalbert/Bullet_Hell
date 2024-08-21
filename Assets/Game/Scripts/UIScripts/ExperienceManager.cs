@@ -41,7 +41,7 @@ public class ExperienceManager : MonoBehaviour
       
         if(Input.GetKeyDown("b")) // For testing delete this later
         {
-            AddExperience(10);
+            AddExperience(1000);
         }
     }
 
