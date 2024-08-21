@@ -197,11 +197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f769e37a9faf80f42b1ff55c9d305232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMaxHealth: 5000
+  enemyMaxHealth: 100
   enemyCurrentHealth: 0
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
-  damage1: 0
-  damage2: 0
 --- !u!114 &1061795281417175996
 MonoBehaviour:
   m_ObjectHideFlags: 0

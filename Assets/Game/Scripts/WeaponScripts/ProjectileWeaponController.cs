@@ -16,6 +16,7 @@ public class ProjectileWeaponController : MonoBehaviour
 
     public GameObject parentObject;
     public GameObject projectilePrefab;
+    public GameObject greenProjectilePrefab;
     public Transform firePoint;
 
     private PlayerMovement playerMovement;
@@ -65,12 +66,18 @@ public class ProjectileWeaponController : MonoBehaviour
         nextFireTime = Time.time + 1f / fireRate;
         PlayFireSound();
 
-        // Determine the direction based on the player's facing direction
         Vector3 direction;
         Vector3 diagonalDirectionUp;
         Vector3 diagonalDirectionDown;
-        //Vector3 backDirection; 
+        Vector3 Up;
+        Vector3 Down;
 
+        //Set directions for up and down projectiles 
+        //It does not matter where the character looks
+        Up = (Vector3.up).normalized;
+        Down = (Vector3.down).normalized;
+
+        // Determine the direction based on the player's facing direction
         if (playerMovement.lastHorizontalVector > 0)
         {
             direction = Vector3.right;
@@ -99,6 +106,23 @@ public class ProjectileWeaponController : MonoBehaviour
             float projectileSpeed2 = projScript2.speed;
         }
 
+        if (UprightandDownrightSkill.Instance.isClicked)
+        {
+            //Upright proc
+            GameObject projectileUp = Instantiate(projectilePrefab, firePoint.position + new Vector3(0, 0, 0), Quaternion.identity, parentObject.transform);
+            Projectile projUp = projectileUp.GetComponent<Projectile>();
+
+            projUp.Initialize(Up);
+            float projectileUpSpeed = projUp.speed;
+
+            //Downright proc
+            GameObject projectileDown = Instantiate(projectilePrefab, firePoint.position + new Vector3(0, 0, 0), Quaternion.identity, parentObject.transform);
+            Projectile projDown = projectileDown.GetComponent<Projectile>();
+
+            projDown.Initialize(Down);
+            float projectileDownSpeed = projDown.speed;
+        }
+
         //Behind projectile if skill already taken shoot projectiles behind the player
         if (BackProjectile.Instance.isClicked)
         {
@@ -109,6 +133,7 @@ public class ProjectileWeaponController : MonoBehaviour
             float projectileSpeed = procscript.speed;
 
         }
+
         // ProjectileSkill.Instance.isClicked control
         if (ProjectileSkill.Instance.isClicked)
         {
@@ -125,6 +150,7 @@ public class ProjectileWeaponController : MonoBehaviour
             projScript2.Initialize(direction);
             float projectileSpeed2 = projScript2.speed;
         }
+
         else
         {
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity, parentObject.transform);

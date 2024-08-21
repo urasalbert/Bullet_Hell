@@ -44,17 +44,17 @@ public class EnemyHealthManager : MonoBehaviour
         if (MoreDamageOneSkill.Instance.isClicked)
         {
             enemyCurrentHealth -= damage1;
-            Debug.Log("More damage one is working");
+            //Debug.Log("More damage one is working");
         }
         if (MoreDamageTwoSkill.Instance.isClicked)
         {
             enemyCurrentHealth -= damage2;
-            Debug.Log("More damage two is working");
+            //Debug.Log("More damage two is working");
         }
         if(MoreDamageThreeSkill.Instance.isClicked)
         {
             enemyCurrentHealth -= damage3;
-            Debug.Log("More damage three is working");
+            //Debug.Log("More damage three is working");
         }
         else
         {
