@@ -5,12 +5,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RejectDeathSkill : MonoBehaviour
+public class PetOneSkill : MonoBehaviour
 {
-    public static RejectDeathSkill Instance { get; private set; }
+    public static PetOneSkill Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
-    float pointCost = 5;
+    float pointCost = 1;
 
     [NonSerialized] public bool isClicked = false;
 
@@ -80,3 +80,4 @@ public class RejectDeathSkill : MonoBehaviour
         skillCostText.text = (" ");
     }
 }
+

@@ -29,7 +29,7 @@ public class SkillTreeText : MonoBehaviour
         // Add texts with index
         SkillNameText = new string[] { "Projectile Hell", "Movement Rush", "Bigger Better", "Pierce All of Them",
         "One Up One Down", "Check Behind", "Shields Up", "More Numbers", "Tank All of Them", "More More Numbers",
-        "MORE MORE MORE NUMBERS", "Check Up and Down", "Projectile Bomb", "Reject Death"};
+        "MORE MORE MORE NUMBERS", "Check Up and Down", "Projectile Bomb", "Reject Death", "Friends"};
         SkillDescriptionText = new string[]
         {
             "Adds one projectile to the number of projectiles already owned.",
@@ -46,7 +46,8 @@ public class SkillTreeText : MonoBehaviour
             "You gain more more MORE DAMAGE.",
             "You gain one up one down projectile.",
             "Every 5 seconds you send a projectile in every direction.",
-            "Player refuses to die, reborn with half a life."
+            "Player refuses to die, reborn with half a life.",
+            "Add a pet that shoots lasers with the player's damage."
         };
 
         // Add all Skill components in SkillHolder to SkillList

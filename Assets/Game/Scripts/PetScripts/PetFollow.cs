@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PetFollow : MonoBehaviour
 {
-    public Transform player;
-    private float followDistance = 1;
+    private Transform player;
+    private float followDistance = 2;
     private float followSpeed = 5;
     //public float deceleration;
 
@@ -16,6 +16,7 @@ public class PetFollow : MonoBehaviour
 
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         playerMovement = FindObjectOfType<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();

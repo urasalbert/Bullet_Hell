@@ -35,6 +35,12 @@ public class EnemyHealthManager : MonoBehaviour
             TakeDamage();
             // Do not destroy it here for pierce skill, if you do pierce breaks
         }
+        if (collision.CompareTag("PetAmmo"))
+        {
+            //Maybe I'll add pet damage scale later
+            //I already have destroy function in lasermovement script
+            TakeDamage();           
+        }
 
     }
     internal float damage1 = 50, damage2 = 70, damage3 = 100;
