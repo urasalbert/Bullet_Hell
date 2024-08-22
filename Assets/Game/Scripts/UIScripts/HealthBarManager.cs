@@ -10,8 +10,15 @@ public class HealthBarManager : MonoBehaviour
 
     internal float currentPlayerHealth = 100;
     internal float maxPlayerHealth = 100;
+    internal float elapsedTime = 0;
+
     internal bool isDead;
+    internal bool isrejectDeathUsed = false;
+    internal bool isImmunityShieldActive = false;
+    internal bool timerStarted = false;
+
     [SerializeField] internal Image healthFill;
+    [SerializeField] internal GameObject immunityShield;
 
     private bool isMaxHealthIncreased = false;
 
@@ -25,18 +32,28 @@ public class HealthBarManager : MonoBehaviour
         {
             Instance = this;
             isDead = false;
+            immunityShield.SetActive(false);
             currentPlayerHealth = maxPlayerHealth;
         }
     }
 
     void Update()
     {
-        if (currentPlayerHealth == 0)
+        if (currentPlayerHealth <= 0)
         {
-            Die();
+            RejectDeath();
         }
 
         UpdateHealth();
+
+        if (elapsedTime <= 5 && timerStarted)
+        {
+            elapsedTime += Time.deltaTime;
+        }
+        else
+        {
+            removeImmunityShield();
+        }
     }
 
     void UpdateHealth()
@@ -56,13 +73,44 @@ public class HealthBarManager : MonoBehaviour
 
     public void IncomeDamage(float damage)
     {
-        currentPlayerHealth -= damage;
-        UpdateHealth();
-        Debug.Log("Current player health: " + currentPlayerHealth);
+        //If immunity shield is active the player cannot be damaged
+        if (!isImmunityShieldActive)
+        {
+            currentPlayerHealth -= damage;
+            UpdateHealth();
+        }
+        //Debug.Log("Current player health: " + currentPlayerHealth);
     }
 
     void Die()
     {
+        Debug.Log("Player died");
         //Die script goes here
+    }
+    void RejectDeath()
+    {
+        if (RejectDeathSkill.Instance.isClicked && !isrejectDeathUsed)
+        {
+            //Equalize to fifty percent of the maximum health
+            currentPlayerHealth = maxPlayerHealth * 0.5f;
+            isrejectDeathUsed = true;
+            timerStarted = true;
+            getImmunityShield();
+        }
+        else
+        {
+            Die();
+        }
+    }
+    void getImmunityShield()
+    {
+        immunityShield.SetActive(true);
+        isImmunityShieldActive = true;
+
+    }
+    void removeImmunityShield()
+    {
+        immunityShield.SetActive(false);
+        isImmunityShieldActive=false;
     }
 }
