@@ -7541,7 +7541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6065f6f8045ac0041b2f95b50e439596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  purpleEyePetPreafab: {fileID: 0}
+  purpleEyePetPreafab: {fileID: 142840264900817101, guid: e93d7e70ce4e5694f882cbfcbd16d59d, type: 3}
   petSpawner: {fileID: 1194721337}
 --- !u!4 &2121311015 stripped
 Transform:
