@@ -31,7 +31,7 @@ public class EnemyDamage : MonoBehaviour
     {
         // Dealing damage
         HealthBarManager.Instance.IncomeDamage(10);
-        Debug.Log("Damage Dealed: " + HealthBarManager.Instance.currentPlayerHealth);
+        //Debug.Log("Damage Dealed: " + HealthBarManager.Instance.currentPlayerHealth);
     }
 
 }

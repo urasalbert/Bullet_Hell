@@ -58,7 +58,7 @@ public class EnemyHealthManager : MonoBehaviour
         }
         else
         {
-            enemyCurrentHealth -= ProjectileWeaponController.Instance.damage;
+            enemyCurrentHealth -= 30;
             //Debug.Log("More damage skills is not working");
             // I have 2 colliders damage deal twice because of it                                                                             
             //If I have one collider damage deal once                                                                           
