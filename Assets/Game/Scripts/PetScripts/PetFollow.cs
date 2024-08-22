@@ -5,9 +5,9 @@ using UnityEngine;
 public class PetFollow : MonoBehaviour
 {
     private Transform player;
-    private float followDistance = 2;
-    private float followSpeed = 5;
-    //public float deceleration;
+    public float followDistance = 2;
+    public float followSpeed = 5;
+    public float deceleration;
 
     internal SpriteRenderer spriteRenderer;
 
@@ -40,7 +40,7 @@ public class PetFollow : MonoBehaviour
         else
         {
             //Smoothly stop the pet wirh lerp
-            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.1f);
+            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, deceleration);
         }
     }
 
