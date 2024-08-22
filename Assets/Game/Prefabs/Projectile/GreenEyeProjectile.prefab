@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8827493465819954912}
   - component: {fileID: 6503556602836203219}
   - component: {fileID: 1635256959110452482}
-  - component: {fileID: 5376046323012977994}
   m_Layer: 0
   m_Name: GreenEyeProjectile
   m_TagString: PetAmmo
@@ -149,17 +148,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5376046323012977994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5408731697776804949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540212b1637a9c94bbc468261253c5e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  projectilePrefab: {fileID: 5408731697776804949}
