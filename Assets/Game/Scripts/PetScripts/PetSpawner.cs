@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PetSpawner : MonoBehaviour
 {
-    [SerializeField ]internal GameObject purpleEyePetPreafab;
+    [SerializeField] internal GameObject purpleEyePetPreafab;
+    [SerializeField] internal GameObject greenEyePetPrefab;
+
     private GameObject parentobject;
 
-    private bool isSpawned = false;
+    private bool isPurpleSpawned = false;
+    private bool isGreenSpawned = false;
 
     [SerializeField] private Transform petSpawner;
+    [SerializeField] private Transform petSpawner2;
 
     private void Awake()
     {
@@ -23,10 +27,15 @@ public class PetSpawner : MonoBehaviour
 
     void SpawnPet()
     {
-        if (PetOneSkill.Instance.isClicked && !isSpawned)
+        if (PetOneSkill.Instance.isClicked && !isPurpleSpawned)
         {
             Instantiate(purpleEyePetPreafab, petSpawner.position, Quaternion.identity, parentobject.transform);
-            isSpawned = true;
+            isPurpleSpawned = true;
+        }
+        if (PetTwoSkill.Instance.isClicked && !isGreenSpawned)
+        {
+            Instantiate(greenEyePetPrefab, petSpawner2.position, Quaternion.identity, parentobject.transform);
+            isGreenSpawned = true;
         }
     }
 }
