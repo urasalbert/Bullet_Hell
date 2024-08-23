@@ -3631,7 +3631,9 @@ MonoBehaviour:
   archerSpawners:
   - {fileID: 1140140526}
   - {fileID: 1202253468}
-  enemyPrefab: {fileID: 3460264748729301433, guid: a4d055bbb4821944da05b7cea73535f6, type: 3}
+  enemyPrefabs:
+  - {fileID: 3460264748729301433, guid: a4d055bbb4821944da05b7cea73535f6, type: 3}
+  - {fileID: 1107695918901332377, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
   rangedEnemyPrefab: {fileID: 563002150359011826, guid: d5d80245a1143574abd6a87a85d2fe3c, type: 3}
   archerEnemyPrefab: {fileID: 6596506985508194959, guid: 36b4b8094197321479c088f4c85e980f, type: 3}
 --- !u!1 &1041491917
@@ -8096,63 +8098,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba1348275dd681143b18b98914fe8c1c, type: 3}
---- !u!1001 &9133711806864249955
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1107695918901332377, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_Name
-      value: SkeletonMelee2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3514045526339380222, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.3147671
-      objectReference: {fileID: 0}
-    - target: {fileID: 3514045526339380222, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -7.7670736
-      objectReference: {fileID: 0}
-    - target: {fileID: 3514045526339380222, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3514045526339380222, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3514045526339380222, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3514045526339380222, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3514045526339380222, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3514045526339380222, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3514045526339380222, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3514045526339380222, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2ee7120351051cb4f94af2066dbfbcac, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -8164,4 +8109,3 @@ SceneRoots:
   - {fileID: 524736190}
   - {fileID: 1359855806}
   - {fileID: 2040781011}
-  - {fileID: 9133711806864249955}
