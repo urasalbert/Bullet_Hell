@@ -40,22 +40,21 @@ public class PickUpRadiusSkill : MonoBehaviour
             isClicked = true;
             SkillImage.color = new Color32(0x38, 0x38, 0x38, 0xFF); // Darken color after clicking       
             if (isAlreadyTaken == false)
-            {
-                Time.timeScale = 1;
-                               
+            {                         
                 isAlreadyTaken = true;
                 ExperienceManager.Instance.skillPoints -= pointCost; //Subtract the score of the
                                                                      //received ability from the total score
                 ExperienceManager.Instance.UpdateSkillPoints();
             }
-            if(ExperienceManager.Instance.skillPoints == 0)//If player spend all points close skilltree
+            if (ExperienceManager.Instance.skillPoints == 0)//If player spend all points close skilltree
             {
+                Time.timeScale = 1;
                 skillTreeUI.SetActive(false);
                 ExperienceManager.Instance.isSkillTreeUIopen = false;
-            }
-            else
-            {
 
+            }
+            if (!isClicked)
+            {
                 skillCostText.text = ("You don't have enough points to get the ability");
             }
         }

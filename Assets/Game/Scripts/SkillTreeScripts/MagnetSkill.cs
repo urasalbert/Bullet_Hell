@@ -12,6 +12,8 @@ public class MagnetSkill : MonoBehaviour
 
     public static MagnetSkill Instance { get; private set; }
 
+    XPFragmentCollector collector;
+
     [NonSerialized] public bool isClicked = false;
     private Image SkillImage;
     private bool isAlreadyTaken;
@@ -23,11 +25,13 @@ public class MagnetSkill : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             Destroy(this);
+            
         }
         else
         {
             Instance = this;
             SkillImage = GetComponent<Image>();
+            collector = FindObjectOfType<XPFragmentCollector>();
         }
     }
 
@@ -41,21 +45,23 @@ public class MagnetSkill : MonoBehaviour
             SkillImage.color = new Color32(0x38, 0x38, 0x38, 0xFF); // Darken color after clicking       
             if (isAlreadyTaken == false)
             {
-                Time.timeScale = 1;
-
+                
                 isAlreadyTaken = true;
                 ExperienceManager.Instance.skillPoints -= pointCost; //Subtract the score of the
                                                                      //received ability from the total score
                 ExperienceManager.Instance.UpdateSkillPoints();
+
+                collector.CollectXPFragments(); //Skill works here
             }
             if (ExperienceManager.Instance.skillPoints == 0)//If player spend all points close skilltree
             {
+                Time.timeScale = 1;
                 skillTreeUI.SetActive(false);
                 ExperienceManager.Instance.isSkillTreeUIopen = false;
-            }
-            else
-            {
 
+            }
+            if (!isClicked)
+            {
                 skillCostText.text = ("You don't have enough points to get the ability");
             }
         }

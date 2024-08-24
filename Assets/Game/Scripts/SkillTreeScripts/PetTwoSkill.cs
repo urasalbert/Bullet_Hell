@@ -41,17 +41,20 @@ public class PetTwoSkill : MonoBehaviour
             SkillImage.color = new Color32(0x38, 0x38, 0x38, 0xFF); // Darken color after clicking       
             if (isAlreadyTaken == false)
             {
-                Time.timeScale = 1;
-                skillTreeUI.SetActive(false);
-                ExperienceManager.Instance.isSkillTreeUIopen = false;
                 isAlreadyTaken = true;
                 ExperienceManager.Instance.skillPoints -= pointCost; //Subtract the score of the
                                                                      //received ability from the total score
                 ExperienceManager.Instance.UpdateSkillPoints();
             }
-            else
+            if (ExperienceManager.Instance.skillPoints == 0)//If player spend all points close skilltree
             {
+                Time.timeScale = 1;
+                skillTreeUI.SetActive(false);
+                ExperienceManager.Instance.isSkillTreeUIopen = false;
 
+            }
+            if (!isClicked)
+            {
                 skillCostText.text = ("You don't have enough points to get the ability");
             }
         }
