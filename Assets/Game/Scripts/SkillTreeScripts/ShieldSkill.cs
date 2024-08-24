@@ -44,6 +44,7 @@ public class ShieldSkill : MonoBehaviour
             {
                 Time.timeScale = 1;
                 skillTreeUI.SetActive(false);
+                ExperienceManager.Instance.isSkillTreeUIopen = false;
                 isAlreadyTaken = true;
                 ExperienceManager.Instance.skillPoints -= pointCost; //Subtract the score of the
                                                                      //received ability from the total score

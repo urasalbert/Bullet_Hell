@@ -41,6 +41,7 @@ public class HealthOneSkill : MonoBehaviour
             {
                 Time.timeScale = 1;
                 skillTreeUI.SetActive(false);
+                ExperienceManager.Instance.isSkillTreeUIopen = false;
                 isAlreadyTaken = true;
                 ExperienceManager.Instance.skillPoints -= pointCost;
                 ExperienceManager.Instance.UpdateSkillPoints();

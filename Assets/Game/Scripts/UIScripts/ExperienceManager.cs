@@ -17,6 +17,7 @@ public class ExperienceManager : MonoBehaviour
     public TextMeshProUGUI skillPointUIText;
     public GameObject skillTreeUI;
     public float skillPoints = 0;
+    [NonSerialized] public bool isSkillTreeUIopen; 
 
     private void Awake()
     {
@@ -71,6 +72,7 @@ public class ExperienceManager : MonoBehaviour
         experienceToNextLevel *= 1.6f; //Increase xp requirement by 20 percent at each level
         Time.timeScale = 0;
         skillTreeUI.SetActive(true);
+        isSkillTreeUIopen = true;
 
     }
     public void UpdateSkillPoints()
