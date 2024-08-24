@@ -5,12 +5,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ProjectileOrbitSkill : MonoBehaviour
+public class ProjectileOrbitTwoSkill : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI skillCostText;
-    float pointCost = 5;
+    float pointCost = 1;
 
-    public static ProjectileOrbitSkill Instance { get; private set; }
+    public static ProjectileOrbitTwoSkill Instance { get; private set; }
 
     [NonSerialized] public bool isClicked = false;
     private Image SkillImage;
