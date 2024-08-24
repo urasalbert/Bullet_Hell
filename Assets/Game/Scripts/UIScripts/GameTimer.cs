@@ -60,16 +60,19 @@ public class GameTimer : MonoBehaviour
     void CheckEvents(float seconds)
     {
         minutes = Mathf.FloorToInt(seconds / 60f); // Checking how many minutes it's been
+        //Debug.Log("Minutes: " + minutes); // Debugging the minutes value
     }
-
     public void TriggerEvent(string eventMessage)
     {
+
         //It does not need to take a minute value
         //its adjustment is made when calling the event triggers.
         Debug.Log(eventMessage);
         eventText.text = eventMessage;
-        Invoke("ClearEventText", 5f);
+        Invoke("ClearEventText", 10f);
+
     }
+
     void ClearEventText()
     {
         eventText.text = null;

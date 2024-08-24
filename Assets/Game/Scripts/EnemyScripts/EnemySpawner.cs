@@ -10,8 +10,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] internal GameObject rangedEnemyPrefab;
     [SerializeField] internal GameObject archerEnemyPrefab;
 
-    internal float spawnInterval = 5f;
-    internal float rangedSpawnInterval = 10f;
+    internal float spawnInterval = 15f;
+    internal float rangedSpawnInterval = 20f;
 
     private float nextSpawnTime;
     private float nextRangedSpawnTime;
@@ -23,12 +23,19 @@ public class EnemySpawner : MonoBehaviour
         parentObject = GameObject.FindWithTag("Environment");
     }
 
+    bool flag1 = false;//For triggerevents
     void Update()
     {
         if (GameTimer.Instance.minutes % 5 == 0 && GameTimer.Instance.minutes > 2) // If the time is more than 3 minutes
         {
             GameTimer.Instance.TriggerEvent("Spawn Rate Increased");
             spawnInterval -= 0.4f; // Decrease the spawn interval for melee enemies
+        }
+
+        if(GameTimer.Instance.minutes >= 2 && flag1 == false)
+        {
+            GameTimer.Instance.TriggerEvent("You will face stronger opponents!");//Event text trigger for UI
+            flag1 = true;  
         }
 
         if (Time.time >= nextSpawnTime)
@@ -66,8 +73,18 @@ public class EnemySpawner : MonoBehaviour
         Transform selectedSpawner = spawners[randomIndex];
         Transform selectedArcherSpawner = archerSpawners[randomArcherIndex];
 
+        GameObject selectedEnemyPrefab;
+
         // Randomly select an enemy prefab
-        GameObject selectedEnemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
+        if (GameTimer.Instance.minutes < 2)//If it's been more than two minutes
+                                            //add the prefab in the third index to the pool.
+        {
+            selectedEnemyPrefab = enemyPrefabs[Random.Range(0, 2)];
+        }
+        else
+        {          
+            selectedEnemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
+        }
         GameObject enemy = Instantiate(selectedEnemyPrefab, selectedSpawner.position, selectedSpawner.rotation, parentObject.transform);
 
         GameObject archerenemy = Instantiate(archerEnemyPrefab, selectedArcherSpawner.position, selectedArcherSpawner.rotation, parentObject.transform);

@@ -84,7 +84,7 @@ public class HealthBarManager : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Player died");
+       //Debug.Log("Player died");
         //Die script goes here
     }
     void RejectDeath()

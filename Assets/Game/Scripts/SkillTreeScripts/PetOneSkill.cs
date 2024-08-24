@@ -10,7 +10,7 @@ public class PetOneSkill : MonoBehaviour
     public static PetOneSkill Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
-    float pointCost = 1;
+    float pointCost = 7;
 
     [NonSerialized] public bool isClicked = false;
 

@@ -11,6 +11,13 @@ public class EnemyDamage : MonoBehaviour
     public LayerMask playerLayer;
     public float damageInterval = 1.0f; // Damage interval
     private float lastDamageTime;
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
 
     private void Start()
     {
@@ -24,6 +31,7 @@ public class EnemyDamage : MonoBehaviour
         {
             DamagePlayer(playerCollider.gameObject);
             lastDamageTime = Time.time; // Update last damage timer
+            
         }
     }
 
@@ -31,6 +39,8 @@ public class EnemyDamage : MonoBehaviour
     {
         // Dealing damage
         HealthBarManager.Instance.IncomeDamage(10);
+        //Playing damage animation
+        animator.SetTrigger("isShoot");
         //Debug.Log("Damage Dealed: " + HealthBarManager.Instance.currentPlayerHealth);
     }
 
