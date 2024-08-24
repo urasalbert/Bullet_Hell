@@ -8,6 +8,7 @@ public class ExperienceCollection : MonoBehaviour
     private Transform player;
     private float attractionDistance = 2f; //Collection distance 
     private float moveSpeed = 7f;
+    [SerializeField] private float experienceAmount;
 
     private void Awake()
     {
@@ -16,6 +17,13 @@ public class ExperienceCollection : MonoBehaviour
 
     void Update()
     {
+        if (PickUpRadiusSkill.Instance.isClicked)//If player took the pickupradius
+                                                 //skill get more distance for collection                         
+        {
+            attractionDistance += 1;
+        }
+
+
         float distance = Vector3.Distance(transform.position, player.position); //Calculate distance for collection
 
         if (distance <= attractionDistance)
@@ -24,7 +32,7 @@ public class ExperienceCollection : MonoBehaviour
 
             if (distance < 0.1f)
             {
-                ExperienceManager.Instance.AddExperience(10);
+                ExperienceManager.Instance.AddExperience(experienceAmount);
                 PlayCollectionSound();
                 Destroy(gameObject);
             }

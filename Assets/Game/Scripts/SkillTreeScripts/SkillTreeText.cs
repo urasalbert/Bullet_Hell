@@ -30,7 +30,7 @@ public class SkillTreeText : MonoBehaviour
         SkillNameText = new string[] { "Projectile Hell", "Movement Rush", "Bigger Better", "Pierce All of Them",
         "One Up One Down", "Check Behind", "Shields Up", "More Numbers", "Tank All of Them", "More More Numbers",
         "MORE MORE MORE NUMBERS", "Check Up and Down", "Projectile Bomb", "Reject Death", "A Friend", "Green Friend",
-        "Saturn", "Circles"};
+        "Saturn", "Circles", "Long Fingers"};
         SkillDescriptionText = new string[]
         {
             "Adds one projectile to the number of projectiles already owned.",
@@ -51,7 +51,8 @@ public class SkillTreeText : MonoBehaviour
             "Add a pet that shoots lasers with the player's damage.",
             "Add a pet that shoots explosive projectiles with the player's damage",
             "You will have a projectile spinning in your gravity.",
-            "You will have one more projectile spinning in your gravity."
+            "You will have one more projectile spinning in your gravity.",
+            "You can collect life and xp particles from further away."
         };
 
         // Add all Skill components in SkillHolder to SkillList
