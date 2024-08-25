@@ -10,6 +10,7 @@ public class BulletSpawner : MonoBehaviour
     private GameObject parentObject;
 
     [SerializeField] private float firingRate = 1f;
+    [SerializeField] private float rotationSpeed = 50f;
 
 
     private GameObject spawnedBullet;
@@ -20,8 +21,10 @@ public class BulletSpawner : MonoBehaviour
     }
     void Update()
     {
+        transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+
         timer += Time.deltaTime;
-        transform.eulerAngles = new Vector3(0f, 0f, transform.eulerAngles.z + 1f);
+        transform.eulerAngles = new Vector3(0f, 0f, transform.eulerAngles.z);
         if (timer >= firingRate)
         {
             Fire();

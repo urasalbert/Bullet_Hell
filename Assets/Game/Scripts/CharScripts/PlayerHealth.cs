@@ -12,4 +12,13 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("Damage Dealed" + HealthBarManager.Instance.currentPlayerHealth);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EnemyProjectile"))
+        {
+            HealthBarManager.Instance.IncomeDamage(10);
+        }
+    }
+
 }
