@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
-using static Unity.IO.LowLevel.Unsafe.AsyncReadManagerMetrics;
 
-public class LifeFragment : MonoBehaviour
+public class MagnetFragment : MonoBehaviour
 {
 
     private Transform player;
     private float attractionDistance = 1f; //Collection distance 
     private float moveSpeed = 7f;
-    [SerializeField] private float healthAmount;
+    XPFragmentCollector collector;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        collector = FindObjectOfType<XPFragmentCollector>();
     }
     bool flag1 = true;
     void Update()
@@ -34,7 +35,7 @@ public class LifeFragment : MonoBehaviour
 
             if (distance < 0.1f)
             {
-                HealthBarManager.Instance.currentPlayerHealth += healthAmount;
+                collector.CollectXPFragments();
                 PlayCollectionSound();
                 Destroy(gameObject);
             }
@@ -47,4 +48,5 @@ public class LifeFragment : MonoBehaviour
     }
 
 }
+
 

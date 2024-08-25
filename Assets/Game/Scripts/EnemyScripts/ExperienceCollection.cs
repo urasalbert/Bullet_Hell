@@ -14,13 +14,15 @@ public class ExperienceCollection : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
-
+    bool flag1 = true;
     void Update()
     {
-        if (PickUpRadiusSkill.Instance.isClicked)//If player took the pickupradius
+        
+        if (PickUpRadiusSkill.Instance.isClicked && flag1)//If player took the pickupradius
                                                  //skill get more distance for collection                         
         {
-            attractionDistance += 1;
+            attractionDistance += 2f;
+            flag1 = false;
         }
 
 

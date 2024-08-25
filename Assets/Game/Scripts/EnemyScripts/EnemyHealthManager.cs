@@ -13,6 +13,8 @@ public class EnemyHealthManager : MonoBehaviour
     [SerializeField] internal float enemyMaxHealth;
     [SerializeField] internal GameObject xpFragment;
     [SerializeField] internal GameObject lifeFragment;
+    [SerializeField] internal GameObject magnetFragment;
+
     public float enemyCurrentHealth;
     
     [NonSerialized] public bool isDead;
@@ -93,6 +95,7 @@ public class EnemyHealthManager : MonoBehaviour
         Destroy(gameObject);
         DropXpFragment();
         DropLifeFragment();
+        DropMagnetFragment();
     }
 
     void DropLifeFragment()
@@ -109,5 +112,15 @@ public class EnemyHealthManager : MonoBehaviour
     {
         Instantiate(xpFragment, transform.position, Quaternion.identity, parentObject.transform);
         //Create experience fragment after enemy dead
+    }
+
+    void DropMagnetFragment()
+    {
+        float randomValue = UnityEngine.Random.Range(0f, 100f);
+
+        if (randomValue <= 1f)//1 percent chance to drop magnet fragment
+        {
+            Instantiate(magnetFragment, transform.position, Quaternion.identity, parentObject.transform);
+        }
     }
 }

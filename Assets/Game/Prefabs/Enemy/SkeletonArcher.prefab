@@ -202,6 +202,7 @@ MonoBehaviour:
   enemyMaxHealth: 100
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
   lifeFragment: {fileID: 722434011091506781, guid: e7892bea0c290dd46b4ab3b46f1870fc, type: 3}
+  magnetFragment: {fileID: 9035413473035538710, guid: dacb37e476851514a9f36331ad78e174, type: 3}
   enemyCurrentHealth: 0
 --- !u!114 &1061795281417175996
 MonoBehaviour:
@@ -303,6 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+  isFrozen: 0
   freezeEffect: {fileID: 7679790444716817597}
   hasAttackAnim: 0
 --- !u!1 &7679790444716817597
