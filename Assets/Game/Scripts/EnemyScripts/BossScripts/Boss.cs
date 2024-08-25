@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    private Image hpFill;
+    private Slider hpFill;
     private float maxHealth = 750;
     private float currentHealth;
     private float speed = 10f; // Boss movement speed
@@ -20,7 +20,7 @@ public class Boss : MonoBehaviour
     {
         enemyDieExplosion = GetComponent<EnemyDieExplosion>();
         playerPos = FindObjectOfType<PlayerMovement>().transform;
-        hpFill = GetComponentInChildren<Image>();
+        hpFill = GetComponentInChildren<Slider>();
         currentHealth = maxHealth;
 
         if (hpFill == null)
@@ -28,7 +28,7 @@ public class Boss : MonoBehaviour
             Debug.Log("Health fill is null");
         }
 
-        hpFill.fillAmount = currentHealth;
+        hpFill.value = currentHealth;
     }
 
     private void Start()
@@ -67,7 +67,7 @@ public class Boss : MonoBehaviour
 
     private void Update()
     {
-        hpFill.fillAmount = currentHealth / maxHealth;
+        hpFill.value = currentHealth / maxHealth;
 
         if (currentHealth <= 0)
         {
