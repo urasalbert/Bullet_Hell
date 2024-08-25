@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 public class EnemyHealthManager : MonoBehaviour
@@ -17,11 +18,14 @@ public class EnemyHealthManager : MonoBehaviour
     [NonSerialized] public bool isDead;
     [NonSerialized] public GameObject parentObject;
 
+    EnemyMovement enemyMovement;
     private void Awake()
     {
         enemyCurrentHealth = enemyMaxHealth;
         isDead = false;
         enemyDieExplosion = GetComponent<EnemyDieExplosion>();
+        enemyMovement = GetComponent<EnemyMovement>();
+
 
         parentObject = GameObject.FindWithTag("Environment");
         if (parentObject == null)
@@ -36,13 +40,15 @@ public class EnemyHealthManager : MonoBehaviour
         if (collision.CompareTag("Ammo"))
         {
             TakeDamage();
+            enemyMovement.EnemyChill();//Check chill if skill already acquired
             // Do not destroy it here for pierce skill, if you do pierce breaks
         }
         if (collision.CompareTag("PetAmmo"))
         {
             //Maybe I'll add pet damage scale later
             //I already have destroy function in lasermovement script
-            TakeDamage();           
+            TakeDamage();
+            enemyMovement.EnemyChill();//Check chill if skill already acquired
         }
 
     }

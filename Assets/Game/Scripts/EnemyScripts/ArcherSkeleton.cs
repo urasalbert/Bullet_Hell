@@ -16,13 +16,14 @@ public class ArcherSkeleton : MonoBehaviour
     Transform _playerTransform;
     GameObject parentObject;
     [NonSerialized] public bool isRight;
-
+    EnemyMovement enemyMovement;
     private void Awake()
     {
         _playerTransform = FindObjectOfType<PlayerMovement>().transform;
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         parentObject = GameObject.FindWithTag("Environment");
+        enemyMovement = GetComponent<EnemyMovement>();
     }
 
     void Start()
@@ -37,19 +38,23 @@ public class ArcherSkeleton : MonoBehaviour
 
     private void Update()
     {
-        SpriteDirectionChecker();
-        timeSinceLastShot += Time.deltaTime;
-
-        if (timeSinceLastShot >= fireInterval)
+        //If enemy is not frozen
+        if(!enemyMovement.isFrozen)
         {
-            animator.SetBool("isShooting", true);
+            SpriteDirectionChecker();
+            timeSinceLastShot += Time.deltaTime;
 
-            FireProjectile();
-            timeSinceLastShot = 0f; // Reset the timer
-        }
-        else
-        {
-            animator.SetBool("isShooting", false);
+            if (timeSinceLastShot >= fireInterval)
+            {
+                animator.SetBool("isShooting", true);
+
+                FireProjectile();
+                timeSinceLastShot = 0f; // Reset the timer
+            }
+            else
+            {
+                animator.SetBool("isShooting", false);
+            }
         }
     }
 

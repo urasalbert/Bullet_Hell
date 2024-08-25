@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArcherSkeletonMove : MonoBehaviour
 {
     private Transform playerTransform;
-    private float moveSpeed = 2f;
+    [SerializeField] private float moveSpeed = 2f;
     private float stopDistance = 7f;
     private Animator animator;
 

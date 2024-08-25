@@ -13,6 +13,7 @@ public class MageSkeleton : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     Transform _playerTransform;
     GameObject parentObject;
+    EnemyMovement enemyMovement;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class MageSkeleton : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         parentObject = GameObject.FindWithTag("Environment");
+        enemyMovement = GetComponent<EnemyMovement>();
     }
 
     void Start()
@@ -34,19 +36,23 @@ public class MageSkeleton : MonoBehaviour
 
     void Update()
     {
-        SpriteDirectionChecker();
-        timeSinceLastShot += Time.deltaTime;
+        //If enemy is not frozen
+        if (!enemyMovement.isFrozen)
+        {
+            SpriteDirectionChecker();
+            timeSinceLastShot += Time.deltaTime;
 
-        if (timeSinceLastShot >= fireInterval)
-        {
-            animator.SetBool("isCasting", true);
-            
-            FireProjectile();
-            timeSinceLastShot = 0f; // Reset the timer
-        }
-        else
-        {
-            animator.SetBool("isCasting", false);
+            if (timeSinceLastShot >= fireInterval)
+            {
+                animator.SetBool("isCasting", true);
+
+                FireProjectile();
+                timeSinceLastShot = 0f; // Reset the timer
+            }
+            else
+            {
+                animator.SetBool("isCasting", false);
+            }
         }
     }
 

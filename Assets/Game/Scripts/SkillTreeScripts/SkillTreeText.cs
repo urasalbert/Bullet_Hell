@@ -30,7 +30,7 @@ public class SkillTreeText : MonoBehaviour
         SkillNameText = new string[] { "Projectile Hell", "Movement Rush", "Bigger Better", "Pierce All of Them",
         "One Up One Down", "Check Behind", "Shields Up", "More Numbers", "Tank All of Them", "More More Numbers",
         "MORE MORE MORE NUMBERS", "Check Up and Down", "Projectile Bomb", "Reject Death", "A Friend", "Green Friend",
-        "Saturn", "Circles", "Long Fingers" , "Magnetic Fingers"};
+        "Saturn", "Circles", "Long Fingers" , "Magnetic Fingers", "Who Wants Ice Cream"};
         SkillDescriptionText = new string[]
         {
             "Adds one projectile to the number of projectiles already owned.",
@@ -53,7 +53,9 @@ public class SkillTreeText : MonoBehaviour
             "You will have a projectile spinning in your gravity.",
             "You will have one more projectile spinning in your gravity.",
             "You can collect life and xp particles from further away.",
-            "Collect all the XP fragments left behind on the map at once."
+            "Collect all the XP fragments left behind on the map at once.",
+            "All your damage can chill enemies. If you chill your enemies enough, you can freeze them. " +
+            "Frozen range enemies will remain frozen until they die"
         };
 
         // Add all Skill components in SkillHolder to SkillList
