@@ -33,8 +33,10 @@ public class BossAttack1 : MonoBehaviour
         GameObject warning = Instantiate(warningPrefab, position, Quaternion.identity);
         yield return new WaitForSeconds(1f);
         Destroy(warning);
+
         GameObject explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
         Animator explosionAnimator = explosion.GetComponent<Animator>();
+
         if (explosionAnimator != null)
         {
             float explosionDuration = explosionAnimator.GetCurrentAnimatorStateInfo(0).length;

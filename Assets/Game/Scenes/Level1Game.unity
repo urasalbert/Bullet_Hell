@@ -9475,14 +9475,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1868067222504419351, guid: 04cb84c6b02b7eb40b8057c1a2c11b4a, type: 3}
-      propertyPath: firingRate
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1868067222504419351, guid: 04cb84c6b02b7eb40b8057c1a2c11b4a, type: 3}
-      propertyPath: rotationSpeed
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 2601444322036183891, guid: 04cb84c6b02b7eb40b8057c1a2c11b4a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
