@@ -10,6 +10,7 @@ TagManager:
   - EnemyProjectile
   - Shield
   - PetAmmo
+  - XPFragment
   layers:
   - Default
   - TransparentFX
