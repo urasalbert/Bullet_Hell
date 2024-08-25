@@ -21,7 +21,7 @@ public class BossAttack1 : MonoBehaviour
 
     void CreateExplosions()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)//Create explosion 4 times
         {
             Vector3 randomPosition = GetRandomPositionAroundPlayer();
             StartCoroutine(SpawnWarningAndExplosion(randomPosition));

@@ -9,9 +9,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] internal List<GameObject> enemyPrefabs; // A list holding multiple enemy prefabs
     [SerializeField] internal GameObject rangedEnemyPrefab;
     [SerializeField] internal GameObject archerEnemyPrefab;
+    [SerializeField] internal GameObject bossPrefab;
 
-    internal float spawnInterval = 15f;
-    internal float rangedSpawnInterval = 20f;
+    internal float spawnInterval = 10f;
+    internal float rangedSpawnInterval = 15f;
 
     private float nextSpawnTime;
     private float nextRangedSpawnTime;
@@ -24,27 +25,40 @@ public class EnemySpawner : MonoBehaviour
     }
 
     bool flag1 = false;//For triggerevents
+    bool flag2 = false;//For boss spawn
+    bool flag3 = false;//For spawn interval
     void Update()
     {
-        if (GameTimer.Instance.minutes % 5 == 0 && GameTimer.Instance.minutes > 2) // If the time is more than 3 minutes
+        if (GameTimer.Instance.minutes % 2 == 0 && !flag3 && GameTimer.Instance.minutes != 0)
         {
+            spawnInterval -= 3f;
+            flag3 = true;
             GameTimer.Instance.TriggerEvent("Spawn Rate Increased");
-            spawnInterval -= 0.4f; // Decrease the spawn interval for melee enemies
+        }
+        else if (GameTimer.Instance.minutes % 2 != 0 && flag3)
+        {
+            flag3 = false;
         }
 
-        if(GameTimer.Instance.minutes >= 2 && flag1 == false)
+        if (GameTimer.Instance.minutes >= 2 && flag1 == false)
         {
             GameTimer.Instance.TriggerEvent("You will face stronger opponents!");//Event text trigger for UI
             flag1 = true;  
         }
 
-        if (Time.time >= nextSpawnTime)
+        if(GameTimer.Instance.minutes == 10 && !flag2)
+        {
+            SpawnBoss();
+            flag2 = true;
+        }
+
+        if (Time.time >= nextSpawnTime && GameTimer.Instance.minutes != 10)
         {
             SpawnEnemy();
             nextSpawnTime = Time.time + spawnInterval;
         }
 
-        if (Time.time >= nextRangedSpawnTime)
+        if (Time.time >= nextRangedSpawnTime && GameTimer.Instance.minutes != 10)
         {
             SpawnRangedEnemy();
             nextRangedSpawnTime = Time.time + rangedSpawnInterval;
@@ -99,5 +113,16 @@ public class EnemySpawner : MonoBehaviour
         {
             // Debug.LogError("Spawned enemy is missing the Life script.");
         }
+    }
+
+    void SpawnBoss()
+    {
+        if (spawners.Count == 0) return;
+
+        int randomIndex = Random.Range(0, spawners.Count);
+
+        Transform selectedSpawner = spawners[randomIndex];
+
+        GameObject boss = Instantiate(bossPrefab, selectedSpawner.position, selectedSpawner.rotation, parentObject.transform);
     }
 }
