@@ -5,10 +5,10 @@ using UnityEngine;
 public class OrbitalProjectileController : MonoBehaviour
 {
     [SerializeField] private GameObject orbitalProjectilePrefab;
+    [SerializeField] private GameObject orbitalProjectilePrefab2;
     [SerializeField] private Transform orbitalProjectileLocation;
-    [SerializeField] private Transform orbitalProjectileLocation2;
-
     private GameObject parentObject;
+
     private void Awake()
     {
         parentObject = GameObject.FindGameObjectWithTag("Environment");
@@ -22,12 +22,14 @@ public class OrbitalProjectileController : MonoBehaviour
         {
             GameObject orbitalProjectile1 = Instantiate(orbitalProjectilePrefab, orbitalProjectileLocation.position,
                 Quaternion.identity, parentObject.transform);
+
             flag = true;
         }
         if (ProjectileOrbitTwoSkill.Instance.isClicked && !flag2)
         {
-            GameObject orbitalProjectile1 = Instantiate(orbitalProjectilePrefab, orbitalProjectileLocation2.position,
+            GameObject orbitalProjectile1 = Instantiate(orbitalProjectilePrefab2, orbitalProjectileLocation.position,
                  Quaternion.identity, parentObject.transform);
+
             flag2 = true;
         }
     }

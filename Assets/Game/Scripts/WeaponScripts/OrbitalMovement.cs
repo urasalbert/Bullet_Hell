@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class OrbitalMovement : MonoBehaviour
 {
-    private Transform target;  
+    private Transform target;
     public float orbitSpeed = 50f;
     public float orbitRadius = 2f;
     private float currentAngle = 0f;
-
     private void Awake()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
-    void Update()
+
+    private void Update()
+    {
+        MoveOrbital();
+    }
+    public void MoveOrbital()
     {
         currentAngle += orbitSpeed * Time.deltaTime;
 
