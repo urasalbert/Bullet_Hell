@@ -16,11 +16,12 @@ public class EnemyHealthManager : MonoBehaviour
     [SerializeField] internal GameObject magnetFragment;
 
     public float enemyCurrentHealth;
-    
+
     [NonSerialized] public bool isDead;
     [NonSerialized] public GameObject parentObject;
 
     EnemyMovement enemyMovement;
+
     private void Awake()
     {
         enemyCurrentHealth = enemyMaxHealth;
@@ -28,13 +29,11 @@ public class EnemyHealthManager : MonoBehaviour
         enemyDieExplosion = GetComponent<EnemyDieExplosion>();
         enemyMovement = GetComponent<EnemyMovement>();
 
-
         parentObject = GameObject.FindWithTag("Environment");
         if (parentObject == null)
         {
             Debug.LogError("Parent object null in EnemyHealthManager.");
         }
-
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -42,44 +41,45 @@ public class EnemyHealthManager : MonoBehaviour
         if (collision.CompareTag("Ammo"))
         {
             TakeDamage();
-            enemyMovement.EnemyChill();//Check chill if skill already acquired
+            enemyMovement.EnemyChill(); // Check chill if skill already acquired
             // Do not destroy it here for pierce skill, if you do pierce breaks
         }
         if (collision.CompareTag("PetAmmo"))
         {
-            //Maybe I'll add pet damage scale later
-            //I already have destroy function in lasermovement script
+            // Maybe I'll add pet damage scale later
+            // I already have destroy function in lasermovement script
             TakeDamage();
-            enemyMovement.EnemyChill();//Check chill if skill already acquired
+            enemyMovement.EnemyChill(); // Check chill if skill already acquired
         }
-
     }
+
     internal float damage1 = 50, damage2 = 70, damage3 = 100;
+
     public void TakeDamage()
     {
-        //If player took the first damage skill in skill tree add 20 more points to the damage
+        // If player took the first damage skill in skill tree add 20 more points to the damage
         if (MoreDamageOneSkill.Instance.isClicked)
         {
             enemyCurrentHealth -= damage1;
-            //Debug.Log("More damage one is working");
+            // Debug.Log("More damage one is working");
         }
         if (MoreDamageTwoSkill.Instance.isClicked)
         {
             enemyCurrentHealth -= damage2;
-            //Debug.Log("More damage two is working");
+            // Debug.Log("More damage two is working");
         }
-        if(MoreDamageThreeSkill.Instance.isClicked)
+        if (MoreDamageThreeSkill.Instance.isClicked)
         {
             enemyCurrentHealth -= damage3;
-            //Debug.Log("More damage three is working");
+            // Debug.Log("More damage three is working");
         }
         else
         {
             enemyCurrentHealth -= 30;
-            //Debug.Log("More damage skills is not working");
+            // Debug.Log("More damage skills is not working");
             // I have 2 colliders damage deal twice because of it                                                                             
-            //If I have one collider damage deal once                                                                           
-            //Debug.Log("Damage dealed!" + ProjectileWeaponController.Instance.damage);
+            // If I have one collider damage deal once                                                                           
+            // Debug.Log("Damage dealed!" + ProjectileWeaponController.Instance.damage);
         }
 
         if (enemyCurrentHealth <= 0)
@@ -93,34 +93,39 @@ public class EnemyHealthManager : MonoBehaviour
     {
         enemyDieExplosion.GoreExplosion();
         Destroy(gameObject);
-        DropXpFragment();
-        DropLifeFragment();
-        DropMagnetFragment();
+        DropRandomFragment();
+    }
+
+    void DropRandomFragment()
+    {
+        float randomValue = UnityEngine.Random.Range(0f, 100f);
+
+        if (randomValue <= 1f)
+        {
+            DropLifeFragment();
+        }
+        else if (randomValue <= 2f)
+        {
+            DropMagnetFragment();
+        }
+        else
+        {
+            DropXpFragment();
+        }
     }
 
     void DropLifeFragment()
     {
-        float randomValue = UnityEngine.Random.Range(0f, 100f);
+        Instantiate(lifeFragment, transform.position, Quaternion.identity, parentObject.transform);
+    }
 
-        if(randomValue <= 1f)//1 percent chance to drop life fragment
-        {
-            Instantiate(lifeFragment, transform.position, Quaternion.identity, parentObject.transform);
-        }
+    void DropMagnetFragment()
+    {
+        Instantiate(magnetFragment, transform.position, Quaternion.identity, parentObject.transform);
     }
 
     void DropXpFragment()
     {
         Instantiate(xpFragment, transform.position, Quaternion.identity, parentObject.transform);
-        //Create experience fragment after enemy dead
-    }
-
-    void DropMagnetFragment()
-    {
-        float randomValue = UnityEngine.Random.Range(0f, 100f);
-
-        if (randomValue <= 1f)//1 percent chance to drop magnet fragment
-        {
-            Instantiate(magnetFragment, transform.position, Quaternion.identity, parentObject.transform);
-        }
     }
 }

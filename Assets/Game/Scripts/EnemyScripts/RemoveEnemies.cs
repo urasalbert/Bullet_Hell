@@ -10,7 +10,7 @@ public class RemoveEnemies : MonoBehaviour
 
     private void Update()
     {
-        if (GameTimer.Instance.minutes == 1)
+        if (GameTimer.Instance.minutes == 10)
         {
             AddAllEnemiesToTheList();
             RemoveAllEnemies();

@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //Movement
-    [NonSerialized] public float moveSpeed = 5;
+    [NonSerialized] public float moveSpeed = 5f;
     [HideInInspector]
     public float lastHorizontalVector, lastVerticalVector;
     Rigidbody2D rb;

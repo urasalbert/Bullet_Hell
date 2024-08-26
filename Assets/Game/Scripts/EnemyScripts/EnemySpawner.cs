@@ -91,7 +91,7 @@ public class EnemySpawner : MonoBehaviour
         GameObject selectedEnemyPrefab;
 
         // Randomly select an enemy prefab
-        int maxPrefabCount = 2;
+        int maxPrefabCount = 1;
         if (GameTimer.Instance.minutes % 2 == 0 && GameTimer.Instance.minutes != 0)//If it's been more than two minutes
                                             //add the prefab in the third index to the pool.
         {
