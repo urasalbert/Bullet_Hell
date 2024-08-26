@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] internal GameObject rangedEnemyPrefab;
     [SerializeField] internal GameObject archerEnemyPrefab;
     [SerializeField] internal GameObject bossPrefab;
+    [SerializeField] internal GameObject batsPrefab;
 
     internal float spawnInterval = 10f;
     internal float rangedSpawnInterval = 15f;
@@ -90,15 +91,14 @@ public class EnemySpawner : MonoBehaviour
         GameObject selectedEnemyPrefab;
 
         // Randomly select an enemy prefab
-        if (GameTimer.Instance.minutes < 2)//If it's been more than two minutes
+        int maxPrefabCount = 2;
+        if (GameTimer.Instance.minutes % 2 == 0 && GameTimer.Instance.minutes != 0)//If it's been more than two minutes
                                             //add the prefab in the third index to the pool.
         {
-            selectedEnemyPrefab = enemyPrefabs[Random.Range(0, 2)];
-        }
-        else
-        {          
-            selectedEnemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
-        }
+            maxPrefabCount++;            
+        }          
+         selectedEnemyPrefab = enemyPrefabs[Random.Range(0, maxPrefabCount)];
+        
         GameObject enemy = Instantiate(selectedEnemyPrefab, selectedSpawner.position, selectedSpawner.rotation, parentObject.transform);
 
         GameObject archerenemy = Instantiate(archerEnemyPrefab, selectedArcherSpawner.position, selectedArcherSpawner.rotation, parentObject.transform);
