@@ -12,6 +12,7 @@ TagManager:
   - PetAmmo
   - XPFragment
   - Boss
+  - GoldAmountText
   layers:
   - Default
   - TransparentFX

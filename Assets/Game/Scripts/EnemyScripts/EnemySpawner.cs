@@ -11,9 +11,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] internal GameObject archerEnemyPrefab;
     [SerializeField] internal GameObject bossPrefab;
     [SerializeField] internal GameObject batsPrefab;
+    [SerializeField] internal GameObject freakSkeletonPrefab;
 
-    internal float spawnInterval = 10f;
-    internal float rangedSpawnInterval = 15f;
+    internal float spawnInterval = 5f;
+    internal float rangedSpawnInterval = 8f;
 
     private float nextSpawnTime;
     private float nextRangedSpawnTime;
@@ -32,9 +33,9 @@ public class EnemySpawner : MonoBehaviour
     {
         if (GameTimer.Instance.minutes % 2 == 0 && !flag3 && GameTimer.Instance.minutes != 0)
         {
-            spawnInterval -= 3f;
+            spawnInterval -= 1f;
             flag3 = true;
-            GameTimer.Instance.TriggerEvent("Spawn Rate Increased");
+            GameTimer.Instance.TriggerEvent("Spawn Rate Increased!");
         }
         else if (GameTimer.Instance.minutes % 2 != 0 && flag3)
         {
@@ -91,7 +92,7 @@ public class EnemySpawner : MonoBehaviour
         GameObject selectedEnemyPrefab;
 
         // Randomly select an enemy prefab
-        int maxPrefabCount = 1;
+        int maxPrefabCount = 2;
         if (GameTimer.Instance.minutes % 2 == 0 && GameTimer.Instance.minutes != 0)//If it's been more than two minutes
                                             //add the prefab in the third index to the pool.
         {
