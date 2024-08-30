@@ -12,6 +12,8 @@ public class HealthBarManager : MonoBehaviour
     internal float maxPlayerHealth = 100;
     internal float elapsedTime = 0;
 
+    private float menuHealthUpgradeValue;
+
     internal bool isDead;
     internal bool isrejectDeathUsed = false;
     internal bool isImmunityShieldActive = false;
@@ -24,6 +26,8 @@ public class HealthBarManager : MonoBehaviour
 
     private void Awake()
     {
+        menuHealthUpgradeValue = PlayerPrefs.GetFloat("HealthUpgradeStoredValue");
+
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -33,7 +37,10 @@ public class HealthBarManager : MonoBehaviour
             Instance = this;
             isDead = false;
             immunityShield.SetActive(false);
-            currentPlayerHealth = maxPlayerHealth;
+            currentPlayerHealth = maxPlayerHealth + menuHealthUpgradeValue;
+
+            Debug.Log("health upgrade value: " + menuHealthUpgradeValue);
+            Debug.Log("Current health: " + currentPlayerHealth);
         }
     }
 
@@ -60,9 +67,10 @@ public class HealthBarManager : MonoBehaviour
     {
         if (HealthOneSkill.Instance.isClicked && !isMaxHealthIncreased)
         {
-            maxPlayerHealth = 200;
+            maxPlayerHealth = 200 + menuHealthUpgradeValue;
             isMaxHealthIncreased = true;
             currentPlayerHealth = maxPlayerHealth;
+            
         }
 
         if (healthFill != null)
