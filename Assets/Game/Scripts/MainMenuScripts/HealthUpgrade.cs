@@ -37,9 +37,11 @@ public class HealthUpgrade : MonoBehaviour
 
     public void OnButtonClick()
     {
-        if (clickCount < 3)
+        if (clickCount < 3 && MainMenuGold.Instance.currentGold != 0)
         {
             clickCount++;
+
+            MainMenuGold.Instance.currentGold -= 1;
 
             sliderValue += 0.33f;
             slider.value = sliderValue;
@@ -61,6 +63,9 @@ public class HealthUpgrade : MonoBehaviour
 
     private void ResetValues()
     {
+        int currentclickCount = Mathf.FloorToInt(sliderValue / 0.33f);
+        MainMenuGold.Instance.currentGold += currentclickCount;
+
         //Reset all values
         sliderValue = 0f;
         healthValue = 0f;

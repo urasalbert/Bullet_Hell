@@ -1,21 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using TMPro;
 using UnityEngine;
 
 public class MainMenuGold : MonoBehaviour
 {
-    public static MainMenuGold Instance { get; private set; }//Singleton
-
+    public static MainMenuGold Instance { get; private set; } // Singleton
 
     private TextMeshProUGUI goldText;
-    public int currentGold;
+
+    private int _currentGold;
+    public int currentGold // Learned 30.08.24 "Properties"
+    {
+        get => _currentGold;
+        set
+        {
+            _currentGold = value;
+            UpgradeMainMenuGoldText();
+            PlayerPrefs.SetInt("PlayerGold", _currentGold); 
+        }
+    }
 
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -24,8 +33,14 @@ public class MainMenuGold : MonoBehaviour
             currentGold = PlayerPrefs.GetInt("PlayerGold", 0);
         }
     }
-    void Start()
+
+    private void Start()
     {
-        goldText.text = currentGold.ToString();
+        UpgradeMainMenuGoldText();
+    }
+
+    public void UpgradeMainMenuGoldText()
+    {
+        goldText.text = "Gold: " + currentGold.ToString();
     }
 }
