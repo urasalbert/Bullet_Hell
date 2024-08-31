@@ -9,7 +9,7 @@ public class MainMenuGold : MonoBehaviour
     private TextMeshProUGUI goldText;
 
     private int _currentGold;
-    public int currentGold // Learned 30.08.24 "Properties"
+    public int currentGold // Learned 30.08.24 "Properties" 
     {
         get => _currentGold;
         set

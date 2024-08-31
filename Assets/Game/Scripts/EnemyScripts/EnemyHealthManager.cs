@@ -86,7 +86,7 @@ public class EnemyHealthManager : MonoBehaviour
         {
             Die();
             isDead = true;
-        }
+        } 
     }
 
     internal void Die()
@@ -98,8 +98,10 @@ public class EnemyHealthManager : MonoBehaviour
 
     void DropRandomFragment()
     {
-        float randomValue = UnityEngine.Random.Range(0f, 100f);
+        int maxRandomDropValue = (int)PlayerPrefs.GetFloat("maxRandomDropValueStoredValue", 0f);
+        float randomValue = UnityEngine.Random.Range(0f, maxRandomDropValue);
 
+        Debug.Log("maxRandomDropValue" + maxRandomDropValue);
         if (randomValue <= 1f)
         {
             DropLifeFragment();

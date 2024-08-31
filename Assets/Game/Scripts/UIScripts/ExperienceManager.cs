@@ -58,7 +58,10 @@ public class ExperienceManager : MonoBehaviour
 
     public void AddExperience(float amount)
     {
-        totalExperience += amount;
+        int extraXPvalue = (int)PlayerPrefs.GetFloat("extraXPvalueStoredValue", 0f);
+        totalExperience += amount + extraXPvalue;
+
+        Debug.Log("Added xp amount: " + (amount + extraXPvalue));
         UpdateXPBar();
         CheckForLevelUp();
     }
