@@ -1997,6 +1997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabd7c6bc5d869342a2880b4faf0f1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldPrefab: {fileID: 6887773552460955722, guid: 300876d631906774aae99a953fda97da, type: 3}
 --- !u!1 &480626352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1748560044211047916, guid: 961eb03a847670a4c89af78b8da5291d, type: 3}
