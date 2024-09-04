@@ -182,6 +182,8 @@ MonoBehaviour:
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
   lifeFragment: {fileID: 722434011091506781, guid: e7892bea0c290dd46b4ab3b46f1870fc, type: 3}
   magnetFragment: {fileID: 9035413473035538710, guid: dacb37e476851514a9f36331ad78e174, type: 3}
+  goldPrefab: {fileID: 6887773552460955722, guid: 300876d631906774aae99a953fda97da, type: 3}
+  canDropGold: 0
   enemyCurrentHealth: 0
 --- !u!114 &5363462885716252406
 MonoBehaviour:
@@ -393,6 +395,8 @@ MonoBehaviour:
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
   lifeFragment: {fileID: 722434011091506781, guid: e7892bea0c290dd46b4ab3b46f1870fc, type: 3}
   magnetFragment: {fileID: 9035413473035538710, guid: dacb37e476851514a9f36331ad78e174, type: 3}
+  goldPrefab: {fileID: 6887773552460955722, guid: 300876d631906774aae99a953fda97da, type: 3}
+  canDropGold: 0
   enemyCurrentHealth: 0
 --- !u!114 &1521472909529678805
 MonoBehaviour:
@@ -604,6 +608,8 @@ MonoBehaviour:
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
   lifeFragment: {fileID: 722434011091506781, guid: e7892bea0c290dd46b4ab3b46f1870fc, type: 3}
   magnetFragment: {fileID: 9035413473035538710, guid: dacb37e476851514a9f36331ad78e174, type: 3}
+  goldPrefab: {fileID: 6887773552460955722, guid: 300876d631906774aae99a953fda97da, type: 3}
+  canDropGold: 0
   enemyCurrentHealth: 0
 --- !u!114 &5347264733147443794
 MonoBehaviour:
@@ -815,6 +821,8 @@ MonoBehaviour:
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
   lifeFragment: {fileID: 722434011091506781, guid: e7892bea0c290dd46b4ab3b46f1870fc, type: 3}
   magnetFragment: {fileID: 9035413473035538710, guid: dacb37e476851514a9f36331ad78e174, type: 3}
+  goldPrefab: {fileID: 6887773552460955722, guid: 300876d631906774aae99a953fda97da, type: 3}
+  canDropGold: 0
   enemyCurrentHealth: 0
 --- !u!114 &386703873895828533
 MonoBehaviour:
@@ -1026,6 +1034,8 @@ MonoBehaviour:
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
   lifeFragment: {fileID: 722434011091506781, guid: e7892bea0c290dd46b4ab3b46f1870fc, type: 3}
   magnetFragment: {fileID: 9035413473035538710, guid: dacb37e476851514a9f36331ad78e174, type: 3}
+  goldPrefab: {fileID: 6887773552460955722, guid: 300876d631906774aae99a953fda97da, type: 3}
+  canDropGold: 0
   enemyCurrentHealth: 0
 --- !u!114 &4599142908957294892
 MonoBehaviour:
@@ -1237,6 +1247,8 @@ MonoBehaviour:
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
   lifeFragment: {fileID: 722434011091506781, guid: e7892bea0c290dd46b4ab3b46f1870fc, type: 3}
   magnetFragment: {fileID: 9035413473035538710, guid: dacb37e476851514a9f36331ad78e174, type: 3}
+  goldPrefab: {fileID: 6887773552460955722, guid: 300876d631906774aae99a953fda97da, type: 3}
+  canDropGold: 0
   enemyCurrentHealth: 0
 --- !u!114 &7693873052063960621
 MonoBehaviour:
@@ -1448,6 +1460,8 @@ MonoBehaviour:
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
   lifeFragment: {fileID: 722434011091506781, guid: e7892bea0c290dd46b4ab3b46f1870fc, type: 3}
   magnetFragment: {fileID: 9035413473035538710, guid: dacb37e476851514a9f36331ad78e174, type: 3}
+  goldPrefab: {fileID: 6887773552460955722, guid: 300876d631906774aae99a953fda97da, type: 3}
+  canDropGold: 0
   enemyCurrentHealth: 0
 --- !u!114 &4234944858500716264
 MonoBehaviour:
@@ -1659,6 +1673,8 @@ MonoBehaviour:
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
   lifeFragment: {fileID: 722434011091506781, guid: e7892bea0c290dd46b4ab3b46f1870fc, type: 3}
   magnetFragment: {fileID: 9035413473035538710, guid: dacb37e476851514a9f36331ad78e174, type: 3}
+  goldPrefab: {fileID: 6887773552460955722, guid: 300876d631906774aae99a953fda97da, type: 3}
+  canDropGold: 0
   enemyCurrentHealth: 0
 --- !u!114 &9067807032002582417
 MonoBehaviour:
@@ -1870,6 +1886,8 @@ MonoBehaviour:
   xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
   lifeFragment: {fileID: 722434011091506781, guid: e7892bea0c290dd46b4ab3b46f1870fc, type: 3}
   magnetFragment: {fileID: 9035413473035538710, guid: dacb37e476851514a9f36331ad78e174, type: 3}
+  goldPrefab: {fileID: 6887773552460955722, guid: 300876d631906774aae99a953fda97da, type: 3}
+  canDropGold: 0
   enemyCurrentHealth: 0
 --- !u!114 &7899120836914193403
 MonoBehaviour:

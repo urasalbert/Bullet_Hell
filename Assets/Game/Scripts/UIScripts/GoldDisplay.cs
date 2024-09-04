@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class GoldDisplay : MonoBehaviour
 {
-    public static GoldDisplay Instance {  get; private set; }
+    public static GoldDisplay Instance { get; private set; }
 
-    [SerializeField] private TextMeshProUGUI goldText; 
+    [SerializeField] private TextMeshProUGUI goldText;
 
     private void Awake()
     {

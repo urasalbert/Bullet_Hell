@@ -14,7 +14,9 @@ public class EnemyHealthManager : MonoBehaviour
     [SerializeField] internal GameObject xpFragment;
     [SerializeField] internal GameObject lifeFragment;
     [SerializeField] internal GameObject magnetFragment;
+    [SerializeField] internal GameObject goldPrefab;
 
+    public bool canDropGold;
     public float enemyCurrentHealth;
 
     [NonSerialized] public bool isDead;
@@ -98,6 +100,11 @@ public class EnemyHealthManager : MonoBehaviour
 
     void DropRandomFragment()
     {
+        if (canDropGold) //Drop gold just for mimic
+        {
+            DropGold();
+        }
+
         int maxRandomDropValue = (int)PlayerPrefs.GetFloat("maxRandomDropValueStoredValue", 0f);
         float randomValue = UnityEngine.Random.Range(0f, maxRandomDropValue);
 
@@ -109,7 +116,7 @@ public class EnemyHealthManager : MonoBehaviour
         else if (randomValue <= 2f)
         {
             DropMagnetFragment();
-        }
+        }       
         else
         {
             DropXpFragment();
@@ -129,5 +136,10 @@ public class EnemyHealthManager : MonoBehaviour
     void DropXpFragment()
     {
         Instantiate(xpFragment, transform.position, Quaternion.identity, parentObject.transform);
+    }
+    
+    void DropGold()
+    {
+        Instantiate(goldPrefab, transform.position, Quaternion.identity, parentObject.transform);
     }
 }
