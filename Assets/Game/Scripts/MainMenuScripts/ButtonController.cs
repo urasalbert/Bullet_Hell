@@ -7,7 +7,7 @@ public class ButtonController : MonoBehaviour
     [SerializeField] private GameObject Buttons;
     [SerializeField] private GameObject Upgrades;
 
-    void OpenUpgrades()
+    public void OpenUpgrades()
     {
         Buttons.SetActive(false);
         Upgrades.SetActive(true);
