@@ -11,6 +11,7 @@ public class CharChooseButton : MonoBehaviour
     [NonSerialized] public bool isLevisSelected = false;
 
     [SerializeField] private GameObject levisBorder;
+    [SerializeField] private GameObject levisInfoPanel;
 
     private void Awake()
     {
@@ -29,6 +30,14 @@ public class CharChooseButton : MonoBehaviour
     {
         isLevisSelected = true;
         levisBorder.SetActive(true);        
+    }
+    public void OnEnterLevisInfoPanel()
+    {
+        levisInfoPanel.SetActive(true);
+    }
+    public void OnExitLevisInfoPanel()
+    {
+        levisInfoPanel.SetActive(false);
     }
 
 }
