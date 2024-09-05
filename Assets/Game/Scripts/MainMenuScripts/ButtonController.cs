@@ -7,6 +7,7 @@ public class ButtonController : MonoBehaviour
     [SerializeField] private GameObject Buttons;
     [SerializeField] private GameObject Upgrades;
     [SerializeField] private GameObject CharacterScreen;
+    [SerializeField] private GameObject ConfirmQuitPanel;
 
     public void OpenUpgrades()
     {
@@ -23,6 +24,21 @@ public class ButtonController : MonoBehaviour
         CharacterScreen.SetActive(true);
         Buttons.SetActive(false);
     }
-
-
+    public void CloseCharChoose()
+    {
+        CharacterScreen.SetActive(false);
+        Buttons.SetActive(true);
+    }
+    public void QuitButton()
+    {
+        ConfirmQuitPanel.SetActive(true);
+    }
+    public void ConfirmQuitButton()
+    {
+        Application.Quit();
+    }
+    public void DeclineQuitButton()
+    {
+        ConfirmQuitPanel.SetActive(false);
+    }
 }
