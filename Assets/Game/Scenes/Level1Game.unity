@@ -2520,6 +2520,7 @@ GameObject:
   - component: {fileID: 517354304}
   - component: {fileID: 517354305}
   - component: {fileID: 517354306}
+  - component: {fileID: 517354307}
   m_Layer: 0
   m_Name: XpManager
   m_TagString: Untagged
@@ -2575,6 +2576,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
+--- !u!114 &517354307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517354303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cdaa016609eb64084f00a821ed7971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8075748445963243059, guid: 3430ed8b4433dd24cba8d015787ef01b, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class ExperienceManager : MonoBehaviour
     public TextMeshProUGUI skillPointUIText;
     public GameObject skillTreeUI;
     public float skillPoints = 0;
+    public TextMeshProUGUI pressPText;
     [NonSerialized] public bool isSkillTreeUIopen;
     LevelUpEffect levelUpEffect;
 
@@ -33,6 +34,7 @@ public class ExperienceManager : MonoBehaviour
             isSkillTreeUIopen = false;
             skillPoints = 0;
             levelUpEffect = GetComponent<LevelUpEffect>();
+            pressPText.gameObject.SetActive(false);
         }
     }
     private void Start()
@@ -50,6 +52,7 @@ public class ExperienceManager : MonoBehaviour
         //Manuel skill tree key
         if (Input.GetKeyDown("p") && !isSkillTreeUIopen) 
         {
+            pressPText.gameObject.SetActive(false);
             OpenSkillUI();
         }
         else if (Input.GetKeyDown("p") && isSkillTreeUIopen)         
@@ -78,7 +81,7 @@ public class ExperienceManager : MonoBehaviour
             UpdateXPBar();
         }
     }
-
+    bool flag1 = false;
     private void LevelUp()
     {
         totalExperience -= experienceToNextLevel;
@@ -89,6 +92,11 @@ public class ExperienceManager : MonoBehaviour
         if (levelUpEffect != null)
         {
             StartCoroutine(levelUpEffect.CreateandDestroyEffect()); // Trigger the level-up effect
+        }
+        if (!flag1)// Information text show up
+        {
+            pressPText.gameObject.SetActive(true);
+            flag1 = true;
         }
     }
     public void UpdateSkillPoints()
