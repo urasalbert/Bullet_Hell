@@ -17,7 +17,8 @@ public class ExperienceManager : MonoBehaviour
     public TextMeshProUGUI skillPointUIText;
     public GameObject skillTreeUI;
     public float skillPoints = 0;
-    [NonSerialized] public bool isSkillTreeUIopen; 
+    [NonSerialized] public bool isSkillTreeUIopen;
+    LevelUpEffect levelUpEffect;
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class ExperienceManager : MonoBehaviour
             skillTreeUI.SetActive(false);
             isSkillTreeUIopen = false;
             skillPoints = 0;
+            levelUpEffect = GetComponent<LevelUpEffect>();
         }
     }
     private void Start()
@@ -83,6 +85,11 @@ public class ExperienceManager : MonoBehaviour
         currentLevel++;
         skillPoints++;
         experienceToNextLevel *= 1.6f; //Increase xp requirement by 20 percent at each level
+
+        if (levelUpEffect != null)
+        {
+            StartCoroutine(levelUpEffect.CreateandDestroyEffect()); // Trigger the level-up effect
+        }
     }
     public void UpdateSkillPoints()
     {
