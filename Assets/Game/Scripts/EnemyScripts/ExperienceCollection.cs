@@ -10,6 +10,7 @@ public class ExperienceCollection : MonoBehaviour
     private float moveSpeed = 7f;
     [SerializeField] private float experienceAmount;
 
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -43,7 +44,7 @@ public class ExperienceCollection : MonoBehaviour
 
     internal void PlayCollectionSound()
     {
-        //Sound effect goes here
+        XPCollectionSound.Instance.PlayXPCollectionSound();
     }
 
 }
