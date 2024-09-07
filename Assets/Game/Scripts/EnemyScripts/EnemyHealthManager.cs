@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using UnityEditorInternal.Profiling.Memory.Experimental.FileFormat;
 using UnityEngine;
 
 public class EnemyHealthManager : MonoBehaviour
@@ -24,8 +25,14 @@ public class EnemyHealthManager : MonoBehaviour
 
     EnemyMovement enemyMovement;
 
+    [NonSerialized] public string enemyType;
     private void Awake()
     {
+        if (gameObject.name.Contains("Bat")) // Keep enemy type for different sounds
+        {
+            enemyType = "Bat";
+        }
+
         enemyCurrentHealth = enemyMaxHealth;
         isDead = false;
         enemyDieExplosion = GetComponent<EnemyDieExplosion>();
@@ -90,7 +97,12 @@ public class EnemyHealthManager : MonoBehaviour
             isDead = true;
         }
 
-        EnemyDamageSound.Instance.PlayEnemyDamageSound(); //Hurt sound
+        if(enemyType == "Bat") { }
+        else
+        {
+            EnemyDamageSound.Instance.PlayEnemyDamageSound(); //Hurt sound
+        }
+        
     }
 
     internal void Die()
@@ -98,7 +110,16 @@ public class EnemyHealthManager : MonoBehaviour
         enemyDieExplosion.GoreExplosion();
         Destroy(gameObject);
         DropRandomFragment();
-        EnemyDieSound.Instance.PlayEnemyDieSound();
+
+        if (enemyType == "Bat")
+        {
+            Debug.Log("Playing Bat Die Sound");
+            BatDieHurtSound.Instance.PlayBatDieSound();
+        }
+        else
+        {
+            EnemyDieSound.Instance.PlayEnemyDieSound();
+        }      
     }
 
     void DropRandomFragment()

@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 5f); // Destroy the bullet after 5 seconds
+        Destroy(gameObject, 2f); // Destroy the bullet after 2 seconds
     }
 
     private void Update()
