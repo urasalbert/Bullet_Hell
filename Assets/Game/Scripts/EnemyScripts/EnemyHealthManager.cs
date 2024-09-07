@@ -88,7 +88,9 @@ public class EnemyHealthManager : MonoBehaviour
         {
             Die();
             isDead = true;
-        } 
+        }
+
+        EnemyDamageSound.Instance.PlayEnemyDamageSound(); //Hurt sound
     }
 
     internal void Die()
@@ -96,6 +98,7 @@ public class EnemyHealthManager : MonoBehaviour
         enemyDieExplosion.GoreExplosion();
         Destroy(gameObject);
         DropRandomFragment();
+        EnemyDieSound.Instance.PlayEnemyDieSound();
     }
 
     void DropRandomFragment()
