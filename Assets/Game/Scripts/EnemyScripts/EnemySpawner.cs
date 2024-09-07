@@ -13,8 +13,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] internal GameObject batsPrefab;
     [SerializeField] internal GameObject freakSkeletonPrefab;
 
-    internal float spawnInterval = 5f;
-    internal float rangedSpawnInterval = 8f;
+    internal float spawnInterval = 4f;
+    internal float rangedSpawnInterval = 4f;
 
     private float nextSpawnTime;
     private float nextRangedSpawnTime;
@@ -33,7 +33,8 @@ public class EnemySpawner : MonoBehaviour
     {
         if (GameTimer.Instance.minutes % 2 == 0 && !flag3 && GameTimer.Instance.minutes != 0)
         {
-            spawnInterval -= 1f;
+            spawnInterval -= 0.7f;
+            rangedSpawnInterval -= 0.7f;
             flag3 = true;
             GameTimer.Instance.TriggerEvent("Spawn Rate Increased!");
         }

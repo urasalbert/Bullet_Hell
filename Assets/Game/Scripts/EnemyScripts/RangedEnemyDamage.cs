@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RangedEnemyDamage : MonoBehaviour
 {
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -22,7 +21,14 @@ public class RangedEnemyDamage : MonoBehaviour
     private void DamagePlayer()
     {
         // Dealing damage
-        HealthBarManager.Instance.IncomeDamage(25);
+        HealthBarManager.Instance.IncomeDamage(20);
+        PlayRangedDamageSound();
         //Debug.Log("Damage Dealed: " + HealthBarManager.Instance.currentPlayerHealth);
     }
+
+    void PlayRangedDamageSound()
+    {
+        PlayerDamageSoundManager.Instance.PlayDamageSound();
+    }
+
 }

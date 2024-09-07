@@ -7,9 +7,9 @@ public class EnemyDamage : MonoBehaviour
     //I did the damage hitting with layers because in
     //overlapcircle enemy and player do not collide
 
-    internal float detectionRadius = 0.3f;
+    internal float detectionRadius = 0.15f;
     public LayerMask playerLayer;
-    public float damageInterval = 1.0f; // Damage interval
+    private float damageInterval = 1.5f; // Damage interval
     private float lastDamageTime;
     private Animator animator;
 

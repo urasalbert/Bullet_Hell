@@ -43,7 +43,7 @@ public class ProjectileWeaponController : MonoBehaviour
     }
     protected void PlayFireSound()
     {
-        // Play fire sound 
+        ProjectileShootSound.Instance.PlayProjectileSound();
     }
 
     private void Update()
