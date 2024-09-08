@@ -49,6 +49,6 @@ public class EnemyDamage : MonoBehaviour
 
     void DamageSound()
     {
-        EnemyDamageSound.Instance.PlayEnemyDamageSound();
+        PlayerDamageSoundManager.Instance.PlayDamageSound();
     }
 }

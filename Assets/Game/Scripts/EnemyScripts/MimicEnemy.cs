@@ -27,6 +27,7 @@ public class MimicEnemy : MonoBehaviour
         if (distanceToPlayer <= triggerRadius)
         {
             Debug.Log("Mimic is attacking");
+            TriggerAttackSound();
             MoveTowardsPlayer();
             TriggerAttackAnimation();
         }
@@ -44,6 +45,17 @@ public class MimicEnemy : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
     }
 
+    bool flag1 = false;
+    void TriggerAttackSound()
+    {
+       
+        if(!flag1)
+        {
+            MimicSounds.Instance.PlayMimicAttackSound();
+            flag1 = true;
+        }
+        
+    }
     void SpriteDirectionChecker()
     {
         // Check the direction of the player relative to the enemy
