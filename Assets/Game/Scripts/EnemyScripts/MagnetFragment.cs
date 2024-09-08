@@ -44,7 +44,7 @@ public class MagnetFragment : MonoBehaviour
 
     internal void PlayCollectionSound()
     {
-        //Sound effect goes here
+        OtherFragmentSounds.Instance.PlayMagnetSound();
     }
 
 }

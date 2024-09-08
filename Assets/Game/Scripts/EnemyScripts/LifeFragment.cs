@@ -43,7 +43,7 @@ public class LifeFragment : MonoBehaviour
 
     internal void PlayCollectionSound()
     {
-        //Sound effect goes here
+        OtherFragmentSounds.Instance.PlayHealSound();
     }
 
 }
