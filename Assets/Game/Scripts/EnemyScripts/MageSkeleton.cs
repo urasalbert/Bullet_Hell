@@ -9,7 +9,7 @@ public class MageSkeleton : MonoBehaviour
     private Transform playerTransform;
     Animator animator;
     private float timeSinceLastShot;
-    private float fireInterval = 3f; // Fire every 3 seconds
+    private float fireInterval = 10f;
     private SpriteRenderer spriteRenderer;
     Transform _playerTransform;
     GameObject parentObject;
@@ -63,6 +63,7 @@ public class MageSkeleton : MonoBehaviour
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform; // Get the player's current transform before shooting
 
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity, parentObject.transform);
+        MageCastSound();
 
         if (projectile == null) // Null check for projectile creation
         {
@@ -85,6 +86,11 @@ public class MageSkeleton : MonoBehaviour
         }
 
         Destroy(projectile,10f);// Anti lag destroy
+    }
+
+    void MageCastSound()
+    {
+        ArcherMageCastSound.Instance.PlayMageCastSound();
     }
     void SpriteDirectionChecker()
     {

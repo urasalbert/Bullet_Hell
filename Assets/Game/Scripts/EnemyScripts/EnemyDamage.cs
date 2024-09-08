@@ -41,7 +41,14 @@ public class EnemyDamage : MonoBehaviour
         HealthBarManager.Instance.IncomeDamage(10);
         //Playing damage animation
         animator.SetTrigger("isShoot");
+
+        DamageSound();
+
         //Debug.Log("Damage Dealed: " + HealthBarManager.Instance.currentPlayerHealth);
     }
 
+    void DamageSound()
+    {
+        EnemyDamageSound.Instance.PlayEnemyDamageSound();
+    }
 }

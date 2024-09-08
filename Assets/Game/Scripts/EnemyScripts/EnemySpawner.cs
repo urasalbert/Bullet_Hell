@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] internal GameObject freakSkeletonPrefab;
 
     internal float spawnInterval = 4f;
-    internal float rangedSpawnInterval = 4f;
+    internal float rangedSpawnInterval = 10f;
 
     private float nextSpawnTime;
     private float nextRangedSpawnTime;

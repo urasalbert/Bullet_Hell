@@ -84,6 +84,7 @@ public class ArcherSkeleton : MonoBehaviour
 
         // Create bow prefab
         GameObject arrowPrefab = Instantiate(projectilePrefab, transform.position, rotation, parentObject.transform);
+        ArrowShootingSound();
 
         if (arrowPrefab == null) // Null check
         {
@@ -104,6 +105,12 @@ public class ArcherSkeleton : MonoBehaviour
 
         Destroy(arrowPrefab, 10f); // Destroy it for antilag
     }
+
+    void ArrowShootingSound()
+    {
+        ArcherMageCastSound.Instance.PlayArcherCastSound();
+    }
+
     void SpriteDirectionChecker()
     {
         // Check the direction of the player relative to the enemy
