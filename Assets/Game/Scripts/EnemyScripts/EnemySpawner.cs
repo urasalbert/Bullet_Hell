@@ -51,6 +51,7 @@ public class EnemySpawner : MonoBehaviour
 
         if(GameTimer.Instance.minutes == 10 && !flag2)
         {
+            SpawnSounds.Instance.PlayBossSpawnSound();
             SpawnBoss();
             flag2 = true;
         }
