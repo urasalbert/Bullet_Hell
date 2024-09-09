@@ -28,8 +28,14 @@ public class PetAttack : MonoBehaviour
     }
 
     void ShootLaser()
-    {       
+    {
+        PlayLaserSound();
         GameObject laser = Instantiate(laserPrefab, laserPoint.position, 
             Quaternion.Euler(0, 0, 90), parentObject.transform);
+    }
+
+    void PlayLaserSound()
+    {
+        PetSounds.Instance.PlayRedPetAttack();
     }
 }
