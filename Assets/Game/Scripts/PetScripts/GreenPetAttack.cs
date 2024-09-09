@@ -57,6 +57,14 @@ public class GreenPetAttack : MonoBehaviour
         StartCoroutine(SplitProjectile(laser));
     }
 
+    void PlayAttackSound()
+    {
+        PetSounds.Instance.PlayGreenPetAttack();
+    }
+    void PlayExplosionSound()
+    {
+        PetSounds.Instance.PlayGreenPetProjectileEXP();
+    }
     IEnumerator SplitProjectile(GameObject projectile)
     {
         PlayAttackSound();
