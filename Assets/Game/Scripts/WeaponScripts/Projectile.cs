@@ -10,15 +10,18 @@ public class Projectile : MonoBehaviour
 
     public void Initialize(Vector2 direction)
     {
-        moveDirection = direction;
+        moveDirection = direction.normalized;
     }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 2f); // Destroy the bullet after 2 seconds
     }
 
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
     private void Update()
     {
         Move();

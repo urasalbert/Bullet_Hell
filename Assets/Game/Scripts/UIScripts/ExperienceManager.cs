@@ -53,14 +53,21 @@ public class ExperienceManager : MonoBehaviour
         if (Input.GetKeyDown("p") && !isSkillTreeUIopen) 
         {
             pressPText.gameObject.SetActive(false);
+            PlayXPMenuOpen();
             OpenSkillUI();
         }
         else if (Input.GetKeyDown("p") && isSkillTreeUIopen)         
         {
+            PlayXPMenuOpen();
             CloseSkillUI();
         }
     }
 
+    public void PlayXPMenuOpen()
+    {
+        LevelUpSkillUISounds.Instance.PlayMenuClickSound(); //Menu and click sound the same
+    }
+    
     public void AddExperience(float amount)
     {
         int extraXPvalue = (int)PlayerPrefs.GetFloat("extraXPvalueStoredValue", 0f);
@@ -71,6 +78,10 @@ public class ExperienceManager : MonoBehaviour
         CheckForLevelUp();
     }
 
+    void LevelUpSound()
+    {
+        LevelUpSkillUISounds.Instance.PlayLevelUpSound();
+    }
     internal void CheckForLevelUp()
     {
         if (totalExperience >= experienceToNextLevel)
@@ -86,6 +97,7 @@ public class ExperienceManager : MonoBehaviour
     {
         totalExperience -= experienceToNextLevel;
         currentLevel++;
+        LevelUpSound();
         skillPoints++;
         experienceToNextLevel *= 1.6f; //Increase xp requirement by 20 percent at each level
 
