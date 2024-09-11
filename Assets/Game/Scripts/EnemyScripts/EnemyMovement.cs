@@ -72,10 +72,13 @@ public class EnemyMovement : MonoBehaviour
     public void EnemyChill()
     {
         float randomValue = Random.Range(0f, 3f);
-        float chillTimer = 3f;
+        float chillTimer = 3f;        
 
         if (ChillEnemySkill.Instance.isClicked && randomValue <= 2f)
         {
+            //Sound effects
+            FreezeSoundEffect();
+
             // Make enemy sprite color blue for chill effect
             spriteRenderer.color = new Color(46f / 255f, 118f / 255f, 229f / 255f);
 
@@ -112,6 +115,10 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    void FreezeSoundEffect()
+    {
+        //FreezeSound.Instance.PlayFreezeSound();
+    }
     IEnumerator EndChillEffect(float delay)
     {
         yield return new WaitForSeconds(delay);

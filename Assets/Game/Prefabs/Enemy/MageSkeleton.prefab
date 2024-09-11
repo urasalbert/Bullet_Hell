@@ -101,7 +101,6 @@ GameObject:
   - component: {fileID: -1116769673576782359}
   - component: {fileID: -6861329257060185036}
   - component: {fileID: 1732269913918610308}
-  - component: {fileID: -7814469349820718647}
   m_Layer: 7
   m_Name: MageSkeleton
   m_TagString: Enemy
@@ -334,16 +333,3 @@ MonoBehaviour:
   isFrozen: 0
   freezeEffect: {fileID: 546611269260973300}
   hasAttackAnim: 0
---- !u!114 &-7814469349820718647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563002150359011826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 459fc47aacc70e7409463bc68f107087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
