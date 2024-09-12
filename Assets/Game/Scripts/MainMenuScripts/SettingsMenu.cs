@@ -8,6 +8,7 @@ public class SettingsMenu : MonoBehaviour
 {
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private Slider volumeSlider;
+    [SerializeField] private Toggle toggle;
 
     public void SetVolume(float volume)
     {
@@ -19,6 +20,11 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
+        bool isFullScreen = PlayerPrefs.GetInt("FullScreen", 0) == 1;
+        Screen.fullScreen = isFullScreen;
+
+        toggle.isOn = isFullScreen;
+
         if (PlayerPrefs.HasKey("Volume"))
         {
             float savedVolume = PlayerPrefs.GetFloat("Volume");
@@ -31,5 +37,11 @@ public class SettingsMenu : MonoBehaviour
             audioMixer.SetFloat("Volume", 1);
             Debug.Log("Default volume set");
         }
+    }
+
+    public void SetFullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
+        PlayerPrefs.SetInt("FullScreen", isFullScreen ? 1 : 0); 
     }
 }
