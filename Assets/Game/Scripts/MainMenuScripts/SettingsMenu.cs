@@ -13,35 +13,35 @@ public class SettingsMenu : MonoBehaviour
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("Volume", volume);
-        PlayerPrefs.SetFloat("Volume", volume);
+        PlayerPrefs.SetFloat("Volume", volume); //Save volume with playerpref
         PlayerPrefs.Save();
-        Debug.Log(volume);
     }
 
     private void Start()
     {
-        bool isFullScreen = PlayerPrefs.GetInt("FullScreen", 0) == 1;
+        bool isFullScreen = PlayerPrefs.GetInt("FullScreen", 0) == 1; //Check bool value 1 = true 0 = false
         Screen.fullScreen = isFullScreen;
 
         toggle.isOn = isFullScreen;
 
         if (PlayerPrefs.HasKey("Volume"))
         {
-            float savedVolume = PlayerPrefs.GetFloat("Volume");
-            audioMixer.SetFloat("Volume", savedVolume);
+            float savedVolume = PlayerPrefs.GetFloat("Volume"); //Get saved volume when game launch
+
+            // Set it again for slider + audiomixer
+            audioMixer.SetFloat("Volume", savedVolume); 
             volumeSlider.value = savedVolume;
-            Debug.Log("Saved volume loaded: " + savedVolume);
         }
         else
         {
-            audioMixer.SetFloat("Volume", 1);
-            Debug.Log("Default volume set");
+            //If there is no saved volume set volume max value
+            audioMixer.SetFloat("Volume", 20);
         }
     }
 
     public void SetFullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
-        PlayerPrefs.SetInt("FullScreen", isFullScreen ? 1 : 0); 
+        PlayerPrefs.SetInt("FullScreen", isFullScreen ? 1 : 0); // condition ? value_if_true : value_if_false
     }
 }
