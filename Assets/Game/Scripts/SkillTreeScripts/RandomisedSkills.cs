@@ -74,10 +74,10 @@ public class RandomisedSkill : MonoBehaviour
         if (activeButtons.Count >= 2)
         {
             RectTransform rectTransform1 = activeButtons[0].GetComponent<RectTransform>();
-            rectTransform1.anchoredPosition = new Vector2(-280, -55);
+            rectTransform1.anchoredPosition = new Vector2(-220, 80);
 
             RectTransform rectTransform2 = activeButtons[1].GetComponent<RectTransform>();
-            rectTransform2.anchoredPosition = new Vector2(220, -55);
+            rectTransform2.anchoredPosition = new Vector2(220, 80);
         }
     }
 }

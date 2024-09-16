@@ -111,7 +111,7 @@ public class ExperienceManager : MonoBehaviour
         }
         if (!flag1)// Information text show up
         {
-            pressPText.gameObject.SetActive(true);
+            //pressPText.gameObject.SetActive(true);
             flag1 = true;
         }
     }
