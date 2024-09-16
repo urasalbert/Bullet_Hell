@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
             spawnInterval -= 0.5f;
             rangedSpawnInterval -= 0.5f;
             flag4 = true;
-            GameTimer.Instance.TriggerEvent("Spawn Rate Increased!");
+            //GameTimer.Instance.TriggerEvent("Spawn Rate Increased!");
         }
         else if (Mathf.FloorToInt(GameTimer.Instance.minutes) ==
             Mathf.FloorToInt(GameTimer.Instance.minutes - Time.deltaTime) && flag4)
@@ -48,7 +48,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (GameTimer.Instance.minutes >= 2 && flag1 == false)
         {
-            //GameTimer.Instance.TriggerEvent("You will face stronger opponents!");//Event text trigger for UI
+            GameTimer.Instance.TriggerEvent("You will face stronger opponents!");//Event text trigger for UI
             flag1 = true;  
         }
 

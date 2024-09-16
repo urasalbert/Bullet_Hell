@@ -23,6 +23,8 @@ public class HealthBarManager : MonoBehaviour
     [SerializeField] internal GameObject immunityShield;
 
     private bool isMaxHealthIncreased = false;
+    [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject skillTreeUI;
 
     private void Awake()
     {
@@ -38,6 +40,7 @@ public class HealthBarManager : MonoBehaviour
             isDead = false;
             immunityShield.SetActive(false);
             currentPlayerHealth = maxPlayerHealth + menuHealthUpgradeValue;
+            gameOverUI.SetActive(false);
 
             Debug.Log("health upgrade value: " + menuHealthUpgradeValue);
             Debug.Log("Current health: " + currentPlayerHealth);
@@ -92,8 +95,10 @@ public class HealthBarManager : MonoBehaviour
 
     void Die()
     {
-       //Debug.Log("Player died");
-        //Die script goes here
+        //Debug.Log("Player died");
+        gameOverUI.SetActive(true);
+        skillTreeUI.SetActive(false);
+        Time.timeScale = 0;
     }
     void RejectDeath()
     {
@@ -107,6 +112,7 @@ public class HealthBarManager : MonoBehaviour
         }
         else
         {
+
             Die();
         }
     }
