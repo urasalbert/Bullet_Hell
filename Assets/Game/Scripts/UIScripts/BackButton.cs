@@ -9,11 +9,8 @@ public class BackButton : MonoBehaviour
 
     public void CloseSkillTree()
     {
-        if (ExperienceManager.Instance.isSkillTreeUIopen)
-        {
             skillTreeUI.SetActive(false);
             ExperienceManager.Instance.isSkillTreeUIopen = false;
             Time.timeScale = 1.0f;
-        }
     }
 }

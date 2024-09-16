@@ -29,23 +29,26 @@ public class EnemySpawner : MonoBehaviour
     bool flag1 = false;//For triggerevents
     bool flag2 = false;//For boss spawn
     bool flag3 = false;//For spawn interval
+    bool flag4 = false;
     void Update()
     {
-        if (GameTimer.Instance.minutes % 1 == 0 && !flag3 && GameTimer.Instance.minutes != 0)
+        if (Mathf.FloorToInt(GameTimer.Instance.minutes) != 
+            Mathf.FloorToInt(GameTimer.Instance.minutes - Time.deltaTime) && !flag4 && GameTimer.Instance.minutes != 0)
         {
             spawnInterval -= 0.5f;
             rangedSpawnInterval -= 0.5f;
-            flag3 = true;
+            flag4 = true;
             GameTimer.Instance.TriggerEvent("Spawn Rate Increased!");
         }
-        else if (GameTimer.Instance.minutes % 2 != 0 && flag3)
+        else if (Mathf.FloorToInt(GameTimer.Instance.minutes) ==
+            Mathf.FloorToInt(GameTimer.Instance.minutes - Time.deltaTime) && flag4)
         {
-            flag3 = false;
+            flag4 = false;
         }
 
         if (GameTimer.Instance.minutes >= 2 && flag1 == false)
         {
-            GameTimer.Instance.TriggerEvent("You will face stronger opponents!");//Event text trigger for UI
+            //GameTimer.Instance.TriggerEvent("You will face stronger opponents!");//Event text trigger for UI
             flag1 = true;  
         }
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,11 @@ public class RandomisedSkill : MonoBehaviour
 
     private Vector2 offScreenPosition = new Vector2(-1000, -1000);
 
+    public TextMeshProUGUI maxLevelText;
+    public TextMeshProUGUI skillNameText;
     public GameObject skillTreeUI;
+
+    public bool maxLevel = false; 
     void Start()
     {
         MoveButtonsOffScreen();
@@ -20,6 +25,9 @@ public class RandomisedSkill : MonoBehaviour
     {
         if (buttonList.Count < 2)
         {
+            maxLevel = true;
+            skillNameText.text = string.Empty;
+            maxLevelText.text = "You have reached the maximum level!";
             return;
         }
 

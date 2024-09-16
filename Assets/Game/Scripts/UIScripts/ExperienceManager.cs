@@ -45,23 +45,23 @@ public class ExperienceManager : MonoBehaviour
     }
 
     private void Update()
-    {     
-        if(Input.GetKeyDown("b")) // For testing delete this later
+    {
+        if (Input.GetKeyDown("b")) // For testing delete this later
         {
-            AddExperience(1000);
-        } 
+            AddExperience(10000);
+        }
 
         //Manuel skill tree key
-        if (Input.GetKeyDown("p") && !isSkillTreeUIopen) 
+        if (Input.GetKeyDown("p") && !isSkillTreeUIopen)
         {
             pressPText.gameObject.SetActive(false);
             PlayXPMenuOpenSound();
             OpenSkillUI();
         }
-        else if (Input.GetKeyDown("p") && isSkillTreeUIopen)         
+        else if (Input.GetKeyDown("p") && isSkillTreeUIopen)
         {
             PlayXPMenuOpenSound();
-           CloseSkillUI();
+            CloseSkillUI();
         }
     }
 
@@ -69,7 +69,7 @@ public class ExperienceManager : MonoBehaviour
     {
         LevelUpSkillUISounds.Instance.PlayMenuClickSound(); //Menu and click sound the same
     }
-    
+
     public void AddExperience(float amount)
     {
         int extraXPvalue = (int)PlayerPrefs.GetFloat("extraXPvalueStoredValue", 0f);
@@ -97,23 +97,26 @@ public class ExperienceManager : MonoBehaviour
     bool flag1 = false;
     private void LevelUp()
     {
-        OpenSkillUI();
-        RandomisedSkill.ShowRandomButtons();
-        totalExperience -= experienceToNextLevel;
-        currentLevel++;
-        LevelUpSound();
-        skillPoints++;
-        experienceToNextLevel *= 1.5f; //Increase xp requirement by 20 percent at each level
+        if (!RandomisedSkill.maxLevel)
+        {
+            OpenSkillUI();
+            RandomisedSkill.ShowRandomButtons();
+            totalExperience -= experienceToNextLevel;
+            currentLevel++;
+            LevelUpSound();
+            skillPoints++;
+            experienceToNextLevel *= 1.3f; //Increase xp requirement by 20 percent at each level
 
-        if (levelUpEffect != null)
-        {
-            StartCoroutine(levelUpEffect.CreateandDestroyEffect()); // Trigger the level-up effect
-        }
-        if (!flag1)// Information text show up
-        {
-            //pressPText.gameObject.SetActive(true);
-            flag1 = true;
-        }
+            if (levelUpEffect != null)
+            {
+                StartCoroutine(levelUpEffect.CreateandDestroyEffect()); // Trigger the level-up effect
+            }
+            if (!flag1)// Information text show up
+            {
+                //pressPText.gameObject.SetActive(true);
+                flag1 = true;
+            }
+        }     
     }
     public void UpdateSkillPoints()
     {
@@ -127,7 +130,7 @@ public class ExperienceManager : MonoBehaviour
         }
     }
 
-    void OpenSkillUI() 
+    void OpenSkillUI()
     {
         Time.timeScale = 0;
         skillTreeUI.SetActive(true);
@@ -140,4 +143,6 @@ public class ExperienceManager : MonoBehaviour
         skillTreeUI.SetActive(false);
         isSkillTreeUIopen = false;
     }
+
+
 }
