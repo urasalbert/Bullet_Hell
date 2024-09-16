@@ -10,7 +10,7 @@ public class UprightandDownrightSkill : MonoBehaviour
     public static UprightandDownrightSkill Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
-    float pointCost = 5;
+    float pointCost = 1;
 
     [NonSerialized] public bool isClicked = false;
 
