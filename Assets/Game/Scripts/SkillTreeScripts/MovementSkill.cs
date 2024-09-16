@@ -10,7 +10,7 @@ public class MovementSkill : MonoBehaviour
     public static MovementSkill Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
-    float pointCost = 2;
+    float pointCost = 1;
 
     [NonSerialized] public bool isClicked = false;
     [SerializeField] private GameObject skillTreeUI;
@@ -46,14 +46,14 @@ public class MovementSkill : MonoBehaviour
             }
             if (ExperienceManager.Instance.skillPoints == 0)//If player spend all points close skilltree
             {
-                Time.timeScale = 1;
-                skillTreeUI.SetActive(false);
-                ExperienceManager.Instance.isSkillTreeUIopen = false;
+                //Time.timeScale = 1;
+                //skillTreeUI.SetActive(false);
+                //ExperienceManager.Instance.isSkillTreeUIopen = false;
 
             }
             if (!isClicked)
             {
-                skillCostText.text = ("You don't have enough points to get the ability");
+                //skillCostText.text = ("You don't have enough points to get the ability");
             }
         }
         else
@@ -62,23 +62,26 @@ public class MovementSkill : MonoBehaviour
         }
     }
 
-    public void SkillCost()
-    {
-        if (isClicked)
-        {
-            skillCostText.text = ("You have already took the ability ");
-        }
-        else if (ExperienceManager.Instance.skillPoints >= pointCost)
-        {
-            skillCostText.text = ("Ability can be taken for ") + pointCost.ToString() + (" points");
-        }
-        else
-        {
-            skillCostText.text = ("You don't have enough points to get the ability ") + pointCost.ToString() + (" points");
-        }
-    }
-    public void ClearSkillCost()
-    {
-        skillCostText.text = (" ");
-    }
+
+    /*public void SkillCost()
+ {
+     if (isClicked)
+     {
+         skillCostText.text = ("You have already took the ability ");
+     }
+     else if (ExperienceManager.Instance.skillPoints >= pointCost)
+     {
+         skillCostText.text = ("Ability can be taken for ") + pointCost.ToString() + (" points");
+     }
+     else
+     {
+         skillCostText.text = ("You don't have enough points to get the ability ") + pointCost.ToString() + (" points");
+     }
+ }
+
+ public void ClearSkillCost()
+ {
+     skillCostText.text = (" ");
+ }
+ */
 }

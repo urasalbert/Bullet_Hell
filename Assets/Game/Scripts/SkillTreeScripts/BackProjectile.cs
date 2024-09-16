@@ -10,7 +10,7 @@ public class BackProjectile : MonoBehaviour
     public static BackProjectile Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI skillCostText;
-    float pointCost = 2;
+    float pointCost = 1;
 
     [NonSerialized] public bool isClicked = false;
     internal Image SkillImage;
@@ -45,14 +45,14 @@ public class BackProjectile : MonoBehaviour
             }
             if (ExperienceManager.Instance.skillPoints == 0)//If player spend all points close skilltree
             {
-                Time.timeScale = 1;
-                skillTreeUI.SetActive(false);
-                ExperienceManager.Instance.isSkillTreeUIopen = false;
+                //Time.timeScale = 1;
+                //skillTreeUI.SetActive(false);
+                //ExperienceManager.Instance.isSkillTreeUIopen = false;
 
             }
             if (!isClicked)
             {
-                skillCostText.text = ("You don't have enough points to get the ability");
+                //skillCostText.text = ("You don't have enough points to get the ability");
             }
         }
         else
@@ -61,7 +61,7 @@ public class BackProjectile : MonoBehaviour
         }
     }
 
-    public void SkillCost()
+    /*public void SkillCost()
     {
         if (isClicked)
         {
@@ -76,8 +76,10 @@ public class BackProjectile : MonoBehaviour
             skillCostText.text = ("You don't have enough points to get the ability ") + pointCost.ToString() + (" points");
         }
     }
+
     public void ClearSkillCost()
     {
         skillCostText.text = (" ");
     }
+    */
 }

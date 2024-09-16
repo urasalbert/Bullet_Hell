@@ -45,14 +45,14 @@ public class HealthOneSkill : MonoBehaviour
             }
             if (ExperienceManager.Instance.skillPoints == 0)//If player spend all points close skilltree
             {
-                Time.timeScale = 1;
-                skillTreeUI.SetActive(false);
-                ExperienceManager.Instance.isSkillTreeUIopen = false;
+                //Time.timeScale = 1;
+                //skillTreeUI.SetActive(false);
+                //ExperienceManager.Instance.isSkillTreeUIopen = false;
 
             }
             if (!isClicked)
             {
-                skillCostText.text = ("You don't have enough points to get the ability");
+               // skillCostText.text = ("You don't have enough points to get the ability");
             }
         }
         else
@@ -60,7 +60,7 @@ public class HealthOneSkill : MonoBehaviour
             return;
         }
     }
-    public void SkillCost()
+    /*public void SkillCost()
     {
         if (isClicked)
         {
@@ -75,9 +75,11 @@ public class HealthOneSkill : MonoBehaviour
             skillCostText.text = ("You don't have enough points to get the ability ") + pointCost.ToString() + (" points");
         }
     }
+
     public void ClearSkillCost()
     {
         skillCostText.text = (" ");
     }
+    */
 }
 

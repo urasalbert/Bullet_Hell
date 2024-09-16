@@ -11,7 +11,7 @@ public class ExperienceManager : MonoBehaviour
 
     public float totalExperience;
     public int currentLevel = 1;
-    public float experienceToNextLevel = 500;
+    [NonSerialized] public float experienceToNextLevel = 100;
     public Image xpBar;
     public TextMeshProUGUI textMeshProUGUI;
     public TextMeshProUGUI skillPointUIText;
@@ -19,8 +19,9 @@ public class ExperienceManager : MonoBehaviour
     public float skillPoints = 0;
     public TextMeshProUGUI pressPText;
     [NonSerialized] public bool isSkillTreeUIopen;
-    LevelUpEffect levelUpEffect;
 
+    LevelUpEffect levelUpEffect;
+    RandomisedSkill RandomisedSkill;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -35,6 +36,7 @@ public class ExperienceManager : MonoBehaviour
             skillPoints = 0;
             levelUpEffect = GetComponent<LevelUpEffect>();
             pressPText.gameObject.SetActive(false);
+            RandomisedSkill = FindObjectOfType<RandomisedSkill>();
         }
     }
     private void Start()
@@ -47,23 +49,23 @@ public class ExperienceManager : MonoBehaviour
         if(Input.GetKeyDown("b")) // For testing delete this later
         {
             AddExperience(1000);
-        }
+        } 
 
         //Manuel skill tree key
         if (Input.GetKeyDown("p") && !isSkillTreeUIopen) 
         {
             pressPText.gameObject.SetActive(false);
-            PlayXPMenuOpen();
+            PlayXPMenuOpenSound();
             OpenSkillUI();
         }
         else if (Input.GetKeyDown("p") && isSkillTreeUIopen)         
         {
-            PlayXPMenuOpen();
-            CloseSkillUI();
+            PlayXPMenuOpenSound();
+           CloseSkillUI();
         }
     }
 
-    public void PlayXPMenuOpen()
+    public void PlayXPMenuOpenSound()
     {
         LevelUpSkillUISounds.Instance.PlayMenuClickSound(); //Menu and click sound the same
     }
@@ -95,11 +97,13 @@ public class ExperienceManager : MonoBehaviour
     bool flag1 = false;
     private void LevelUp()
     {
+        OpenSkillUI();
+        RandomisedSkill.ShowRandomButtons();
         totalExperience -= experienceToNextLevel;
         currentLevel++;
         LevelUpSound();
         skillPoints++;
-        experienceToNextLevel *= 1.6f; //Increase xp requirement by 20 percent at each level
+        experienceToNextLevel *= 1.5f; //Increase xp requirement by 20 percent at each level
 
         if (levelUpEffect != null)
         {
@@ -127,7 +131,7 @@ public class ExperienceManager : MonoBehaviour
     {
         Time.timeScale = 0;
         skillTreeUI.SetActive(true);
-        isSkillTreeUIopen = true;
+        //isSkillTreeUIopen = true;
     }
 
     void CloseSkillUI()
