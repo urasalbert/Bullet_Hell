@@ -21,8 +21,10 @@ public class EnemyHealthManager : MonoBehaviour
 
     [NonSerialized] public bool isDead;
     [NonSerialized] public GameObject parentObject;
+    [NonSerialized] public int killedEnemy;
 
     EnemyMovement enemyMovement;
+   
 
     [NonSerialized] public string enemyType;
     private void Awake()
@@ -32,6 +34,7 @@ public class EnemyHealthManager : MonoBehaviour
             enemyType = "Bat";
         }
 
+        killedEnemy = 0;
         enemyCurrentHealth = enemyMaxHealth;
         isDead = false;
         enemyDieExplosion = GetComponent<EnemyDieExplosion>();
@@ -118,7 +121,8 @@ public class EnemyHealthManager : MonoBehaviour
         else
         {
             EnemyDieSound.Instance.PlayEnemyDieSound();
-        }      
+        }
+        killedEnemy++;
     }
 
     void DropRandomFragment()

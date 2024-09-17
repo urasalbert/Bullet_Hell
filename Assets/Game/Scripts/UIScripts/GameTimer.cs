@@ -11,7 +11,9 @@ public class GameTimer : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI eventText;
     [NonSerialized] public float minutes;
+    [SerializeField] private TextMeshProUGUI killedEnemyText;
 
+    EnemyHealthManager enemyHealthManager;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -21,13 +23,15 @@ public class GameTimer : MonoBehaviour
         else
         {
             Instance = this;
+            enemyHealthManager = FindObjectOfType<EnemyHealthManager>();
         }
     }
 
     private void Start()
     {
         StartCoroutine(StartTimer());
-        TriggerEvent("Event text goes here"); // Test code for timer events
+        //TriggerEvent("Event text goes here"); 
+        // Test code for timer events
     }
 
     IEnumerator StartTimer()
@@ -72,6 +76,8 @@ public class GameTimer : MonoBehaviour
 
     void GameFinish()
     {
+        Time.timeScale = 0f;
+        killedEnemyText.text = enemyHealthManager.killedEnemy.ToString();
         // Code for game finish after 10 minutes would go here
     }
 }
