@@ -9,5 +9,6 @@ public class GameOverButton : MonoBehaviour
     public void BackToTheMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1.0f;
     }
 }

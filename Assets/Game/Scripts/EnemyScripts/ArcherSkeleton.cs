@@ -62,7 +62,6 @@ public class ArcherSkeleton : MonoBehaviour
     {
         if (projectilePrefab == null)
         {
-            Debug.Log("Ok prefab'ý atanmýþ deðil");
             return;
         }
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -87,7 +86,6 @@ public class ArcherSkeleton : MonoBehaviour
 
         if (arrowPrefab == null) // Null check
         {
-            Debug.LogError("Projeyi oluþturmakta baþarýsýz");
             return;
         }
 
@@ -96,10 +94,6 @@ public class ArcherSkeleton : MonoBehaviour
         if (rb != null) // If there is rb set speed
         {
             rb.velocity = direction * projectileSpeed;
-        }
-        else
-        {
-            Debug.LogError("Projede rb bileþeni bulunamadý");
         }
 
         Destroy(arrowPrefab, 10f); // Destroy it for antilag

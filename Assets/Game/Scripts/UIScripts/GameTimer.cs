@@ -7,7 +7,7 @@ public class GameTimer : MonoBehaviour
 {
     public static GameTimer Instance { get; private set; } // Singleton instance
 
-    private float elapsedTime = 0f; 
+    private float elapsedTime = 1000f; 
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI eventText;
     [NonSerialized] public float minutes;
@@ -29,10 +29,7 @@ public class GameTimer : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown("l"))
-        {
-            GameFinish();
-        }
+
     }
     private void Start()
     {
@@ -81,12 +78,12 @@ public class GameTimer : MonoBehaviour
         eventText.text = null;
     }
 
-    void GameFinish()
+    public void GameFinish()
     {
         // Code for game finish after 10 minutes would go here
-
+       
+        killedEnemyText.text = EnemyHealthManager.killedEnemy.ToString() + " enemies";
         Time.timeScale = 0f;
-        killedEnemyText.text = EnemyHealthManager.killedEnemy.ToString();
         gameWinUI.SetActive(true);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Boss : MonoBehaviour
 {
     private Slider hpFill;
-    private float maxHealth = 750;
+    private float maxHealth = 10;
     private float currentHealth;
     private float speed = 10f; // Boss movement speed
     private Transform playerPos;
@@ -14,13 +14,15 @@ public class Boss : MonoBehaviour
     private Vector2 targetPosition;
 
     EnemyDieExplosion enemyDieExplosion;
-
+    GameTimer gameTimer;
 
     private void Awake()
     {
         enemyDieExplosion = GetComponent<EnemyDieExplosion>();
         playerPos = FindObjectOfType<PlayerMovement>().transform;
         hpFill = GetComponentInChildren<Slider>();
+        gameTimer = FindObjectOfType<GameTimer>();
+
         currentHealth = maxHealth;
 
         if (hpFill == null)
@@ -82,10 +84,15 @@ public class Boss : MonoBehaviour
             currentHealth -= 25;
         }
     }
-
+    bool flag1 = false;
     void Die()
     {
+        if (!flag1)
+        {
+            enemyDieExplosion.GoreExplosion();
+            flag1 = true;
+        }
+        gameTimer.GameFinish();
         Destroy(gameObject);
-        enemyDieExplosion.GoreExplosion();
     }
 }
