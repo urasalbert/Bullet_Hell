@@ -31,6 +31,9 @@ public class BossAttack1 : MonoBehaviour
     IEnumerator SpawnWarningAndExplosion(Vector3 position)
     {
         GameObject warning = Instantiate(warningPrefab, position, Quaternion.identity);
+
+        BossSounds.Instance.PlayWarningSound();
+
         yield return new WaitForSeconds(1f);
         Destroy(warning);
 
@@ -43,6 +46,7 @@ public class BossAttack1 : MonoBehaviour
             //Get explosion duration for destroy
             yield return new WaitForSeconds(explosionDuration);
         }
+        BossSounds.Instance.PlayBossExplosionSound();
         Destroy(explosion);
     }
 

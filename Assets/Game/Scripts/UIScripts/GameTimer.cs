@@ -14,6 +14,7 @@ public class GameTimer : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI killedEnemyText;
     [SerializeField] private GameObject gameWinUI;
+    [SerializeField] private GameObject spawnerController;
 
     private void Awake()
     {
@@ -26,10 +27,6 @@ public class GameTimer : MonoBehaviour
             Instance = this;
             gameWinUI.SetActive(false);
         }
-    }
-    private void Update()
-    {
-
     }
     private void Start()
     {
@@ -83,7 +80,7 @@ public class GameTimer : MonoBehaviour
         // Code for game finish after 10 minutes would go here
        
         killedEnemyText.text = EnemyHealthManager.killedEnemy.ToString() + " enemies";
-        Time.timeScale = 0f;
+        spawnerController.SetActive(false); //Stop enemy spawning
         gameWinUI.SetActive(true);
     }
 }

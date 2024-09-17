@@ -32,6 +32,12 @@ public class EnemySpawner : MonoBehaviour
     bool flag4 = false;
     void Update()
     {
+
+        if (Input.GetKeyDown("l")) //Debug
+        {
+            SpawnBoss();
+        }
+
         if (Mathf.FloorToInt(GameTimer.Instance.minutes) != 
             Mathf.FloorToInt(GameTimer.Instance.minutes - Time.deltaTime) && !flag4 && GameTimer.Instance.minutes != 0)
         {
@@ -125,10 +131,13 @@ public class EnemySpawner : MonoBehaviour
     {
         if (spawners.Count == 0) return;
 
+
+
         int randomIndex = Random.Range(0, spawners.Count);
 
         Transform selectedSpawner = spawners[randomIndex];
 
         GameObject boss = Instantiate(bossPrefab, selectedSpawner.position, selectedSpawner.rotation, parentObject.transform);
+        BossSounds.Instance.PlayBossSpawnSound();
     }
 }

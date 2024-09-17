@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Boss : MonoBehaviour
 {
     private Slider hpFill;
-    private float maxHealth = 10;
+    private float maxHealth = 1000;
     private float currentHealth;
     private float speed = 10f; // Boss movement speed
     private Transform playerPos;
@@ -82,6 +82,7 @@ public class Boss : MonoBehaviour
         if (collision.CompareTag("Ammo"))
         {
             currentHealth -= 25;
+            EnemyDamageSound.Instance.PlayEnemyDamageSound();
         }
     }
     bool flag1 = false;

@@ -38,6 +38,9 @@ public class BulletSpawner : MonoBehaviour
         if (bullet)
         {
             spawnedBullet = Instantiate(bullet, transform.position, Quaternion.identity, parentObject.transform);
+
+            BossSounds.Instance.PlayBossProjectileSound();
+
             spawnedBullet.GetComponent<BossBullet>().speed = speed;
             spawnedBullet.GetComponent<BossBullet>().bulletLife = bulletLife;
             spawnedBullet.transform.rotation = transform.rotation;
