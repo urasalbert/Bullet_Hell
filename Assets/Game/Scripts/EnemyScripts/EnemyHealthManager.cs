@@ -21,7 +21,7 @@ public class EnemyHealthManager : MonoBehaviour
 
     [NonSerialized] public bool isDead;
     [NonSerialized] public GameObject parentObject;
-    [NonSerialized] public int killedEnemy;
+    [NonSerialized] public static int killedEnemy = 0;
 
     EnemyMovement enemyMovement;
    
@@ -34,7 +34,6 @@ public class EnemyHealthManager : MonoBehaviour
             enemyType = "Bat";
         }
 
-        killedEnemy = 0;
         enemyCurrentHealth = enemyMaxHealth;
         isDead = false;
         enemyDieExplosion = GetComponent<EnemyDieExplosion>();

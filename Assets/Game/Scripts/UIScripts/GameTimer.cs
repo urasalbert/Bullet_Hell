@@ -11,9 +11,10 @@ public class GameTimer : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI eventText;
     [NonSerialized] public float minutes;
-    [SerializeField] private TextMeshProUGUI killedEnemyText;
 
-    EnemyHealthManager enemyHealthManager;
+    [SerializeField] private TextMeshProUGUI killedEnemyText;
+    [SerializeField] private GameObject gameWinUI;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -23,10 +24,16 @@ public class GameTimer : MonoBehaviour
         else
         {
             Instance = this;
-            enemyHealthManager = FindObjectOfType<EnemyHealthManager>();
+            gameWinUI.SetActive(false);
         }
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown("l"))
+        {
+            GameFinish();
+        }
+    }
     private void Start()
     {
         StartCoroutine(StartTimer());
@@ -76,8 +83,10 @@ public class GameTimer : MonoBehaviour
 
     void GameFinish()
     {
-        Time.timeScale = 0f;
-        killedEnemyText.text = enemyHealthManager.killedEnemy.ToString();
         // Code for game finish after 10 minutes would go here
+
+        Time.timeScale = 0f;
+        killedEnemyText.text = EnemyHealthManager.killedEnemy.ToString();
+        gameWinUI.SetActive(true);
     }
 }
