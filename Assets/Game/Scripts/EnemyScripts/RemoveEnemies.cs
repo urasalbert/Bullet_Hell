@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class RemoveEnemies : MonoBehaviour
 
     private void Update()
     {
-        if (GameTimer.Instance.minutes == 10)
+        if (Mathf.FloorToInt(GameTimer.Instance.minutes) == 10)
         {
             AddAllEnemiesToTheList();
             RemoveAllEnemies();

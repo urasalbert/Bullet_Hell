@@ -131,8 +131,18 @@ public class EnemyHealthManager : MonoBehaviour
             DropGold();
         }
 
-        int maxRandomDropValue = (int)PlayerPrefs.GetFloat("maxRandomDropValueStoredValue", 0f);
-        float randomValue = UnityEngine.Random.Range(0f, maxRandomDropValue);
+        int maxRandomDropValue = (int)PlayerPrefs.GetFloat("maxRandomDropValueStoredValue", 100f);
+
+        float randomValue;
+        if (maxRandomDropValue <= 0)
+        {
+            randomValue  = UnityEngine.Random.Range(0f, 100f);
+        }
+        else
+        {
+            randomValue = UnityEngine.Random.Range(0f, maxRandomDropValue);
+        }
+
 
         Debug.Log("maxRandomDropValue" + maxRandomDropValue);
         if (randomValue <= 1f)

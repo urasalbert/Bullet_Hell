@@ -105,7 +105,7 @@ public class ExperienceManager : MonoBehaviour
             currentLevel++;
             LevelUpSound();
             skillPoints++;
-            experienceToNextLevel *= 1.3f; //Increase xp requirement by 20 percent at each level
+            experienceToNextLevel *= 1.1f; //Increase xp requirement by 20 percent at each level
 
             if (levelUpEffect != null)
             {

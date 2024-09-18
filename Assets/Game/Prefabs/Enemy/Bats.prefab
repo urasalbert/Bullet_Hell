@@ -262,6 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8766030133806673042}
   - component: {fileID: 2601786955092550929}
+  - component: {fileID: -4240607845775478353}
   m_Layer: 0
   m_Name: Bats
   m_TagString: Untagged

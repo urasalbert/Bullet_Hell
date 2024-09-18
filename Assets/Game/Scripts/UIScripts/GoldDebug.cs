@@ -17,7 +17,7 @@ public class GoldDebug : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("l"))
+       /* if (Input.GetKeyDown("l"))
         {
             AddGoldAmount();
         }
@@ -25,6 +25,7 @@ public class GoldDebug : MonoBehaviour
         {
             ResetGoldAmount();
         }
+       */
     }
 
 

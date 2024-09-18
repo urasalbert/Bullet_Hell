@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] internal GameObject batsPrefab;
     [SerializeField] internal GameObject freakSkeletonPrefab;
 
-    internal float spawnInterval = 5.5f;
+    internal float spawnInterval = 6f;
     internal float rangedSpawnInterval = 10f;
 
     private float nextSpawnTime;
@@ -31,14 +31,8 @@ public class EnemySpawner : MonoBehaviour
     bool flag4 = false;//For spawn interval
     void Update()
     {
-
-        if (Input.GetKeyDown("l")) //Debug
-        {
-            SpawnBoss();
-        }
-
         if (Mathf.FloorToInt(GameTimer.Instance.minutes) != 
-            Mathf.FloorToInt(GameTimer.Instance.minutes - Time.deltaTime) && !flag4 && GameTimer.Instance.minutes != 0)
+            Mathf.FloorToInt(GameTimer.Instance.minutes - Time.deltaTime) && !flag4 && Mathf.FloorToInt(GameTimer.Instance.minutes) != 0)
         {
             spawnInterval -= 0.5f;
             rangedSpawnInterval -= 0.5f;
@@ -57,7 +51,7 @@ public class EnemySpawner : MonoBehaviour
             flag1 = true;  
         }
 
-        if(GameTimer.Instance.minutes == 10 && !flag2)
+        if(Mathf.FloorToInt(GameTimer.Instance.minutes) == 10 && !flag2)
         {
             SpawnSounds.Instance.PlayBossSpawnSound();
             SpawnBoss();
@@ -106,8 +100,9 @@ public class EnemySpawner : MonoBehaviour
 
         // Randomly select an enemy prefab
         int maxPrefabCount = 2;
-        if (GameTimer.Instance.minutes % 2 == 0 && GameTimer.Instance.minutes != 0)//If it's been more than two minutes
-                                            //add the prefab in the third index to the pool.
+        if (Mathf.FloorToInt(GameTimer.Instance.minutes) % 2 == 0 && Mathf.FloorToInt(GameTimer.Instance.minutes) != 0)
+            //If it's been more than two minutes                                                                                                                   
+            //add the prefab in the third index to the pool.
         {
             maxPrefabCount++;            
         }          
@@ -120,11 +115,11 @@ public class EnemySpawner : MonoBehaviour
         EnemyHealthManager enemyLife = enemy.GetComponent<EnemyHealthManager>();
         if (enemyLife != null)
         {
-            Debug.Log("Enemy spawned with Life script.");
+            //Debug.Log("Enemy spawned with Life script.");
         }
         else
         {
-            Debug.LogError("Spawned enemy is missing the Life script.");
+            //Debug.LogError("Spawned enemy is missing the Life script.");
         }
     }
 
