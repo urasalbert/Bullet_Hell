@@ -7,7 +7,7 @@ public class GameTimer : MonoBehaviour
 {
     public static GameTimer Instance { get; private set; } // Singleton instance
 
-    private float elapsedTime = 1000f; 
+    private float elapsedTime = 0f; 
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI eventText;
     [NonSerialized] public float minutes;

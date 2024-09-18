@@ -93,6 +93,7 @@ public class Boss : MonoBehaviour
             enemyDieExplosion.GoreExplosion();
             flag1 = true;
         }
+        EnemyDieSound.Instance.PlayEnemyDieSound();
         gameTimer.GameFinish();
         Destroy(gameObject);
     }

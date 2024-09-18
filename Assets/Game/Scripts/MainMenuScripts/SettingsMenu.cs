@@ -7,13 +7,23 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
     [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private AudioMixer musicAudioMixer;
+
     [SerializeField] private Slider volumeSlider;
+    [SerializeField] private Slider musicVolumeSlider;
+
     [SerializeField] private Toggle toggle;
 
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("Volume", volume);
         PlayerPrefs.SetFloat("Volume", volume); //Save volume with playerpref
+        PlayerPrefs.Save();
+    }
+    public void SetMusicVolume(float musicVolume)
+    {
+        musicAudioMixer.SetFloat("MusicVolume", musicVolume);
+        PlayerPrefs.SetFloat("MusicVolume", musicVolume); //Save music volume with playerpref
         PlayerPrefs.Save();
     }
 
@@ -27,15 +37,20 @@ public class SettingsMenu : MonoBehaviour
         if (PlayerPrefs.HasKey("Volume"))
         {
             float savedVolume = PlayerPrefs.GetFloat("Volume"); //Get saved volume when game launch
+            float savedMusicVolume = PlayerPrefs.GetFloat("MusicVolume");
 
             // Set it again for slider + audiomixer
-            audioMixer.SetFloat("Volume", savedVolume); 
+            audioMixer.SetFloat("Volume", savedVolume);
+            musicAudioMixer.SetFloat("MusicVolume", savedMusicVolume);
+
+            musicVolumeSlider.value = savedMusicVolume;
             volumeSlider.value = savedVolume;
         }
         else
         {
             //If there is no saved volume set volume max value
-            audioMixer.SetFloat("Volume", 20);
+            audioMixer.SetFloat("Volume", 10);
+            musicAudioMixer.SetFloat("MusicVolume", 10);
         }
     }
 

@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] internal GameObject batsPrefab;
     [SerializeField] internal GameObject freakSkeletonPrefab;
 
-    internal float spawnInterval = 6f;
+    internal float spawnInterval = 5.5f;
     internal float rangedSpawnInterval = 10f;
 
     private float nextSpawnTime;
@@ -28,8 +28,7 @@ public class EnemySpawner : MonoBehaviour
 
     bool flag1 = false;//For triggerevents
     bool flag2 = false;//For boss spawn
-    bool flag3 = false;//For spawn interval
-    bool flag4 = false;
+    bool flag4 = false;//For spawn interval
     void Update()
     {
 
@@ -44,7 +43,7 @@ public class EnemySpawner : MonoBehaviour
             spawnInterval -= 0.5f;
             rangedSpawnInterval -= 0.5f;
             flag4 = true;
-            //GameTimer.Instance.TriggerEvent("Spawn Rate Increased!");
+            GameTimer.Instance.TriggerEvent("Spawn Rate Increased!");
         }
         else if (Mathf.FloorToInt(GameTimer.Instance.minutes) ==
             Mathf.FloorToInt(GameTimer.Instance.minutes - Time.deltaTime) && flag4)
@@ -86,7 +85,12 @@ public class EnemySpawner : MonoBehaviour
             int randomIndex = Random.Range(0, spawners.Count);
             Transform selectedSpawner = spawners[randomIndex];
 
+            int randomIndex2 = Random.Range(0, archerSpawners.Count);
+            Transform selectedArcherSpawner = archerSpawners[randomIndex2];
+
             GameObject rangedEnemy = Instantiate(rangedEnemyPrefab, selectedSpawner.position, selectedSpawner.rotation, parentObject.transform);
+
+            GameObject archerRangerEnemy = Instantiate(archerEnemyPrefab, selectedArcherSpawner.position, selectedSpawner.rotation, parentObject.transform);
         }
     }
 
@@ -95,10 +99,8 @@ public class EnemySpawner : MonoBehaviour
         if (spawners.Count == 0) return;
 
         int randomIndex = Random.Range(0, spawners.Count);
-        int randomArcherIndex = Random.Range(0, archerSpawners.Count);
 
         Transform selectedSpawner = spawners[randomIndex];
-        Transform selectedArcherSpawner = archerSpawners[randomArcherIndex];
 
         GameObject selectedEnemyPrefab;
 
@@ -113,17 +115,16 @@ public class EnemySpawner : MonoBehaviour
         
         GameObject enemy = Instantiate(selectedEnemyPrefab, selectedSpawner.position, selectedSpawner.rotation, parentObject.transform);
 
-        GameObject archerenemy = Instantiate(archerEnemyPrefab, selectedArcherSpawner.position, selectedArcherSpawner.rotation, parentObject.transform);
 
         // Check Health Manager script for debugging
         EnemyHealthManager enemyLife = enemy.GetComponent<EnemyHealthManager>();
         if (enemyLife != null)
         {
-            // Debug.Log("Enemy spawned with Life script.");
+            Debug.Log("Enemy spawned with Life script.");
         }
         else
         {
-            // Debug.LogError("Spawned enemy is missing the Life script.");
+            Debug.LogError("Spawned enemy is missing the Life script.");
         }
     }
 

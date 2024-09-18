@@ -12,6 +12,7 @@ public class PlayButton : MonoBehaviour
         if (CharChooseButton.Instance.isLevisSelected)
         {
             SceneManager.LoadScene("Level1Game");
+            Time.timeScale = 1.0f;
         }
     }
 
