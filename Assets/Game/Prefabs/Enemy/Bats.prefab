@@ -308,6 +308,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   lifetime: 15
+--- !u!114 &-4240607845775478353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359027019222644646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f769e37a9faf80f42b1ff55c9d305232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMaxHealth: 1e+10
+  xpFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
+  lifeFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
+  magnetFragment: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
+  goldPrefab: {fileID: 3866901751521529728, guid: 525b0ddd5ae449147ad7a2459a833810, type: 3}
+  canDropGold: 0
+  enemyCurrentHealth: 0
 --- !u!1 &1817119579766009137
 GameObject:
   m_ObjectHideFlags: 0
